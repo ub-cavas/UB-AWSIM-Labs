@@ -221,6 +221,7 @@ namespace AWSIM.Loader
             {
                 AWSIMConfiguration simulationConfig = new AWSIMConfiguration();
                 simulationConfig.mapConfiguration.mapName = mapManager.mapUISelecor.options[mapManager.mapUISelecor.value].text;
+                simulationConfig.mapConfiguration.useShadows = false; // Set shadows default to false.
                 simulationConfig.simulationConfiguration.useTraffic = simulationManager.mapTrafficToggle.isOn;
                 simulationConfig.simulationConfiguration.timeScale = 1.0f; //TODO: Time scale is not yet implemented on the GUI.
                 simulationConfig.egoConfiguration.egoVehicleName = egoManager.egoUISelecor.options[egoManager.egoUISelecor.value].text;

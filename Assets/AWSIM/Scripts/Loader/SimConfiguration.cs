@@ -42,6 +42,10 @@ static class SimConfiguration
         //////////////////////
         // Core initialization
 
+        // Set camera GUI
+        FollowCamera followCamera = GameObject.FindObjectOfType<FollowCamera>();
+        GameObject.FindObjectOfType<MainCameraViewUI>().SetFollowCamera(followCamera);
+
         // Set Ego position manager
         Scripts.UI.EgoVehiclePositionManager positionManager = GameObject.FindObjectOfType<Scripts.UI.EgoVehiclePositionManager>();
         positionManager.InitializeEgoTransform(ego.transform);
@@ -56,6 +60,19 @@ static class SimConfiguration
         foreach (var trafficSim in trafficSims)
         {
             trafficSim.gameObject.SetActive(simulationConfiguration.useTraffic);
+        }
+
+        // Turn shadows for directional light
+        if (mapConfiguration.useShadows)
+        {
+            var lights = GameObject.FindObjectsOfType<Light>();
+            foreach (Light light in lights)
+            {
+                if(light.type == LightType.Directional)
+                {
+                    light.shadows = LightShadows.Hard;
+                }
+            }
         }
     }
 }
