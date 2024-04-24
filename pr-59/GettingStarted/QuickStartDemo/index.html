@@ -2511,6 +2511,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lets-run-the-self-driving-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let's run the self-Driving simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2704,16 +2731,13 @@ sudo apt install nvidia-driver-550
   ```
 </code></pre></div>
 
-<p>4. Launch <code>awsim_labs.x86_64</code>.
-      </p><div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/awsim_labs.x86_64
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code>  !!! warning
-
-      It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.
-
-  ![](Image_0.png)
-</code></pre></div>
-
+<ol>
+<li>Launch <code>awsim_labs.x86_64</code>.
+     <div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/awsim_labs.x86_64
+</code></pre></div><p>It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.</p>
+<p><img alt="" src="Image_0.png"></p>
+</li>
+</ol>
 </li>
 </ol>
 <h3 id="launching-autoware">Launching Autoware<a class="headerlink" href="#launching-autoware" title="Permanent link">#</a></h3>
@@ -2747,19 +2771,16 @@ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 <li>Build the workspace.
 <div class="highlight"><pre><span></span><code>colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=1
 </code></pre></div></li>
-<li>Launch Autoware.<p>!!! warning</p>
-<div class="codehilite"><pre><span></span><code>  `&lt;your mapfile location&gt;` must be changed arbitrarily. When specifying the path the `~` operator cannot be used - please specify absolute full path.
-</code></pre></div>
+<li>Launch Autoware.
+<div class="highlight"><pre><span></span><code>source install/setup.bash
+ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_labs_sensor_kit map_path:=&lt;absolute path of map folder&gt;
 
-<p>```
-source install/setup.bash
-ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_labs_sensor_kit map_path:=<your mapfile location>
-</your></p>
-<h1 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">#</a></h1>
-<p>ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_labs_sensor_kit map_path:=/home/your_username/autoware_map/nishishinjuku_autoware_map
-```
-<img alt="" src="Image_2.png"></p>
-</li>
+# Use the absolute path for the map folder, don't use the ~ operator.
+
+# Example:
+ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_labs_sensor_kit map_path:=/home/your_username/autoware_map/nishishinjuku_autoware_map
+</code></pre></div>
+<img alt="" src="Image_2.png"></li>
 </ol>
 <h2 id="lets-run-the-self-driving-simulation">Let's run the self-Driving simulation<a class="headerlink" href="#lets-run-the-self-driving-simulation" title="Permanent link">#</a></h2>
 <ol>
