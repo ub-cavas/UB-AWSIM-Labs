@@ -2484,64 +2484,85 @@
 </li>
 <li>
 <p>Now, it is time to define the laser (also called a channel) distribution of the <em>LiDAR</em>.</p>
-<p>!!! info
-      If your <em>LiDAR</em>:</p>
-<div class="codehilite"><pre><span></span><code>      - has a uniform laser distribution
-      - has the equal range for all of the lasers
-      - fire all of the rays (beams) at the same time
-
-  You can skip this step and use our helper method to generate a simple uniform laser array definition (more information in the next step).
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If your <em>LiDAR</em>:</p>
+<div class="codehilite"><pre><span></span><code>- has a uniform laser distribution
+- has the equal range for all of the lasers
+- fire all of the rays (beams) at the same time
 </code></pre></div>
 
-<p>1. Laser distribution is represented by <code>LaserArray</code> consists of:
-      - <code>centerOfMeasurementLinearOffsetMm</code> - 3D translation from the game object's origin to <em>LiDAR's</em> origin. Preview in 2D:</p>
-<div class="codehilite"><pre><span></span><code>      &lt;img src="img/LidarOriginParameter.png" width="300"&gt;
-
-  - `focalDistanceMm` - Distance from the sensor center to the focal point where all laser beams intersect.
-
-      &lt;img src="img/LidarFocalDistanceParamter.png" width="300"&gt;
-
-  - `lasers` - array of lasers (channels) with a number of parameters:
-
-      - `horizontalAngularOffsetDeg` - horizontal angle offset of the laser (Azimuth)
-      - `verticalAngularOffsetDeg` - vertical angle offset of the laser (Elevation)
-      - `verticalLinearOffsetMm` - vertical offset of the laser (translation from origin)
-      - `ringId` - Id of the ring (in most cases laser Id)
-      - `timeOffset` - time offset of the laser firing in milliseconds (with reference to the first laser in the array)
-      - `minRange` - minimum range of the laser (set if lasers have different ranges)
-      - `maxRange` - maximum range of the laser (set if lasers have different ranges)
+<p>You can skip this step and use our helper method to generate a simple uniform laser array definition (more information in the next step).</p>
+</div>
+<ol>
+<li>
+<p>Laser distribution is represented by <code>LaserArray</code> consists of:</p>
+<ul>
+<li>
+<p><code>centerOfMeasurementLinearOffsetMm</code> - 3D translation from the game object's origin to <em>LiDAR's</em> origin. Preview in 2D:</p>
+<p><img src="img/LidarOriginParameter.png" width="300"></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><code>focalDistanceMm</code> - Distance from the sensor center to the focal point where all laser beams intersect.</p>
+<p><img src="img/LidarFocalDistanceParamter.png" width="300"></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><code>lasers</code> - array of lasers (channels) with a number of parameters:</p>
+<ul>
+<li><code>horizontalAngularOffsetDeg</code> - horizontal angle offset of the laser (Azimuth)</li>
+<li><code>verticalAngularOffsetDeg</code> - vertical angle offset of the laser (Elevation)</li>
+<li><code>verticalLinearOffsetMm</code> - vertical offset of the laser (translation from origin)</li>
+<li><code>ringId</code> - Id of the ring (in most cases laser Id)</li>
+<li><code>timeOffset</code> - time offset of the laser firing in milliseconds (with reference to the first laser in the array)</li>
+<li><code>minRange</code> - minimum range of the laser (set if lasers have different ranges)</li>
+<li><code>maxRange</code> - maximum range of the laser (set if lasers have different ranges)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>To define a new laser distribution create a new class in the <code>LaserArrayLibrary.cs</code></p>
+<p><img alt="lidar_array" src="img/LidarLaserArray.png"></p>
+<ul>
+<li>Add a new public static instance of <code>LaserArray</code> with the definition.</li>
+</ul>
+<p>In this example, <code>NewLidarModel</code> laser distribution consists of 5 lasers with</p>
+<div class="codehilite"><pre><span></span><code>- elevations: 15, 10, 0, -10, -15 degrees
+- azimuths: 1.4, -1.4, 1.4, -1.4, 1.4 degrees
+- ring Ids: 1, 2, 3, 4, 5
+- time offsets: 0, 0.01, 0.02, 0.03, 0.04 milliseconds
+- an equal range that will be defined later
 </code></pre></div>
 
-<p>1. To define a new laser distribution create a new class in the <code>LaserArrayLibrary.cs</code></p>
-<div class="codehilite"><pre><span></span><code>  ![lidar_array](img/LidarLaserArray.png)
-
-  - Add a new public static instance of `LaserArray` with the definition.
-
-  In this example, `NewLidarModel` laser distribution consists of 5 lasers with
-
-      - elevations: 15, 10, 0, -10, -15 degrees
-      - azimuths: 1.4, -1.4, 1.4, -1.4, 1.4 degrees
-      - ring Ids: 1, 2, 3, 4, 5
-      - time offsets: 0, 0.01, 0.02, 0.03, 0.04 milliseconds
-      - an equal range that will be defined later
-
-  !!! warning "Coordinate system"
-      Keep in mind that *Unity* has a left-handed coordinate system, while most of the *LiDAR's* manuals use a right-handed coordinate system. In that case, reverse sign of the values of the angles.
-</code></pre></div>
-
+<div class="admonition warning">
+<p class="admonition-title">Coordinate system</p>
+<p>Keep in mind that <em>Unity</em> has a left-handed coordinate system, while most of the <em>LiDAR's</em> manuals use a right-handed coordinate system. In that case, reverse sign of the values of the angles.</p>
+</div>
+</li>
+</ol>
 </li>
 <li>
 <p>The last step is to create a <em>LiDAR</em> configuration by adding an entry to <code>LidarConfigurationLibrary.cs</code></p>
 <p><img alt="lidar_configuration" src="img/LidarConfiguration.png"></p>
 <p>Add a new item to the <code>ByModel</code> dictionary that collects <em>LiDAR</em> model enumerations with their <code>BaseLidarConfiguration</code> choosing one of the implementations:</p>
-<p>- <code>UniformRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with a uniform range for all the rays (it contains <code>minRange</code> and <code>maxRange</code> parameters additionally)
-  - <code>LaserBasedRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with ranges retrieved from lasers description
-  - <em>Or create your custom implementations in <code>LidarConfiguration.cs</code> like:</em>
-      - <code>HesaiAT128LidarConfiguration</code>
-      - <code>HesaiQT128C2XLidarConfiguration</code>
-      - <code>HesaiPandar128E4XLidarConfiguration</code></p>
-<p>!!! note "Lidar configuration parameters descrition"
-      Please refer to <a href="../LiDARSensor/#elements-configurable-from-the-editor-level">this section</a> for the detailed description of all configuration parameters.</p>
+<ul>
+<li><code>UniformRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with a uniform range for all the rays (it contains <code>minRange</code> and <code>maxRange</code> parameters additionally)</li>
+<li><code>LaserBasedRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with ranges retrieved from lasers description</li>
+<li><em>Or create your custom implementations in <code>LidarConfiguration.cs</code> like:</em><ul>
+<li><code>HesaiAT128LidarConfiguration</code></li>
+<li><code>HesaiQT128C2XLidarConfiguration</code></li>
+<li><code>HesaiPandar128E4XLidarConfiguration</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Lidar configuration parameters descrition</p>
+<p>Please refer to <a href="../LiDARSensor/#elements-configurable-from-the-editor-level">this section</a> for the detailed description of all configuration parameters.</p>
+</div>
 </li>
 <li>
 <p>Done. New <em>LiDAR</em> preset should be available via <em>Unity Inspector</em>.</p>

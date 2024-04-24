@@ -431,7 +431,7 @@
         <li class="md-nav__item">
   <a href="#lets-run-the-self-driving-simulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Let's run the self-Driving simulation
+      Let's run the self driving simulation
     </span>
   </a>
   
@@ -2543,7 +2543,7 @@
         <li class="md-nav__item">
   <a href="#lets-run-the-self-driving-simulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Let's run the self-Driving simulation
+      Let's run the self driving simulation
     </span>
   </a>
   
@@ -2704,22 +2704,23 @@ The instruction assumes using the Ubuntu OS.</p>
 <p>To run the simulator, please follow the steps below.</p>
 <ol>
 <li>
-<p>Install Nvidia GPU driver (Skip if already installed).
-    1. Add Nvidia driver to apt repository
-    </p><div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
+<p>Install Nvidia GPU driver (Skip if already installed).</p>
+<ol>
+<li>Add Nvidia driver to apt repository
+<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
-</code></pre></div>
-    2. Install the recommended version of the driver.
-    <div class="highlight"><pre><span></span><code>sudo ubuntu-drivers autoinstall
+</code></pre></div></li>
+<li>Install the recommended version of the driver.
+<div class="highlight"><pre><span></span><code>sudo ubuntu-drivers autoinstall
 
 # or install a specific version (following was tested)
 sudo apt install nvidia-driver-550
-</code></pre></div>
-    3. Reboot your machine to make the installed driver detected by the system.
-    <div class="highlight"><pre><span></span><code>sudo reboot
-</code></pre></div>
-    4. Open terminal and check if <code>nvidia-smi</code> command is available and outputs summary similar to the one presented below.
-    <div class="highlight"><pre><span></span><code>$ nvidia-smi
+</code></pre></div></li>
+<li>Reboot your machine to make the installed driver detected by the system.
+<div class="highlight"><pre><span></span><code>sudo reboot
+</code></pre></div></li>
+<li>Open terminal and check if <code>nvidia-smi</code> command is available and outputs summary similar to the one presented below.
+<div class="highlight"><pre><span></span><code>$ nvidia-smi
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
 |-----------------------------------------+------------------------+----------------------+
@@ -2732,50 +2733,54 @@ sudo apt install nvidia-driver-550
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 ...
-</code></pre></div>
+</code></pre></div></li>
+</ol>
 </li>
 <li>
-<p>Install Vulkan Graphics Library (Skip if already installed).
-    1. Update the environment.
-    </p><div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div>
-    2. Install the library.
-    <div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
-</code></pre></div>
+<p>Install Vulkan Graphics Library (Skip if already installed).</p>
+<ol>
+<li>Update the environment.
+<div class="highlight"><pre><span></span><code>sudo apt update
+</code></pre></div></li>
+<li>Install the library.
+<div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
+</code></pre></div></li>
+</ol>
 </li>
 <li>
 <p>Download and Run AWSIM Demo binary.</p>
-<p>1. Download the latest release from the AWSIM Labs GitHub Release Page.
-      <a class="md-button md-button--primary" href="https://github.com/autowarefoundation/AWSIM/releases">AWSIM Labs GitHub Release Page</a></p>
-<p>2. Unzip the downloaded file.</p>
-<p>3. Make the file executable.</p>
-<div class="codehilite"><pre><span></span><code>  Right click the `awsim_labs.x86_64` file and check the `Execute` checkbox
-
-  ![](Image_1.png)
-
-  or execute the command below.
-
-  ```
-  chmod +x &lt;path to AWSIM folder&gt;/awsim_labs.x86_64
-  ```
+<ol>
+<li>
+<p>Download the latest release from the AWSIM Labs GitHub Release Page.</p>
+<p><a class="md-button md-button--primary" href="https://github.com/autowarefoundation/AWSIM/releases">AWSIM Labs GitHub Release Page</a></p>
+</li>
+<li>
+<p>Unzip the downloaded file.</p>
+</li>
+<li>
+<p>Make the file executable.</p>
+<p>Right click the <code>awsim_labs.x86_64</code> file and check the <code>Execute</code> checkbox</p>
+<p><img alt="" src="Image_1.png"></p>
+<p>or execute the command below.</p>
+<div class="highlight"><pre><span></span><code>chmod +x &lt;path to AWSIM folder&gt;/awsim_labs.x86_64
 </code></pre></div>
-
-<p>4. Launch <code>awsim_labs.x86_64</code>.
-      </p><div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/awsim_labs.x86_64
+</li>
+<li>
+<p>Launch <code>awsim_labs.x86_64</code>.
+    </p><div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/awsim_labs.x86_64
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code>  It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.
-
-  ![](Image_0.png)
-</code></pre></div>
-
+<p>It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.</p>
+<p><img alt="" src="Image_0.png"></p>
+</li>
+</ol>
 </li>
 </ol>
 <h3 id="launching-autoware">Launching Autoware<a class="headerlink" href="#launching-autoware" title="Permanent link">#</a></h3>
 <p>In order to configure and run the Autoware software with the AWSIM demo, please:</p>
 <ol>
 <li>
-<p>Download <code>map files (pcd, osm)</code> and unzip them.</p>
-<p><a class="md-button md-button--primary" href="https://drive.google.com/drive/folders/15D5s2m3A7_wtCPio8ewRy0wL_xQtmqss">Download Map files (pcd, osm)</a></p>
+<p>Download <code>map files (pcd, osm)</code> and unzip them.
+    <a class="md-button md-button--primary" href="https://drive.google.com/drive/folders/15D5s2m3A7_wtCPio8ewRy0wL_xQtmqss">Download Map files (pcd, osm)</a></p>
 </li>
 <li>
 <p>Clone <a href="https://github.com/autowarefoundation/autoware">Autoware</a> and move to the directory.
@@ -2812,7 +2817,7 @@ ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehic
 </code></pre></div>
 <img alt="" src="Image_2.png"></li>
 </ol>
-<h2 id="lets-run-the-self-driving-simulation">Let's run the self-Driving simulation<a class="headerlink" href="#lets-run-the-self-driving-simulation" title="Permanent link">#</a></h2>
+<h2 id="lets-run-the-self-driving-simulation">Let's run the self driving simulation<a class="headerlink" href="#lets-run-the-self-driving-simulation" title="Permanent link">#</a></h2>
 <ol>
 <li>
 <p>Launch AWSIM and Autoware according to the steps described earlier in this document.

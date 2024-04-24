@@ -2577,14 +2577,16 @@ In subsequent frames of the simulation, <code>SceneManager</code> synchronizes t
 <li><code>IntensityTexture</code> - adds slot for <code>Intensity Texture ID</code> to the <em>GameObject</em></li>
 <li><code>SemanticCategory</code> - adds category ID to the <em>GameObject</em></li>
 <li><code>RGLDebugger</code> - provides configuration for Native <code>RGL</code> debug tools (logging and tape).</li>
-<li>A set of classes providing tools to define <em>LiDAR</em> specification (mostly: ray poses):
-    - <code>LidarModels</code> - enumeration of some real-world <em>LiDARs</em> names.
-    - <code>LidarConfiguration</code> - top-level configuration class, horizontal ranges, distance range, laser array.
-    - <code>LidarConfigurationLibrary</code> - provides a number of pre-defined <code>LidarConfigurations</code>.
-    - <code>LaserArray</code> - definition of a (vertical) array of lasers.
-    - <code>LaserArrayLibrary</code> - provides a number of pre-defined <code>LaserArrays</code>.
-    - <code>Laser</code> - describes offsets of a single laser within a <code>LaserArray</code>.
-    - <code>LidarNoiseParams</code> - describes a LiDAR noise that can be simulated</li>
+<li>A set of classes providing tools to define <em>LiDAR</em> specification (mostly: ray poses):<ul>
+<li><code>LidarModels</code> - enumeration of some real-world <em>LiDARs</em> names.</li>
+<li><code>LidarConfiguration</code> - top-level configuration class, horizontal ranges, distance range, laser array.</li>
+<li><code>LidarConfigurationLibrary</code> - provides a number of pre-defined <code>LidarConfigurations</code>.</li>
+<li><code>LaserArray</code> - definition of a (vertical) array of lasers.</li>
+<li><code>LaserArrayLibrary</code> - provides a number of pre-defined <code>LaserArrays</code>.</li>
+<li><code>Laser</code> - describes offsets of a single laser within a <code>LaserArray</code>.</li>
+<li><code>LidarNoiseParams</code> - describes a LiDAR noise that can be simulated</li>
+</ul>
+</li>
 <li><code>LowLevelWrappers</code> scripts - provides some convenience code to call Native <code>RGL</code> functions.</li>
 <li><code>Utilities</code> scripts - miscellaneous utilities to make rest of the code clearer.</li>
 </ul>
@@ -2638,13 +2640,17 @@ This incurs additional performance, but produces the most realistic results.</li
 <p>Objects, to be detectable by <code>RGL</code>, must fulfill the following requirements:</p>
 <ol>
 <li>Contain one of the components: <a href="https://docs.unity3d.com/ScriptReference/Collider.html"><code>Collider</code></a>, <a href="https://docs.unity3d.com/Manual/class-MeshRenderer.html"><code>Mesh Renderer</code></a>, or <a href="https://docs.unity3d.com/Manual/class-SkinnedMeshRenderer.html"><code>Skinned Mesh Renderer</code></a> - it depends on <code>SceneManager</code> mesh source parameter.</li>
-<li>Be readable from <em>CPU</em>-accessible memory - it can be achieved using the <code>Read/Write Enabled</code> checkbox in mesh settings.<p>!!! note "Readable objects"
-      <a href="https://docs.unity3d.com/Manual/PrimitiveObjects.html">Primitive Objects</a> are readable by default.</p>
-<p>!!! example
-      The activated <em>Readable</em> option in the mesh should look like this.</p>
-<div class="codehilite"><pre><span></span><code>  &lt;img src="readable.png" width="75%"&gt;
-</code></pre></div>
-
+<li>
+<p>Be readable from <em>CPU</em>-accessible memory - it can be achieved using the <code>Read/Write Enabled</code> checkbox in mesh settings.</p>
+<div class="admonition note">
+<p class="admonition-title">Readable objects</p>
+<p><a href="https://docs.unity3d.com/Manual/PrimitiveObjects.html">Primitive Objects</a> are readable by default.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The activated <em>Readable</em> option in the mesh should look like this.</p>
+<p><img src="readable.png" width="75%"></p>
+</div>
 </li>
 </ol>
 <!-- ### Debugging Native RGL library (*advanced*)

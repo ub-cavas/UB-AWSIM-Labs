@@ -2783,24 +2783,30 @@ The pipeline consists of:</p>
 <li><code>Apply Distance Gaussian Noise</code> - enable/disable distance <em>Gaussian</em> noise (default: <code>true</code>)</li>
 <li><code>Apply Angular Gaussian Noise</code> - enable/disable angular <em>Gaussian</em> noise (default: <code>true</code>)</li>
 <li><code>Apply Velocity Distortion</code> - enable/disable velocity distortion (default: <code>false</code>)</li>
-<li><em>Configuration</em>:
-    - <code>Laser Array</code> - geometry description of lidar's array of lasers, should be prepared on the basis of the manual for a given model of <em>LiDAR</em> (default: loaded from <code>LaserArrayLibrary</code>)
-    - <code>Horizontal Resolution</code> - the horiontal resolution of laser array firings
-    - <code>Min H Angle</code> - minimum horizontal angle, left (default: <code>0</code>)
-    - <code>Max H Angle</code> - maximum horizontal angle, right (default: <code>0</code>)
-    - <code>Laser Array Cycle Time</code> - time between two consecutive firings of the whole laser array in milliseconds (default: <code>0</code>); used for velocity distortion feature.
-    - <code>Beam Divergence</code> - represents the deviation of photons from a single beam emitted by a LiDAR sensor (in degrees); used for simulating snow only (private feature).
-    - <em>Noise Params</em>:
-        - <code>Angular Noise Type</code> - angular noise type<br>(default: <code>Ray Based</code>)
-        - <code>Angular Noise St Dev</code> - angular noise standard deviation in degree<br>(default: <code>0.05729578</code>)
-        - <code>Angular Noise Mean</code> - angular noise mean in degrees<br>(default: <code>0</code>)
-        - <code>Distance Noise St Dev Base</code> - distance noise standard deviation base in meters<br>(default: <code>0.02</code>)
-        - <code>Distance Noise Rise Per Meter</code> - distance noise standard deviation rise per meter<br>(default: <code>0</code>)
-        - <code>Distance Noise Mean</code> - distance noise mean in meters<br>(default: <code>0</code>)
-    - <em>Additional options (available for some Lidar Model Preset)</em>
-        - <code>Min Range</code> - minimum range of the sensor (if not avaiable, the range is different for each laser in <code>Laser Array</code>)
-        - <code>Max Range</code> - maximum range of the sensor (if not avaiable, the range is different for each laser in <code>Laser Array</code>)
-        - <code>High Resolution Mode Enabled</code> - whether to activate high resolution mode (available for <code>Hesai Pandar 128E4X</code> LiDAR model)</li>
+<li><em>Configuration</em>:<ul>
+<li><code>Laser Array</code> - geometry description of lidar's array of lasers, should be prepared on the basis of the manual for a given model of <em>LiDAR</em> (default: loaded from <code>LaserArrayLibrary</code>)</li>
+<li><code>Horizontal Resolution</code> - the horiontal resolution of laser array firings</li>
+<li><code>Min H Angle</code> - minimum horizontal angle, left (default: <code>0</code>)</li>
+<li><code>Max H Angle</code> - maximum horizontal angle, right (default: <code>0</code>)</li>
+<li><code>Laser Array Cycle Time</code> - time between two consecutive firings of the whole laser array in milliseconds (default: <code>0</code>); used for velocity distortion feature.</li>
+<li><code>Beam Divergence</code> - represents the deviation of photons from a single beam emitted by a LiDAR sensor (in degrees); used for simulating snow only (private feature).</li>
+<li><em>Noise Params</em>:<ul>
+<li><code>Angular Noise Type</code> - angular noise type<br>(default: <code>Ray Based</code>)</li>
+<li><code>Angular Noise St Dev</code> - angular noise standard deviation in degree<br>(default: <code>0.05729578</code>)</li>
+<li><code>Angular Noise Mean</code> - angular noise mean in degrees<br>(default: <code>0</code>)</li>
+<li><code>Distance Noise St Dev Base</code> - distance noise standard deviation base in meters<br>(default: <code>0.02</code>)</li>
+<li><code>Distance Noise Rise Per Meter</code> - distance noise standard deviation rise per meter<br>(default: <code>0</code>)</li>
+<li><code>Distance Noise Mean</code> - distance noise mean in meters<br>(default: <code>0</code>)</li>
+</ul>
+</li>
+<li><em>Additional options (available for some Lidar Model Preset)</em><ul>
+<li><code>Min Range</code> - minimum range of the sensor (if not avaiable, the range is different for each laser in <code>Laser Array</code>)</li>
+<li><code>Max Range</code> - maximum range of the sensor (if not avaiable, the range is different for each laser in <code>Laser Array</code>)</li>
+<li><code>High Resolution Mode Enabled</code> - whether to activate high resolution mode (available for <code>Hesai Pandar 128E4X</code> LiDAR model)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h4 id="output-data">Output Data<a class="headerlink" href="#output-data" title="Permanent link">#</a></h4>
 <p><code>LidarSensor</code> provides public methods to extend this pipeline with additional <code>RGL</code> nodes.

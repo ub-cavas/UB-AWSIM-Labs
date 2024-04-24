@@ -2810,10 +2810,14 @@ As a result of loading, <code>TrafficLanes</code> and <code>StopLines</code> wil
 <li>
 <p>In the window that pops-up select your osm file, change some Waypoint Settings to suit your needs and click <code>Load</code>.</p>
 <p><img alt="load lanelet gif" src="load_lanelet2.gif"></p>
-<p>!!! info "Waypoint Settings explanation"
-      - <em>Resolution</em> - resolution of resampling. Lower values provide better accuracy at the cost of processing time
-      - <em>Min Delta Length</em> - minimum length(m) between adjacent points
-      - <em>Min Delta Angle</em> - minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve</p>
+<div class="admonition info">
+<p class="admonition-title">Waypoint Settings explanation</p>
+<ul>
+<li><em>Resolution</em> - resolution of resampling. Lower values provide better accuracy at the cost of processing time</li>
+<li><em>Min Delta Length</em> - minimum length(m) between adjacent points</li>
+<li><em>Min Delta Angle</em> - minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Traffic Lanes and Stop Lanes should occur in the Hierarchy view.
@@ -2824,14 +2828,18 @@ If they appear somewhere else in your Hierarchy tree, then move them into the <c
 <p>The Traffic Lanes that were loaded should be configures accordingly to the road situation.
 The aspects you can configure</p>
 <ul>
-<li>Right of way<p>The right of way has to be configured so that Vehicles know how ot behave in the traffic.
-  To configure this please visit a <a href="#7-configure-right-of-way">dedicated section in Add a Traffic Lane</a>.
-  After you have set right of way to all traffic lanes please follow <a href="#10-set-the-right-of-ways">this final step</a>.</p>
+<li>
+<p>Right of way</p>
+<p>The right of way has to be configured so that Vehicles know how ot behave in the traffic.
+To configure this please visit a <a href="#7-configure-right-of-way">dedicated section in Add a Traffic Lane</a>.
+After you have set right of way to all traffic lanes please follow <a href="#10-set-the-right-of-ways">this final step</a>.</p>
 </li>
 </ul>
 <ul>
-<li>Stop Line<p>Assuming you have all Stop Lines loaded from the lanelet you have to add them to the Traffic Lanes.
-  For detailed instruction please visit a <a href="#8-add-stop-line">dedicated section in Add a Traffic Lane</a>.</p>
+<li>
+<p>Stop Line</p>
+<p>Assuming you have all Stop Lines loaded from the lanelet you have to add them to the Traffic Lanes.
+For detailed instruction please visit a <a href="#8-add-stop-line">dedicated section in Add a Traffic Lane</a>.</p>
 <p>If - for any reason - you don't have all the Stop Lines added, please follow <a href="#add-a-stopline-manually">this dedicated section</a>.</p>
 </li>
 </ul>

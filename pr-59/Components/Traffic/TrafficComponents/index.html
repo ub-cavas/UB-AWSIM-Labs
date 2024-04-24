@@ -2842,34 +2842,46 @@
 <p><img alt="traffic components diagram" src="traffic_components.png"></p>
 <p>The random traffic system consists of the following components:</p>
 <ul>
-<li><a href="#trafficmanager-script"><code>TrafficManager</code></a><p>It is a top level interface meant to be used on the <em>Unity</em> scene.
-  <code>TrafficManager</code> runs all elements needed for a successful traffic simulation.
-  This component manages all <code>TrafficSimulators</code> so they don't work against each other.
-  It gives you the possibility to configure the <code>TrafficSimulators</code>.</p>
+<li>
+<p><a href="#trafficmanager-script"><code>TrafficManager</code></a></p>
+<p>It is a top level interface meant to be used on the <em>Unity</em> scene.
+<code>TrafficManager</code> runs all elements needed for a successful traffic simulation.
+This component manages all <code>TrafficSimulators</code> so they don't work against each other.
+It gives you the possibility to configure the <code>TrafficSimulators</code>.</p>
 </li>
 </ul>
 <ul>
-<li><code>TrafficSimulator</code><p>Technically it is not a component, it is crucial to understand what it is and what it does in order to correctly configure the <code>TrafficManager</code>.
-  <code>TrafficSimulator</code> manages <code>NPCVehicles</code> spawning.
-  There can be many <code>TrafficSimulators</code> on the scene.
-  They are added and configured in the <code>TrafficManager</code> component.
-  Every <code>TrafficSimulator</code> manages some part of the traffic it is responsible for - meaning it has spawned the <code>NPCVehicles</code> and set their configuration.</p>
-<p>- <code>RandomTrafficSimulator</code> - spawns and controls <code>NPCVehicles</code> driving randomly
-  - <code>RouteTrafficSimulator</code> - spawns and controls <code>NPCVehicles</code> driving on a defined route</p>
-<p>!!! info "TrafficSimulator inaccessibility"
-      It is not possible to get direct access to the <code>TrafficSimulator</code>.
-      It should be added and configured through the <code>TrafficManager</code> component.</p>
+<li>
+<p><code>TrafficSimulator</code></p>
+<p>Technically it is not a component, it is crucial to understand what it is and what it does in order to correctly configure the <code>TrafficManager</code>.
+<code>TrafficSimulator</code> manages <code>NPCVehicles</code> spawning.
+There can be many <code>TrafficSimulators</code> on the scene.
+They are added and configured in the <code>TrafficManager</code> component.
+Every <code>TrafficSimulator</code> manages some part of the traffic it is responsible for - meaning it has spawned the <code>NPCVehicles</code> and set their configuration.</p>
+<ul>
+<li><code>RandomTrafficSimulator</code> - spawns and controls <code>NPCVehicles</code> driving randomly</li>
+<li><code>RouteTrafficSimulator</code> - spawns and controls <code>NPCVehicles</code> driving on a defined route</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TrafficSimulator inaccessibility</p>
+<p>It is not possible to get direct access to the <code>TrafficSimulator</code>.
+It should be added and configured through the <code>TrafficManager</code> component.</p>
+</div>
 </li>
 </ul>
 <ul>
-<li><a href="#trafficlanes"><code>TrafficLane</code></a>, <a href="#trafficintersections"><code>TrafficIntersection</code></a> and <a href="#stoplines"><code>StopLine</code></a><p>These components represent traffic entities.
-  They are used to control and manage the traffic with respect to traffic rules and current road situation.</p>
+<li>
+<p><a href="#trafficlanes"><code>TrafficLane</code></a>, <a href="#trafficintersections"><code>TrafficIntersection</code></a> and <a href="#stoplines"><code>StopLine</code></a></p>
+<p>These components represent traffic entities.
+They are used to control and manage the traffic with respect to traffic rules and current road situation.</p>
 </li>
 </ul>
 <ul>
-<li><a href="../../../Components/Traffic/NPCs/Vehicle/"><code>NPCVehicle</code></a><p>The vehicle models (<em>NPCs</em>) spawned by one of the <code>TrafficSimulators</code>.
-  They are spawned according to the <code>TrafficSimulator</code> configuration and either drive around the map randomly (when spawned by a <a href="#random-traffic"><code>RandomTrafficSimulator</code></a>) or follow the predefined path (when spawned by a <a href="#route-traffic"><code>RouteTrafficSimulator</code></a>).
-  <code>NPCVehicles</code> are managed by one central knowledge base.</p>
+<li>
+<p><a href="../../../Components/Traffic/NPCs/Vehicle/"><code>NPCVehicle</code></a></p>
+<p>The vehicle models (<em>NPCs</em>) spawned by one of the <code>TrafficSimulators</code>.
+They are spawned according to the <code>TrafficSimulator</code> configuration and either drive around the map randomly (when spawned by a <a href="#random-traffic"><code>RandomTrafficSimulator</code></a>) or follow the predefined path (when spawned by a <a href="#route-traffic"><code>RouteTrafficSimulator</code></a>).
+<code>NPCVehicles</code> are managed by one central knowledge base.</p>
 </li>
 </ul>
 <p>The process of spawning a <code>NPCVehicle</code> and its later behavior control is presented on the following sequence diagram.</p>

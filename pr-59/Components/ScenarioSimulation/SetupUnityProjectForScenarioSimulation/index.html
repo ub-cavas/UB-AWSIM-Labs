@@ -2529,19 +2529,17 @@ The instruction assumes using the Ubuntu OS.</p>
 <ol>
 <li>Open AutowareSimulationScenarioSimulator.unity scene placed under <code>Assets/AWSIM/Scenes/Main</code> directory</li>
 <li>Run the simulation by clicking <code>Play</code> button placed at the top section of Editor.</li>
-<li>
-<p>Launch <code>scenario_test_runner</code>.
-   </p><div class="highlight"><pre><span></span><code>source install/setup.bash
+<li>Launch <code>scenario_test_runner</code>.
+   <div class="highlight"><pre><span></span><code>source install/setup.bash
 ros2 launch scenario_test_runner scenario_test_runner.launch.py                        \
 architecture_type:=awf/universe  record:=false                                         \
 scenario:='$(find-pkg-share scenario_test_runner)/scenario/sample_awsim.yaml'          \
 sensor_model:=awsim_sensor_kit  vehicle_model:=sample_vehicle                          \
 launch_simple_sensor_simulator:=false autoware_launch_file:="e2e_simulator.launch.xml" \
 initialize_duration:=260 port:=8080
-</code></pre></div>
-<p><img alt="ss2_awsim.png" src="ss2_awsim.png"></p>
-</li>
+</code></pre></div></li>
 </ol>
+<p><img alt="ss2_awsim.png" src="ss2_awsim.png"></p>
 <h2 id="other-sample-scenarios">Other sample scenarios<a class="headerlink" href="#other-sample-scenarios" title="Permanent link">#</a></h2>
 <h3 id="conventional-traffic-lights-demo">Conventional traffic lights demo<a class="headerlink" href="#conventional-traffic-lights-demo" title="Permanent link">#</a></h3>
 <p>This scenario controls traffic signals in the scene based on OpenSCENARIO. It can be used to verify whether traffic light recognition pipeline works well in Autoware.</p>

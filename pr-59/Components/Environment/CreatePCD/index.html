@@ -2763,20 +2763,28 @@ Instead you can map the simulated environment.</p>
 <p>To properly perform the mapping, make sure you have the following files downloaded and configured:</p>
 <ul>
 <li><em>Lanelet2</em> format <em>OSM</em> data (<code>*.osm</code> file)</li>
-<li>3D model map of the area<p>!!! question "How to obtain a map"
-      You can obtain the 3D model of the area by using a <code>Environment</code> <em>prefab</em> prepared for <em>AWSIM</em> or by creating your own.
-      You can learn how to create you own <code>Environment</code> <em>prefab</em> in <a href="../../Environment/AddNewEnvironment/AddEnvironment/">this tutorial</a>.</p>
+<li>
+<p>3D model map of the area</p>
+<div class="admonition question">
+<p class="admonition-title">How to obtain a map</p>
+<p>You can obtain the 3D model of the area by using a <code>Environment</code> <em>prefab</em> prepared for <em>AWSIM</em> or by creating your own.
+You can learn how to create you own <code>Environment</code> <em>prefab</em> in <a href="../../Environment/AddNewEnvironment/AddEnvironment/">this tutorial</a>.</p>
+</div>
 </li>
 </ul>
 <ul>
-<li>Configured in-simulation vehicle object with sensors attached (only the <a href="../../../Components/Sensors/LiDARSensor/AddNewLiDAR/"><em>LiDAR</em></a> is necessary)<!-- !!! info "LiDAR count"
-      Please note that mapping with only **one** LiDAR sensor is supported for now.
-      If your *Vehicle* has more LiDAR sensors please remove them before moving on with this tutorial. -->
-<p>!!! tip "Vehicle model"
-      For the sake of creating a <em>PCD</em> the <em>vehicle</em> model doesn't have to be accurate.
-      It will be just a carrier for <em>LiDAR</em>.
-      The model can even be a simple box as shown <a href="#pointcloudmapper">earlier in this tutorial</a>.
-      Make sure it is not visible to the <em>LiDAR</em>, so it does not break the sensor readings.</p>
+<li>
+<p>Configured in-simulation vehicle object with sensors attached (only the <a href="../../../Components/Sensors/LiDARSensor/AddNewLiDAR/"><em>LiDAR</em></a> is necessary)</p>
+<!-- !!! info "LiDAR count"
+    Please note that mapping with only **one** LiDAR sensor is supported for now.
+    If your *Vehicle* has more LiDAR sensors please remove them before moving on with this tutorial. -->
+<div class="admonition tip">
+<p class="admonition-title">Vehicle model</p>
+<p>For the sake of creating a <em>PCD</em> the <em>vehicle</em> model doesn't have to be accurate.
+It will be just a carrier for <em>LiDAR</em>.
+The model can even be a simple box as shown <a href="#pointcloudmapper">earlier in this tutorial</a>.
+Make sure it is not visible to the <em>LiDAR</em>, so it does not break the sensor readings.</p>
+</div>
 </li>
 </ul>
 <h2 id="import-osm">Import OSM<a class="headerlink" href="#import-osm" title="Permanent link">#</a></h2>
@@ -2816,8 +2824,10 @@ Details on how to do this can be found on <a href="../../Environment/AddNewEnvir
 </li>
 <li>
 <p>Change the <code>Transform</code> for an even better visual experience.</p>
-<p>!!! note "Camera preview"
-      Observe how the <em>Camera</em> preview changes when adjusting the transformation.</p>
+<div class="admonition note">
+<p class="admonition-title">Camera preview</p>
+<p>Observe how the <em>Camera</em> preview changes when adjusting the transformation.</p>
+</div>
 <p><img alt="vehicle camera transform" src="vehicle_camera_transform.gif"></p>
 </li>
 </ol>
@@ -2839,17 +2849,23 @@ For more details and instruction how to do it please visit <a href="../../Sensor
 </li>
 <li>
 <p>Attach <em>Lidar Sensor</em> (script) to previously created <code>Lidar</code> <em>Object</em> by clicking on the 'Add Component' button, searching for the script and selecting it.</p>
-<p>!!! note "Point Cloud Visualization"
-      Please note that <em>Point Cloud Visualization</em> (script) will be added automatically with the <em>Lidar Sensor</em> (script).</p>
+<div class="admonition note">
+<p class="admonition-title">Point Cloud Visualization</p>
+<p>Please note that <em>Point Cloud Visualization</em> (script) will be added automatically with the <em>Lidar Sensor</em> (script).</p>
+</div>
 <p><img alt="add lidar sensor script" src="point_cloud_mapping_add_lidar_sensor_script.gif"></p>
 <p><img alt="lidar sensor search" src="lidar_sensor_search.png"></p>
 </li>
 <li>
 <p>Configure <em>LiDAR</em> pattern, e.g. by selecting one of the available presets.</p>
-<p>!!! example "Example Lidar Sensor configuration"
-      <img alt="lidar sensor configuration example" src="lidar_sensor_configuration.png"></p>
-<p>!!! note "Gaussian noise"
-      Gaussian noise should be disabled to achieve a more accurate map.</p>
+<div class="admonition example">
+<p class="admonition-title">Example Lidar Sensor configuration</p>
+<p><img alt="lidar sensor configuration example" src="lidar_sensor_configuration.png"></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Gaussian noise</p>
+<p>Gaussian noise should be disabled to achieve a more accurate map.</p>
+</div>
 </li>
 <li>
 <p>Attach <em>RGL Mapping Adapter</em> (script) to previously created <code>Lidar</code> <em>Object</em> by clicking on the 'Add Component' button, searching for the script and selecting it.</p>
@@ -2858,10 +2874,14 @@ For more details and instruction how to do it please visit <a href="../../Sensor
 </li>
 <li>
 <p>Configure <code>RGL Mapping Adapter</code> - e.g. set <code>Leaf Size</code> for filtering.</p>
-<p>!!! example "Example RGL Mapping Adapter configuration"
-      <img alt="rgl mapping adapter configuration example" src="rgl_mapping_adapter_configuration.png"></p>
-<p>!!! note "Downsampling"
-      Please note that downsampling is applied on the single LiDAR scans only. If you would like to filter merged scans use the external tool described below.</p>
+<div class="admonition example">
+<p class="admonition-title">Example RGL Mapping Adapter configuration</p>
+<p><img alt="rgl mapping adapter configuration example" src="rgl_mapping_adapter_configuration.png"></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Downsampling</p>
+<p>Please note that downsampling is applied on the single LiDAR scans only. If you would like to filter merged scans use the external tool described below.</p>
+</div>
 </li>
 </ol>
 <h4 id="effect-of-leaf-size-to-point-cloud-data-pcd-generation">Effect of <code>Leaf Size</code> to Point Cloud Data (PCD) generation<a class="headerlink" href="#effect-of-leaf-size-to-point-cloud-data-pcd-generation" title="Permanent link">#</a></h4>
@@ -2899,20 +2919,30 @@ A <code>Leaf Size</code> of 10.0 results in a reasonable PCD in the given exampl
 </li>
 <li>
 <p>Configure the <code>Point Cloud Mapper</code> fields:</p>
-<p>- <code>Osm Container</code> - the OSM file you <a href="#import-osm">imported earlier</a>
-  - <code>World Origin</code> - MGRS position of the origin of the scene</p>
-<div class="codehilite"><pre><span></span><code>  !!! note "World Origin coordinate system"
-      Use [*ROS* coordinate system](../../Vehicle/AddNewVehicle/AddSensors/#coordinate-system-conversion) for *World Origin*, not Unity.
-</code></pre></div>
-
-<p>- <code>Capture Location Interval</code> - Distance between consecutive capture points along lanelet centerline
-  - <code>Output Pcd File Path</code> - Output relative path from <code>Assets</code> folder
-  - <code>Target Vehicle</code> - The vehicle you want to use for point cloud capturing that you <a href="#setup-vehicle-sensors-rgl">created earlier</a></p>
-<p>!!! example "Example Point Cloud Mapper configuration"
-      <img alt="point cloud mapper configuration example" src="point_cloud_mapper_configuration2.png"></p>
-<p>!!! note "Lanelet visualization"
-      <img alt="point cloud mapper disabled lanelet visualizer" src="point_cloud_mapper_disable_ll.png">
-      It is recommended to disable Lanelet Visualizer by setting <code>Material</code> to <code>None</code> and <code>Width</code> equal to zero. Rendered Lanelet is not ignored by the LiDAR so it would be captured in the PCD.</p>
+<ul>
+<li><code>Osm Container</code> - the OSM file you <a href="#import-osm">imported earlier</a></li>
+<li>
+<p><code>World Origin</code> - MGRS position of the origin of the scene</p>
+<div class="admonition note">
+<p class="admonition-title">World Origin coordinate system</p>
+<p>Use <a href="../../Vehicle/AddNewVehicle/AddSensors/#coordinate-system-conversion"><em>ROS</em> coordinate system</a> for <em>World Origin</em>, not Unity.</p>
+</div>
+</li>
+</ul>
+<ul>
+<li><code>Capture Location Interval</code> - Distance between consecutive capture points along lanelet centerline</li>
+<li><code>Output Pcd File Path</code> - Output relative path from <code>Assets</code> folder</li>
+<li><code>Target Vehicle</code> - The vehicle you want to use for point cloud capturing that you <a href="#setup-vehicle-sensors-rgl">created earlier</a></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example Point Cloud Mapper configuration</p>
+<p><img alt="point cloud mapper configuration example" src="point_cloud_mapper_configuration2.png"></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Lanelet visualization</p>
+<p><img alt="point cloud mapper disabled lanelet visualizer" src="point_cloud_mapper_disable_ll.png">
+It is recommended to disable Lanelet Visualizer by setting <code>Material</code> to <code>None</code> and <code>Width</code> equal to zero. Rendered Lanelet is not ignored by the LiDAR so it would be captured in the PCD.</p>
+</div>
 </li>
 </ol>
 <h3 id="effect-of-capture-location-interval-to-pcd-generation">Effect of <code>Capture Location Interval</code> to PCD generation<a class="headerlink" href="#effect-of-capture-location-interval-to-pcd-generation" title="Permanent link">#</a></h3>
@@ -2953,10 +2983,12 @@ PCD file will be written when you stop your scene or all locations in the route 
 <p>Use this tool to downsample and save PCD in ASCII format.
     </p><div class="highlight"><pre><span></span><code>./DownsampleLargePCD -in &lt;PATH_TO_INPUT_PCD&gt; -out &lt;PATH_TO_OUTPUT_PCD&gt; -leaf 0.2,0.2,0.2
 </code></pre></div>
-    - Assuming input PCD is in your working directory and named <code>in_cloud.pcd</code> and output PCD is to be named <code>out_cloud.pcd</code> the command will be:
-        <div class="highlight"><pre><span></span><code>./DownsampleLargePCD -in in_cloud.pcd -out out_cloud.pcd -leaf 0.2,0.2,0.2
-</code></pre></div>
-    - You can also save PCD in binary format by adding <code>-binary 1</code> option.
+<ul>
+<li>Assuming input PCD is in your working directory and named <code>in_cloud.pcd</code> and output PCD is to be named <code>out_cloud.pcd</code> the command will be:
+    <div class="highlight"><pre><span></span><code>./DownsampleLargePCD -in in_cloud.pcd -out out_cloud.pcd -leaf 0.2,0.2,0.2
+</code></pre></div></li>
+<li>You can also save PCD in binary format by adding <code>-binary 1</code> option.</li>
+</ul>
 </li>
 <li>
 <p>Your PCD is ready to use.</p>
@@ -2987,11 +3019,15 @@ source &lt;PATH_TO_AUTOWARE&gt;/install/setup.bash
 </li>
 <li>
 <p>Launch the planning simulation with the map directory path (<code>map_path</code>) and PCD file (<code>pointcloud_map_file</code>) specified.</p>
-<p>!!! note "PCD file location"
-      The PCD file needs to be located in the Autoware map directory and as a <code>pointcloud_map_file</code> parameter you only supply the file name, not the path.</p>
-<p>!!! warning "Absolute path"
-      When launching <em>Autoware</em> never use <code>~/</code> to specify the home directory.
-      Either write the full absolute path ot use <code>$HOME</code> environmental variable.</p>
+<div class="admonition note">
+<p class="admonition-title">PCD file location</p>
+<p>The PCD file needs to be located in the Autoware map directory and as a <code>pointcloud_map_file</code> parameter you only supply the file name, not the path.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Absolute path</p>
+<p>When launching <em>Autoware</em> never use <code>~/</code> to specify the home directory.
+Either write the full absolute path ot use <code>$HOME</code> environmental variable.</p>
+</div>
 <div class="highlight"><pre><span></span><code>ros2 launch autoware_launch planning_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit map_path:=&lt;ABSOLUTE_PATH_TO_AUTOWARE_MAP&gt; pointcloud_map_file:=&lt;PCD_FILE_NAME&gt;
 </code></pre></div>
 </li>

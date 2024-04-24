@@ -2627,44 +2627,44 @@
 <p>Vast majority of features supported by <code>scenario_simulator_v2</code> are supported with AWSIM as well. Currently supported features are described in the <a href="https://tier4.github.io/scenario_simulator_v2-docs/developer_guide/OpenSCENARIOSupport/">scenario_simulator_v2's documentation</a>.</p>
 <p>Features which are not supported when connected with AWSIM are listed below.</p>
 <ol>
-<li>Controller properties used by <code>attach_*_sensor</code>
-    - <code>pointcloudPublishingDelay</code>
-    - <code>isClairvoyant</code>
-    - <code>detectedObjectPublishingDelay</code>
-    - <code>detectedObjectPositionStandardDeviation</code>
-    - <code>detectedObjectMissingProbability</code>
-    - <code>randomSeed</code></li>
+<li>Controller properties used by <code>attach_*_sensor</code><ul>
+<li><code>pointcloudPublishingDelay</code></li>
+<li><code>isClairvoyant</code></li>
+<li><code>detectedObjectPublishingDelay</code></li>
+<li><code>detectedObjectPositionStandardDeviation</code></li>
+<li><code>detectedObjectMissingProbability</code></li>
+<li><code>randomSeed</code></li>
+</ul>
+</li>
 </ol>
 <p>If those features are curcial for the scenario's execution, the scenario might not work properly.</p>
 <h2 id="awsim-scene-preparation-to-work-with-scenario_simulator_v2">AWSIM scene preparation to work with <code>scenario_simulator_v2</code><a class="headerlink" href="#awsim-scene-preparation-to-work-with-scenario_simulator_v2" title="Permanent link">#</a></h2>
 <ol>
 <li>Disable or remove random traffic and any pre-spawned NPCs</li>
 <li>Disable or remove V2I traffic lights publishing</li>
-<li>
-<p>Disable or remove the clock publisher</p>
+<li>Disable or remove the clock publisher</li>
+</ol>
 <p><img alt="removed_objects.png" src="removed_objects.png"></p>
-</li>
-<li>
-<p>Add <code>ScenarioSimulatorConnector</code> prefab to the scene - located in <code>Assets/ScenarioSimulatorConnector</code></p>
+<ol>
+<li>Add <code>ScenarioSimulatorConnector</code> prefab to the scene - located in <code>Assets/ScenarioSimulatorConnector</code></li>
+</ol>
 <p><img alt="scene_tree.png" src="scene_tree.png"></p>
-</li>
-<li>
-<p>Add Ego Follow Camera object - most likely Main Camera</p>
+<ol>
+<li>Add Ego Follow Camera object - most likely Main Camera</li>
+</ol>
 <p><img alt="follow_camera.png" src="follow_camera.png"></p>
-</li>
-<li>
-<p>If necessary update the asset_id to prefab mapping - key in the map can be used in the scenario</p>
+<ol>
+<li>If necessary update the asset_id to prefab mapping - key in the map can be used in the scenario</li>
+</ol>
 <p><img alt="entities.png" src="entities.png"></p>
-</li>
-<li>
-<p>Add TimeSourceSelector prefab to the scene - located in <code>Assets/AWSIM/Scripts/Clock/Prefabs</code></p>
+<ol>
+<li>Add TimeSourceSelector prefab to the scene - located in <code>Assets/AWSIM/Scripts/Clock/Prefabs</code></li>
+</ol>
 <p><img alt="scene_tree_time_selector.png" src="scene_tree_time_selector.png"></p>
-</li>
-<li>
-<p>Configure Type in the TimeSourceSelector component to SS2</p>
-<p><img alt="time_selector_ss2.png" src="time_selector_ss2.png"></p>
-</li>
-</ol></div>
+<ol>
+<li>Configure Type in the TimeSourceSelector component to SS2</li>
+</ol>
+<p><img alt="time_selector_ss2.png" src="time_selector_ss2.png"></p></div>
 
 
 

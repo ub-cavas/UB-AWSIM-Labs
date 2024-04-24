@@ -2643,29 +2643,45 @@ This library is already included so you don't need to install it, but there are 
 <ol>
 <li>
 <p>Clone <code>ROS2ForUnity</code> repository by execute command:</p>
-<p>=== "Ubuntu"
-      </p><div class="highlight"><pre><span></span><code>git clone https://github.com/RobotecAI/ros2-for-unity ~/
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Ubuntu</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>git clone https://github.com/RobotecAI/ros2-for-unity ~/
 </code></pre></div>
-      !!! warning
-          The cloned <code>ROS 2 For Unity</code> repository must be located in the home directory <code>~/</code>.
-  === "Windows"
-      <div class="highlight"><pre><span></span><code>git clone https://github.com/RobotecAI/ros2-for-unity /C
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The cloned <code>ROS 2 For Unity</code> repository must be located in the home directory <code>~/</code>.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>git clone https://github.com/RobotecAI/ros2-for-unity /C
 </code></pre></div>
-      !!! warning
-          The cloned <code>ROS 2 For Unity</code> repository must be located in the home directory <code>C:\</code>.
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The cloned <code>ROS 2 For Unity</code> repository must be located in the home directory <code>C:\</code>.</p>
+</div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>Pull dependent repositories by execute commands:</p>
-<p>=== "Ubuntu"
-      </p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ros2-for-unity
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ros2-for-unity
 .<span class="w"> </span>/opt/ros/humble/setup.bash
 ./pull_repositories.sh
 </code></pre></div>
-<p>=== "Windows"
-      </p><div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">ros2-for-unity</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">ros2-for-unity</span>
 <span class="n">C</span><span class="p">:\</span><span class="n">ros2_humble</span><span class="p">\</span><span class="n">local_setup</span><span class="p">.</span><span class="n">ps1</span>
 <span class="p">.\</span><span class="n">pull_repositories</span><span class="p">.</span><span class="n">ps1</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 </li>
 </ol>
 <h2 id="2-setup-custom_msgs-package">2. Setup <code>custom_msgs</code> package<a class="headerlink" href="#2-setup-custom_msgs-package" title="Permanent link">#</a></h2>
@@ -2676,12 +2692,20 @@ Please, choose the appropriate option and follow the instructions.</p>
 
 <h3 id="21-package-contained-on-local-machine">2.1. Package contained on local machine<a class="headerlink" href="#21-package-contained-on-local-machine" title="Permanent link">#</a></h3>
 <ol>
-<li>Copy the <code>custom_msgs</code> package with custom message to the folder to <code>src/ros2cs/custom_messages</code> directory<p>=== "Ubuntu"
-      </p><div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>~/custom_msgs<span class="w"> </span>~/ros2-for-unity/src/ros2cs/custom_messages/
+<li>
+<p>Copy the <code>custom_msgs</code> package with custom message to the folder to <code>src/ros2cs/custom_messages</code> directory</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Ubuntu</label><label for="__tabbed_4_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>~/custom_msgs<span class="w"> </span>~/ros2-for-unity/src/ros2cs/custom_messages/
 </code></pre></div>
-<p>=== "Windows"
-      </p><div class="highlight"><pre><span></span><code><span class="nb">Copy-Item</span> <span class="s1">'C:\custom_msgs'</span> <span class="n">-Destination</span> <span class="s1">'C:\ros2-for-unity\src\custom_messages'</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">Copy-Item</span> <span class="s1">'C:\custom_msgs'</span> <span class="n">-Destination</span> <span class="s1">'C:\ros2-for-unity\src\custom_messages'</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 </li>
 </ol>
 <h3 id="22-package-hosted-on-git-repository">2.2. Package hosted on git repository<a class="headerlink" href="#22-package-hosted-on-git-repository" title="Permanent link">#</a></h3>
@@ -2689,18 +2713,21 @@ Please, choose the appropriate option and follow the instructions.</p>
 <li>Open <code>ros2-for-unity/ros2_for_unity_custom_messages.repos</code> file in editor.</li>
 <li>
 <p>Modify the contents of the file shown below, <strong>uncomment</strong> and <strong>set</strong>:</p>
-<p>- <code>&lt;package_name&gt;</code> - to your package name - so in this case <code>custom_msgs</code>,
-  - <code>&lt;repo_url&gt;</code> - to repository address,<br>
-  - <code>&lt;repo_branch&gt;</code> - to desired branch.
-  </p><div class="highlight"><pre><span></span><code>repositories:
+<ul>
+<li><code>&lt;package_name&gt;</code> - to your package name - so in this case <code>custom_msgs</code>,</li>
+<li><code>&lt;repo_url&gt;</code> - to repository address,  </li>
+<li><code>&lt;repo_branch&gt;</code> - to desired branch.
+<div class="highlight"><pre><span></span><code>repositories:
 #  src/ros2cs/custom_messages/&lt;package_name&gt;:
 #    type: git
 #    url: &lt;repo_url&gt;
 #    version: &lt;repo_branch&gt;
-</code></pre></div>
-<p>!!! example
-      Below is an example of a file configured to pull 2 packages (<code>custom_msgs</code>,<code>autoware_auto_msgs</code>) of messages hosted on a <em>git</em> repository.
-      </p><div class="highlight"><pre><span></span><code># NOTE: Use this file if you want to build with custom messages that reside in a separate remote repo.
+</code></pre></div></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Below is an example of a file configured to pull 2 packages (<code>custom_msgs</code>,<code>autoware_auto_msgs</code>) of messages hosted on a <em>git</em> repository.
+</p><div class="highlight"><pre><span></span><code># NOTE: Use this file if you want to build with custom messages that reside in a separate remote repo.
 # NOTE: use the following format
 
 repositories:
@@ -2713,22 +2740,29 @@ repositories:
         url: https://github.com/tier4/autoware_auto_msgs.git
         version: tier4/main
 </code></pre></div>
+</div>
 </li>
 <li>
 <p>Now pull the repositories again (also the <code>custom_msgs</code> package repository)</p>
-<p>=== "Ubuntu"
-      </p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ros2-for-unity
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Ubuntu</label><label for="__tabbed_5_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ros2-for-unity
 ./pull_repositories.sh
 </code></pre></div>
-<p>=== "Windows"
-      </p><div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">ros2-for-unity</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">ros2-for-unity</span>
 <span class="p">.\</span><span class="n">pull_repositories</span><span class="p">.</span><span class="n">ps1</span>
 </code></pre></div>
+</div>
+</div>
+</div>
 </li>
 </ol>
 <h2 id="3-build-ros-2-for-unity">3. Build ROS 2 For Unity<a class="headerlink" href="#3-build-ros-2-for-unity" title="Permanent link">#</a></h2>
 <p>Build <code>ROS2ForUnity</code> with custom message packages using the following commands:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Ubuntu</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Ubuntu</label><label for="__tabbed_6_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>cd ~/ros2-for-unity
@@ -2746,7 +2780,7 @@ repositories:
 <p>New <code>ROS2ForUnity</code> build, which you just made in step <a href="#3-build-ros-2-for-unity">3</a>, contains multiple libraries that already exist in the <em>AWSIM</em>.<br>
 To install <code>custom_msgs</code> and not copy all other unnecessary files, you should get the <code>custom_msgs</code> related libraries only.</p>
 <p>You can find them in following directories and simply copy to the analogous directories in <code>AWSIM/Assets/Ros2ForUnity</code> folder, or use the script described <a href="#automation-of-copying-message-files">here</a>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Ubuntu</label><label for="__tabbed_7_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -2755,13 +2789,15 @@ To install <code>custom_msgs</code> and not copy all other unnecessary files, yo
 </ul>
 </div>
 <div class="tabbed-block">
-<p>- <code>ros2-for-unity/install/asset/Ros2ForUnity/Plugins</code> which names matches <code>custom_msgs_*</code>
-  - <code>ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Windows/x86_64/</code> which names matches <code>custom_msgs_*</code></p>
+<ul>
+<li><code>ros2-for-unity/install/asset/Ros2ForUnity/Plugins</code> which names matches <code>custom_msgs_*</code></li>
+<li><code>ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Windows/x86_64/</code> which names matches <code>custom_msgs_*</code></li>
+</ul>
 </div>
 </div>
 </div>
 <h3 id="automation-of-copying-message-files">Automation of copying message files<a class="headerlink" href="#automation-of-copying-message-files" title="Permanent link">#</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Ubuntu</label><label for="__tabbed_4_2">Windows</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Ubuntu</label><label for="__tabbed_8_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To automate the process, you can use a script that copies all files related to your <code>custom_msgs</code> package.</p>

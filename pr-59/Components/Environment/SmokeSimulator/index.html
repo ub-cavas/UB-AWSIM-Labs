@@ -2465,18 +2465,22 @@ However, smoke simulated by Particle System cannot be sensed by RGL in AWSIM alt
 <li><code>Particle Range Radius</code>: Specifies the radius of a circle, centered at the GameObject, which defines the region in which <code>Smoke Particles</code> are generated in</li>
 <li><code>Particle Size</code>: Specifies the edge of a <code>Smoke Particle</code></li>
 <li><code>Average Lifetime</code>: Specifies the average lifetime of a <code>Smoke Particle</code></li>
-<li><code>Variation Lifetime</code>: Specifies the variation of lifetime of <code>Smoke Particles</code>.<p>The lifetime of a <code>Smoke Particle</code> is calculated as follows:</p>
-<div class="codehilite"><pre><span></span><code>  `lifetime` = `Average Lifetime` + Random.Range(-`Variation Lifetime`, `Variation Lifetime`)
+<li>
+<p><code>Variation Lifetime</code>: Specifies the variation of lifetime of <code>Smoke Particles</code>.</p>
+<p>The lifetime of a <code>Smoke Particle</code> is calculated as follows:</p>
+<div class="codehilite"><pre><span></span><code>`lifetime` = `Average Lifetime` + Random.Range(-`Variation Lifetime`, `Variation Lifetime`)
 </code></pre></div>
 
 </li>
 </ul>
 <ul>
-<li><code>Physics</code>: These parameters can be adjusted to specify the behavior of the smoke particles.
-    - <code>Initial Plane Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the x-z plane
-    - <code>Initial Vertical Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the vertical direction
-    - <code>Plane Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the x-z plane
-    - <code>Vertical Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the vertical direction</li>
+<li><code>Physics</code>: These parameters can be adjusted to specify the behavior of the smoke particles.<ul>
+<li><code>Initial Plane Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the x-z plane</li>
+<li><code>Initial Vertical Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the vertical direction</li>
+<li><code>Plane Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the x-z plane</li>
+<li><code>Vertical Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the vertical direction</li>
+</ul>
+</li>
 </ul>
 <p>4.(Optional): You may also specify the <code>Material</code> of <code>Smoke Particles</code>. If this field is unspecified, a default material is used</p>
 <p><img src="image_2.png"></p>

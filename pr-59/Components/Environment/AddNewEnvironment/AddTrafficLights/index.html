@@ -2556,27 +2556,28 @@ To simplify the process of creating an environment it is advised to create one <
 <p>To specify a material click on the selection button on <code>Materials</code> element and search for the material you want to use and select it.</p>
 <p><img alt="specify material" src="traffic_light_select_material.gif"></p>
 <p>Repeat this process until you specify all materials.
-  When you add one material more than there are sub-meshes you will see this warning.
-  Then just remove the last material and the <code>TrafficLight</code> is prepared.</p>
+When you add one material more than there are sub-meshes you will see this warning.
+Then just remove the last material and the <code>TrafficLight</code> is prepared.</p>
 <p><img alt="too many traffic materials" src="traffic_light_too_many_materials.png"></p>
-<p>!!! info
-      Different material for every bulb is necessary for the color changing behavior that we expect from traffic lights.
-      Even though in most cases you will use the same material for every <code>Bulb</code>, having them as different elements is necessary.
-      Please only use models of <code>TrafficLights</code> that have different <code>Materials Elements</code> for every <code>Bulb</code>.</p>
-<p>!!! warning "Materials order"
-      When specifying materials remember the order in which they are used in the mesh.
-      Especially remember what <code>Materials Elements</code> are associated with every <code>Bulb</code> in the <code>TrafficLight</code>.
-      This information will be needed later.</p>
-<div class="codehilite"><pre><span></span><code>  !!! example
-      In the case of `Traffic.Lights.001` the bulb materials are ordered starting from the left side with index 1 and increasing to the right.
-
-      ![bulb 1](traffic_light_1_bulb.png)
-
-      ![bulb 2](traffic_light_2_bulb.png)
-
-      ![bulb 3](traffic_light_3_bulb.png)
-</code></pre></div>
-
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Different material for every bulb is necessary for the color changing behavior that we expect from traffic lights.
+Even though in most cases you will use the same material for every <code>Bulb</code>, having them as different elements is necessary.
+Please only use models of <code>TrafficLights</code> that have different <code>Materials Elements</code> for every <code>Bulb</code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Materials order</p>
+<p>When specifying materials remember the order in which they are used in the mesh.
+Especially remember what <code>Materials Elements</code> are associated with every <code>Bulb</code> in the <code>TrafficLight</code>.
+This information will be needed later.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>In the case of <code>Traffic.Lights.001</code> the bulb materials are ordered starting from the left side with index 1 and increasing to the right.</p>
+<p><img alt="bulb 1" src="traffic_light_1_bulb.png"></p>
+<p><img alt="bulb 2" src="traffic_light_2_bulb.png"></p>
+<p><img alt="bulb 3" src="traffic_light_3_bulb.png"></p>
+</div>
+</div>
 </li>
 </ol>
 <h2 id="4-add-a-mesh-collider">4. Add a Mesh Collider<a class="headerlink" href="#4-add-a-mesh-collider" title="Permanent link">#</a></h2>
@@ -2600,16 +2601,20 @@ Do this by dragging a <code>TrafficLight</code> with a square representing a pla
 <p><img alt="bulb emission config" src="traffic_light_bulb_emissions_config.png"></p>
 </li>
 <li>
-<p>You will have to specify <code>Bulb material config</code>, in which you should add elements with fields:
-    - <code>Bulb Type</code> - One of the predefined Bulb types that describes the Bulb (its color and pattern).</p>
-<p>- <code>Material Index</code> - Index of the material that you want to be associated with the Bulb Type. This is where you need to use the knowledge from earlier where we said you have to remember what Materials Element corresponds to which bulb sub-mesh.</p>
-<p>!!! example "Bulb configuration example"
-      Here we specify an element Type as <code>RED_BULB</code> and associate it with Material that has an index 3.
-      This will result in associating the right most bulb with the name <code>RED_BULB</code>.
-      This information will be of use to us when specifying <code>TrafficLights</code> sequences.</p>
-<div class="codehilite"><pre><span></span><code>  ![traffic light bulb config](traffic_light_bulb_config.gif)
-</code></pre></div>
-
+<p>You will have to specify <code>Bulb material config</code>, in which you should add elements with fields:</p>
+<ul>
+<li><code>Bulb Type</code> - One of the predefined Bulb types that describes the Bulb (its color and pattern).</li>
+</ul>
+<ul>
+<li><code>Material Index</code> - Index of the material that you want to be associated with the Bulb Type. This is where you need to use the knowledge from earlier where we said you have to remember what Materials Element corresponds to which bulb sub-mesh.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Bulb configuration example</p>
+<p>Here we specify an element Type as <code>RED_BULB</code> and associate it with Material that has an index 3.
+This will result in associating the right most bulb with the name <code>RED_BULB</code>.
+This information will be of use to us when specifying <code>TrafficLights</code> sequences.</p>
+<p><img alt="traffic light bulb config" src="traffic_light_bulb_config.gif"></p>
+</div>
 </li>
 </ol>
 <div class="admonition success">

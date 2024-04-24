@@ -2497,7 +2497,7 @@ It will contain many parts, so first lets create a <code>Body</code> parent <em>
 <li>
 <p>To the <code>BodyCar</code> <em>Object</em> add a Mesh Filter.</p>
 <p>Click on the 'Add Component' button, search for <code>Mesh Filter</code> and select it.
-  Next search for <em>mesh</em> of your vehicle and select it in the <code>Mesh</code> field.</p>
+Next search for <em>mesh</em> of your vehicle and select it in the <code>Mesh</code> field.</p>
 <p><img alt="body car add mesh filter" src="body_car_add_mesh_filter.gif"></p>
 <p><img alt="mesh filter add component" src="mesh_filter_search.png"></p>
 </li>
@@ -2510,15 +2510,15 @@ It will contain many parts, so first lets create a <code>Body</code> parent <em>
 <li>
 <p>Specify Materials.</p>
 <p>You need to specify what materials will be used for rendering your <code>EgoVehicle</code> model.
-  Do this by adding elements to the <code>Materials</code> list and selecting the materials you wish to use as shown below.</p>
+Do this by adding elements to the <code>Materials</code> list and selecting the materials you wish to use as shown below.</p>
 <p><img alt="mesh renderer add materials" src="mesh_renderer_add_materials.gif"></p>
 <p>Add as many materials as your model has sub-meshes.</p>
-<p>!!!tip
-      When you add too many materials, meaning there will be no sub-meshes to apply these materials to, you will see this warning.
-      In such a case please remove materials until this warning disappears.</p>
-<div class="codehilite"><pre><span></span><code>  ![mesh renderer too many materials](mesh_renderer_too_many_materials.png)
-</code></pre></div>
-
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you add too many materials, meaning there will be no sub-meshes to apply these materials to, you will see this warning.
+In such a case please remove materials until this warning disappears.</p>
+<p><img alt="mesh renderer too many materials" src="mesh_renderer_too_many_materials.png"></p>
+</div>
 </li>
 </ol>
 <h3 id="add-interactive-body-parts">Add interactive Body parts<a class="headerlink" href="#add-interactive-body-parts" title="Permanent link">#</a></h3>
@@ -2559,7 +2559,9 @@ It will contain many parts, so first lets create a <code>Body</code> parent <em>
 <p>In this step we will add individual visuals for every wheel.
 This process is very similar to <a href="#add-interactive-body-parts">the one before</a>.</p>
 <ol>
-<li>Add a child <em>Object</em> to the <code>Models</code> <em>Object</em> called <code>WheelVisuals</code>.<p><img alt="wheel visuals add object" src="wheel_visuals_add_object.gif"></p>
+<li>
+<p>Add a child <em>Object</em> to the <code>Models</code> <em>Object</em> called <code>WheelVisuals</code>.</p>
+<p><img alt="wheel visuals add object" src="wheel_visuals_add_object.gif"></p>
 </li>
 </ol>
 <div class="admonition note">
@@ -2597,7 +2599,7 @@ That is, follow the instructions that follow this message for every wheel your V
 <li>
 <p>Repeat the steps before to add Breaks.</p>
 <p>The same way you have added the <code>WheelFrontL</code> <em>Object</em> now add the <code>WheelFrontLBreaks</code>.
-  Naturally you will have to adjust the mesh and materials used as they will be different for breaks than for the wheel.</p>
+Naturally you will have to adjust the mesh and materials used as they will be different for breaks than for the wheel.</p>
 <p>Your final break configuration should look similar to the one following.</p>
 <p><img alt="wheel front l breaks configured" src="wheel_front_l_breaks_configured.png"></p>
 </li>

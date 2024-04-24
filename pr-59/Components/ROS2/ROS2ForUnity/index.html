@@ -2742,20 +2742,24 @@ Spins and executes actions (e.g. clock, sensor publish triggers) in a dedicated 
 <li><code>Sensor</code> - an abstract base class for <em>ROS2</em>-enabled sensor.</li>
 <li><code>Transformations</code> - a set of transformation functions between coordinate systems of <em>Unity</em> and <em>ROS2</em>.</li>
 <li><code>PostInstall</code> - an internal class responsible for installing <code>R2FU</code> metadata files.</li>
-<li><code>Time</code> scripts - a set of classes that provide  the ability to use different time sources:
-    - <code>ROS2Clock</code> - <em>ROS2</em> clock class that for interfacing between a time source (<em>Unity</em> or <em>ROS2</em> system time) and <em>ROS2</em> messages.
-    - <code>ROS2TimeSource</code> - acquires <em>ROS2</em> time (system time by default).
-    - <code>UnityTimeSource</code> - acquires <em>Unity</em> time.
-    - <code>DotnetTimeSource</code> - acquires <em>Unity</em> <code>DateTime</code> based clock that has resolution increased using <code>Stopwatch</code>.
-    - <code>ITimeSource</code> - interface for general time extraction from any source.
-    - <code>TimeUtils</code> - utils for time conversion.</li>
+<li><code>Time</code> scripts - a set of classes that provide  the ability to use different time sources:<ul>
+<li><code>ROS2Clock</code> - <em>ROS2</em> clock class that for interfacing between a time source (<em>Unity</em> or <em>ROS2</em> system time) and <em>ROS2</em> messages.</li>
+<li><code>ROS2TimeSource</code> - acquires <em>ROS2</em> time (system time by default).</li>
+<li><code>UnityTimeSource</code> - acquires <em>Unity</em> time.</li>
+<li><code>DotnetTimeSource</code> - acquires <em>Unity</em> <code>DateTime</code> based clock that has resolution increased using <code>Stopwatch</code>.</li>
+<li><code>ITimeSource</code> - interface for general time extraction from any source.</li>
+<li><code>TimeUtils</code> - utils for time conversion.</li>
+</ul>
+</li>
 </ul>
 <h3 id="extension-scripts">Extension Scripts<a class="headerlink" href="#extension-scripts" title="Permanent link">#</a></h3>
 <p>Additionally, in order to adapt <em>AWSIM</em> to the use of <code>R2FU</code>, the following scripts are used:</p>
 <ul>
 <li><code>SimulatorROS2Node</code> - it is a class that is directly responsible for <em>AWSIM&lt;-&gt;ROS2</em> communication.</li>
-<li><code>ClockPublisher</code> - allows the publication of the simulation time from the clock running in the <em>SimulatorROS2Node</em>.
-It must be added as a component to the scene in order to publish the current time when the scene is run.<p><img alt="clock_publisher" src="clock_publisher.png"></p>
+<li>
+<p><code>ClockPublisher</code> - allows the publication of the simulation time from the clock running in the <em>SimulatorROS2Node</em>.
+It must be added as a component to the scene in order to publish the current time when the scene is run.</p>
+<p><img alt="clock_publisher" src="clock_publisher.png"></p>
 </li>
 </ul>
 <ul>
@@ -2767,29 +2771,39 @@ It uses the <a href="https://github.com/RobotecAI/ros2cs/blob/develop/src/ros2cs
 <h2 id="default-message-types">Default message types<a class="headerlink" href="#default-message-types" title="Permanent link">#</a></h2>
 <p>The basic <em>ROS2</em> msgs types that are supported in <em>AWSIM</em> by default include:</p>
 <ul>
-<li><a href="https://index.ros.org/r/common_interfaces/github-ros2-common_interfaces/">common_interfaces</a>:
-    - <a href="https://index.ros.org/p/std_msgs/github-ros2-common_interfaces/#humble"><code>std_msgs</code></a>.
-    - <a href="https://index.ros.org/p/geometry_msgs/github-ros2-common_interfaces/#humble"><code>geometry_msgs</code></a>,
-    - <a href="https://index.ros.org/p/sensor_msgs/github-ros2-common_interfaces/#humble"><code>sensor_msgs</code></a>,
-    - <a href="https://index.ros.org/p/nav_msgs/github-ros2-common_interfaces/#humble"><code>nav_msgs</code></a>,
-    - <a href="https://index.ros.org/p/diagnostic_msgs/github-ros2-common_interfaces/#humble"><code>diagnostic_msgs</code></a>,</li>
-<li><a href="https://index.ros.org/r/rcl_interfaces/github-ros2-rcl_interfaces/">rcl_interfaces</a>:
-    - <a href="https://index.ros.org/p/builtin_interfaces/github-ros2-rcl_interfaces/#humble"><code>builtin_interfaces</code></a>,
-    - <a href="https://index.ros.org/p/action_msgs/github-ros2-rcl_interfaces/#humble"><code>action_msgs</code></a>,
-    - <a href="https://index.ros.org/p/rosgraph_msgs/github-ros2-rcl_interfaces/#humble"><code>rosgraph_msgs</code></a>,
-    - <a href="https://index.ros.org/p/test_msgs/github-ros2-rcl_interfaces/#humble"><code>test_msgs</code></a>.</li>
-<li><a href="https://github.com/tier4/autoware_auto_msgs">autoware_auto_msgs</a>:
-    - <a href="https://index.ros.org/p/autoware_auto_control_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_control_msgs</code></a>,
-    - <a href="https://index.ros.org/p/autoware_auto_geometry_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_geometry_msgs</code></a>,
-    - <a href="https://index.ros.org/p/autoware_auto_planning_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_planning_msgs</code></a>,
-    - <a href="https://index.ros.org/p/autoware_auto_mapping_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_mapping_msgs</code></a>,
-    - <a href="https://index.ros.org/p/autoware_auto_vehicle_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_vehicle_msgs</code></a>.</li>
-<li><a href="https://github.com/tier4/tier4_autoware_msgs">tier4_autoware_msgs</a>:
-    - <a href="https://github.com/tier4/tier4_autoware_msgs/tree/tier4/universe/tier4_control_msgs"><code>tier4_control_msgs</code></a>,
-    - <a href="https://github.com/tier4/tier4_autoware_msgs/tree/tier4/universe/tier4_vehicle_msgs"><code>tier4_vehicle_msgs</code></a>.</li>
-<li>Others:
-    - <a href="https://index.ros.org/p/tf2_msgs/github-ros2-geometry2/#humble"><code>tf2_msgs</code></a>,
-    - <a href="https://index.ros.org/p/unique_identifier_msgs/github-ros2-unique_identifier_msgs/#humble"><code>unique_identifier_msgs</code></a>.</li>
+<li><a href="https://index.ros.org/r/common_interfaces/github-ros2-common_interfaces/">common_interfaces</a>:<ul>
+<li><a href="https://index.ros.org/p/std_msgs/github-ros2-common_interfaces/#humble"><code>std_msgs</code></a>.</li>
+<li><a href="https://index.ros.org/p/geometry_msgs/github-ros2-common_interfaces/#humble"><code>geometry_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/sensor_msgs/github-ros2-common_interfaces/#humble"><code>sensor_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/nav_msgs/github-ros2-common_interfaces/#humble"><code>nav_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/diagnostic_msgs/github-ros2-common_interfaces/#humble"><code>diagnostic_msgs</code></a>,</li>
+</ul>
+</li>
+<li><a href="https://index.ros.org/r/rcl_interfaces/github-ros2-rcl_interfaces/">rcl_interfaces</a>:<ul>
+<li><a href="https://index.ros.org/p/builtin_interfaces/github-ros2-rcl_interfaces/#humble"><code>builtin_interfaces</code></a>,</li>
+<li><a href="https://index.ros.org/p/action_msgs/github-ros2-rcl_interfaces/#humble"><code>action_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/rosgraph_msgs/github-ros2-rcl_interfaces/#humble"><code>rosgraph_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/test_msgs/github-ros2-rcl_interfaces/#humble"><code>test_msgs</code></a>.</li>
+</ul>
+</li>
+<li><a href="https://github.com/tier4/autoware_auto_msgs">autoware_auto_msgs</a>:<ul>
+<li><a href="https://index.ros.org/p/autoware_auto_control_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_control_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/autoware_auto_geometry_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_geometry_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/autoware_auto_planning_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_planning_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/autoware_auto_mapping_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_mapping_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/autoware_auto_vehicle_msgs/gitlab-autowarefoundation-autoware-auto-autoware_auto_msgs/#humble"><code>autoware_auto_vehicle_msgs</code></a>.</li>
+</ul>
+</li>
+<li><a href="https://github.com/tier4/tier4_autoware_msgs">tier4_autoware_msgs</a>:<ul>
+<li><a href="https://github.com/tier4/tier4_autoware_msgs/tree/tier4/universe/tier4_control_msgs"><code>tier4_control_msgs</code></a>,</li>
+<li><a href="https://github.com/tier4/tier4_autoware_msgs/tree/tier4/universe/tier4_vehicle_msgs"><code>tier4_vehicle_msgs</code></a>.</li>
+</ul>
+</li>
+<li>Others:<ul>
+<li><a href="https://index.ros.org/p/tf2_msgs/github-ros2-geometry2/#humble"><code>tf2_msgs</code></a>,</li>
+<li><a href="https://index.ros.org/p/unique_identifier_msgs/github-ros2-unique_identifier_msgs/#humble"><code>unique_identifier_msgs</code></a>.</li>
+</ul>
+</li>
 </ul>
 <p>In order for the message package to be used in <em>Unity</em>, its <code>*.dll</code> and <code>*.so</code> libraries must be generated using <code>R2FU</code>.</p>
 <div class="admonition tip">

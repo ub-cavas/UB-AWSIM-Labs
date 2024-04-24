@@ -2622,7 +2622,9 @@ This image is displayed in the <em>GUI</em> and further processed to obtain the 
 <p>The script uses two <a href="https://docs.unity3d.com/ScriptReference/ComputeShader.html"><code>ComputeShaders</code></a>, they are located in the same location as the scripts:</p>
 <ul>
 <li><code>CameraDistortion</code> - to correct the image using the camera distortion parameters,</li>
-<li><code>RosImageShader</code> - to encode two pixels color (<em>bgr8</em> - 3 bytes) into one (<em>uint32</em> - 4 bytes) in order to produce <em>ROS Image</em> <em>BGR8</em> buffer.<p><img alt="compute" src="compute.png"></p>
+<li>
+<p><code>RosImageShader</code> - to encode two pixels color (<em>bgr8</em> - 3 bytes) into one (<em>uint32</em> - 4 bytes) in order to produce <em>ROS Image</em> <em>BGR8</em> buffer.</p>
+<p><img alt="compute" src="compute.png"></p>
 </li>
 </ul>
 <table>
@@ -2644,15 +2646,19 @@ This image is displayed in the <em>GUI</em> and further processed to obtain the 
 <h4 id="elements-configurable-from-the-editor-level_1">Elements configurable from the editor level<a class="headerlink" href="#elements-configurable-from-the-editor-level_1" title="Permanent link">#</a></h4>
 <ul>
 <li><code>Output Hz</code> - frequency of output calculation and callback (default: <code>10Hz</code>)</li>
-<li><em>Image On GUI</em>:
-    - <code>Show</code> - if camera image should be show on <em>GUI</em> (default: <code>true</code>)
-    - <code>Scale</code> - scale of reducing the image from the camera, <code>1</code> - will give an image of real size, <code>2</code> - twice smaller, etc. (default: <code>4</code>)
-    - <code>X Axis</code> - position of the upper left corner of the displayed image in the X axis, <code>0</code>is the left edge (default: <code>0</code>)
-    - <code>Y Axis</code> - position of the upper left corner of the  displayed image in the Y axis, <code>0</code> is the upper edge (default: <code>0</code>)</li>
-<li><em>Camera parameters</em>
-    - <code>Width</code> - image width (default: <code>1920</code>)
-    - <code>Height</code> - image height (default: <code>1080</code>)
-    - <code>K1, K2, P1, P2, K3</code> - camera distortion coefficients for <em>Plum Bob</em> model<br>(default: <code>0, 0, 0, 0, 0</code>)</li>
+<li><em>Image On GUI</em>:<ul>
+<li><code>Show</code> - if camera image should be show on <em>GUI</em> (default: <code>true</code>)</li>
+<li><code>Scale</code> - scale of reducing the image from the camera, <code>1</code> - will give an image of real size, <code>2</code> - twice smaller, etc. (default: <code>4</code>)</li>
+<li><code>X Axis</code> - position of the upper left corner of the displayed image in the X axis, <code>0</code>is the left edge (default: <code>0</code>)</li>
+<li><code>Y Axis</code> - position of the upper left corner of the  displayed image in the Y axis, <code>0</code> is the upper edge (default: <code>0</code>)</li>
+</ul>
+</li>
+<li><em>Camera parameters</em><ul>
+<li><code>Width</code> - image width (default: <code>1920</code>)</li>
+<li><code>Height</code> - image height (default: <code>1080</code>)</li>
+<li><code>K1, K2, P1, P2, K3</code> - camera distortion coefficients for <em>Plum Bob</em> model<br>(default: <code>0, 0, 0, 0, 0</code>)</li>
+</ul>
+</li>
 <li><code>Camera Object</code> -  reference to the basic <a href="https://docs.unity3d.com/Manual/class-Camera.html"><em>Camera component</em></a> (default: <code>None</code>)</li>
 <li><code>Distortion Shader</code> - reference to <a href="https://docs.unity3d.com/ScriptReference/ComputeShader.html"><em>ComputeShader</em></a> asset about <em>Distortion Shader</em> functionality (default: <code>None</code>)</li>
 <li><code>Ros Image Shader</code> - reference to <a href="https://docs.unity3d.com/ScriptReference/ComputeShader.html"><em>ComputeShader</em></a> asset about <em>Ros Image Shader</em> functionality
