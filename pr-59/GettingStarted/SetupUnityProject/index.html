@@ -2586,29 +2586,7 @@
 <li>Prepare a desktop PC with Ubuntu 22.04 installed.</li>
 <li>Install <a href="../QuickStartDemo/#running-the-awsim-simulation-demo">Nvidia drivers and Vulkan Graphics API</a>.</li>
 <li>Install <a href="https://git-scm.com/">git</a>.</li>
-<li>
-<p>Set the ROS 2 middleware and the localhost only mode in <code>~/.profile</code> (or, in <code>~/.bash_profile</code> or <code>~/bash_login</code> if either of those exists) file:
-</p><div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_LOCALHOST_ONLY</span><span class="o">=</span><span class="m">1</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A system restart is required for these changes to work.</p>
-</div>
-</li>
-<li>
-<p>Set the system optimizations by adding this code to the very bottom of your <code>~/.bashrc</code> file:
-</p><div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-e<span class="w"> </span>/tmp/cycloneDDS_configured<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">    </span>sudo<span class="w"> </span>sysctl<span class="w"> </span>-w<span class="w"> </span>net.core.rmem_max<span class="o">=</span><span class="m">2147483647</span>
-<span class="w">    </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>lo<span class="w"> </span>multicast<span class="w"> </span>on
-<span class="w">    </span>touch<span class="w"> </span>/tmp/cycloneDDS_configured
-<span class="k">fi</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>As a result, each time you run the terminal (<code>bash</code> prompt), your OS will be configured for the best ROS 2 performance. Make sure you open your terminal at least one before running any instance of AWSIM (or Editor running the AWSIM).</p>
-</div>
-</li>
+<li>Follow <a href="../QuickStartDemo/#dds-configuration">the DDS configuration guide</a>.</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -2653,14 +2631,14 @@
 <h3 id="unity-installation">Unity installation<a class="headerlink" href="#unity-installation" title="Permanent link">#</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>AWSIM's Unity version is currently <strong>2021.1.7f1</strong></p>
+<p>AWSIM's Unity version is currently <strong>2022.3.21f1</strong></p>
 </div>
 <p>Follow the steps below to install Unity on your machine:</p>
 <ol>
 <li>Install UnityHub to manage Unity projects. Please go to <a href="https://unity3d.com/get-unity/download">Unity download page</a> and download latest <code>UnityHub.AppImage</code>.
 <img alt="" src="image_1.png"></li>
 <li>
-<p>Install Unity 2021.1.7f1 via UnityHub.</p>
+<p>Install Unity 2022.3.21f1 via UnityHub.</p>
 <ul>
 <li>Open new terminal, navigate to directory where <code>UnityHub.AppImage</code> is download and execute the following command:
 <div class="highlight"><pre><span></span><code>./UnityHub.AppImage
@@ -2678,7 +2656,7 @@
 </div>
 <ul>
 <li>*NOTE: If the installation process has not started after clicking the green button (image above), please copy the hyperlink (by rightclicking the button and selecting <code>Copy link address</code>) and add it as a argument for Unity Hub app. An example command:
-<div class="highlight"><pre><span></span><code>./UnityHub.AppImage unityhub://2021.1.7f1/d91830b65d9b
+<div class="highlight"><pre><span></span><code>./UnityHub.AppImage unityhub://2022.3.21f1/d91830b65d9b
 </code></pre></div></li>
 </ul>
 </li>
@@ -2739,7 +2717,7 @@
 </li>
 <li>
 <p>If your Unity Editor is in default location, run the project using the editor command.
-    </p><div class="highlight"><pre><span></span><code>~/Unity/Hub/Editor/2021.1.7f1/Editor/Unity -projectPath .
+    </p><div class="highlight"><pre><span></span><code>~/Unity/Hub/Editor/2022.3.21f1/Editor/Unity -projectPath .
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2768,7 +2746,7 @@
 <p><a class="md-button md-button--primary" href="https://drive.google.com/drive/folders/1Q6PolpCIwiVRdPNMjSBAQ5t2TcCoY-KZ">Download Map Package</a></p>
 </li>
 <li>
-<p>In Unity Editor, from the menu bar at the top, select <code>Assets -&gt; Import Package -&gt; Custom Package...</code> and navigate the <code>Nishishinjuku_urp.unitypackage</code> file.
+<p>In Unity Editor, from the menu bar at the top, select <code>Assets -&gt; Import Package -&gt; Custom Package...</code> and navigate the <code>Nishishinjuku_URP.unitypackage</code> file.
 <img alt="" src="image_10.png">
 <img alt="" src="image_11.png"></p>
 </li>
