@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM/main/Components/Traffic/RandomTraffic/AddRandomTrafficEnvironment/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM/main/Components/Vehicle/DynamicSensorPlacement/">
       
       
-        <link rel="prev" href="../YieldingRules/">
+        <link rel="prev" href="../URDFAndSensors/">
       
       
-        <link rel="next" href="../../NPCs/Pedestrian/">
+        <link rel="next" href="../AddNewVehicle/AddAVehicle/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
-        <title>Add Random Traffic Environment - AWSIM Labs Documentation</title>
+        <title>Dynamic Sensor Placement - AWSIM Labs Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-environment-for-random-traffic" class="md-skip">
+        <a href="#dynamic-sensor-placement" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add Random Traffic Environment
+              Dynamic Sensor Placement
             
           </span>
         </div>
@@ -231,7 +231,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
+      <a href="../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
+      <a href="../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
+      <a href="../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/Autoware/" class="md-nav__link">
+      <a href="../../../Introduction/Autoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/AWSIM/" class="md-nav__link">
+      <a href="../../../Introduction/AWSIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
+      <a href="../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/Directory/" class="md-nav__link">
+      <a href="../../../ProjectGuide/Directory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/HotkeyList/" class="md-nav__link">
+      <a href="../../../ProjectGuide/HotkeyList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/Scenes/" class="md-nav__link">
+      <a href="../../../ProjectGuide/Scenes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/GitBranch/" class="md-nav__link">
+      <a href="../../../ProjectGuide/GitBranch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
+      <a href="../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Clock/ClockPublisher/" class="md-nav__link">
+      <a href="../../Clock/ClockPublisher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,6 +766,8 @@
                 
   
   
+    
+  
   
   
     
@@ -774,13 +776,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -794,7 +794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Vehicle
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/EgoVehicle/" class="md-nav__link">
+      <a href="../EgoVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/URDFAndSensors/" class="md-nav__link">
+      <a href="../URDFAndSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,10 +847,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Vehicle/DynamicSensorPlacement/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dynamic Sensor Placement
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -859,6 +879,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#follow-the-steps-to-generate-the-urdf-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow the steps to generate the urdf file:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-dynamic-sensor-placement-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Dynamic Sensor Placement tool:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -910,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
+      <a href="../AddNewVehicle/AddAVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
+      <a href="../AddNewVehicle/AddColliders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
+      <a href="../AddNewVehicle/AddSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
+      <a href="../AddNewVehicle/AddVisualElements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/CustomizeSlip/" class="md-nav__link">
+      <a href="../CustomizeSlip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/FollowCamera/" class="md-nav__link">
+      <a href="../FollowCamera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
+      <a href="../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
+      <a href="../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
+      <a href="../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
+      <a href="../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/CameraSensor/" class="md-nav__link">
+      <a href="../../Sensors/CameraSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/IMUSensor/" class="md-nav__link">
+      <a href="../../Sensors/IMUSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/GNSSSensor/" class="md-nav__link">
+      <a href="../../Sensors/GNSSSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/VehicleStatusSensor/" class="md-nav__link">
+      <a href="../../Sensors/VehicleStatusSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AWSIMEnvironment/" class="md-nav__link">
+      <a href="../../Environment/AWSIMEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
+      <a href="../../Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
+      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1494,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
+      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1515,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
+      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1544,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
+      <a href="../../Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/CreatePCD/" class="md-nav__link">
+      <a href="../../Environment/CreatePCD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/LaneletBoundsVisualizer/" class="md-nav__link">
+      <a href="../../Environment/LaneletBoundsVisualizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/SmokeSimulator/" class="md-nav__link">
+      <a href="../../Environment/SmokeSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/V2I/" class="md-nav__link">
+      <a href="../../Environment/V2I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1662,8 +1729,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1672,11 +1737,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
         
           
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
@@ -1690,7 +1757,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Traffic
@@ -1704,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TrafficComponents/" class="md-nav__link">
+      <a href="../../Traffic/TrafficComponents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,8 +1789,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1732,11 +1797,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
@@ -1750,7 +1817,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_2">
             <span class="md-nav__icon md-icon"></span>
             Random Traffic
@@ -1764,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RandomTrafficSimulator/" class="md-nav__link">
+      <a href="../../Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../YieldingRules/" class="md-nav__link">
+      <a href="../../Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1803,30 +1870,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Add Random Traffic Environment
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,98 +1882,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#map-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Map preparation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-traffic-lights" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate Traffic Lights
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load-lanelet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Load Lanelet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-traffic-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate Traffic Intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-right-of-ways-on-uncontrolled-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate right of ways on uncontrolled intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-stop-lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate stop lines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assign-intersection-trafficlanes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assign Intersection TrafficLanes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-final-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check final configuration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1986,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NPCs/Pedestrian/" class="md-nav__link">
+      <a href="../../Traffic/NPCs/Pedestrian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2007,7 +1962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../NPCs/Vehicle/" class="md-nav__link">
+      <a href="../../Traffic/NPCs/Vehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2083,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/ROS2TopicList/" class="md-nav__link">
+      <a href="../../ROS2/ROS2TopicList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2104,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/AddACustomROS2Message/" class="md-nav__link">
+      <a href="../../ROS2/AddACustomROS2Message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2125,7 +2080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/ROS2ForUnity/" class="md-nav__link">
+      <a href="../../ROS2/ROS2ForUnity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2193,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
+      <a href="../../ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2214,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
+      <a href="../../ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2292,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/HowToContribute/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/HowToContribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2313,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2334,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2355,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2376,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2397,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/Documentation/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/Documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2418,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/License/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/License/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2439,7 +2394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/Contact/" class="md-nav__link">
+      <a href="../../../DeveloperGuide/Contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2487,72 +2442,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#map-preparation" class="md-nav__link">
+  <a href="#follow-the-steps-to-generate-the-urdf-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Map preparation
+      Follow the steps to generate the urdf file:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotate-traffic-lights" class="md-nav__link">
+  <a href="#using-the-dynamic-sensor-placement-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Annotate Traffic Lights
+      Using the Dynamic Sensor Placement tool:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-lanelet" class="md-nav__link">
+  <a href="#note" class="md-nav__link">
     <span class="md-ellipsis">
-      Load Lanelet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-traffic-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate Traffic Intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-right-of-ways-on-uncontrolled-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate right of ways on uncontrolled intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-stop-lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate stop lines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assign-intersection-trafficlanes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assign Intersection TrafficLanes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-final-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check final configuration
+      Note
     </span>
   </a>
   
@@ -2576,74 +2486,74 @@
   
 
 
-<div><h1 id="add-environment-for-random-traffic">Add Environment for Random Traffic<a class="headerlink" href="#add-environment-for-random-traffic" title="Permanent link">#</a></h1>
-<p>This document describes the steps to properly configuer <code>RandomTrafficSimulator</code> in your environment.</p>
-<h2 id="map-preparation">Map preparation<a class="headerlink" href="#map-preparation" title="Permanent link">#</a></h2>
-<p>The 3D map model should be added to the scene. Please make sure that the <code>Environment</code> component with appropriate <code>mgrsOffsetPosition</code> is attached to the root GameObject.
-<img alt="" src="map.png"></p>
-<h2 id="annotate-traffic-lights">Annotate Traffic Lights<a class="headerlink" href="#annotate-traffic-lights" title="Permanent link">#</a></h2>
-<p>Please attach <code>TrafficLight</code> component to all traffic light GameObjects placed on scene.
-<img alt="" src="traffic_light.png">  </p>
-<h2 id="load-lanelet">Load Lanelet<a class="headerlink" href="#load-lanelet" title="Permanent link">#</a></h2>
-<p>The lanelet load process can be performed by opening <code>AWSIM -&gt; Random Traffic -&gt; Load Lanelet</code> at the top toolbar of Unity Editor.
-<img alt="" src="load_lanelet.png"></p>
-<p>You should be prompted with a similar window to the one presented below. Please adjust the parameters for the loading process if needed.</p>
-<p><img alt="" src="lanelet_loader_window.png"></p>
-<p>Waypoint settings affect the density and accuracy of the generated waypoints. The parameters are described below:</p>
-<ul>
-<li>Resolution: resolution of resampling. Lower values provide better accuracy at the cost of processing time.</li>
-<li>Min Delta Length: minimum length(m) between adjacent points.</li>
-<li>Min Delta Angle: minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve.</li>
-</ul>
-<p>To generate the Lanelet2 map representation in your simulation, please click the <code>Load</code> button. Environment components should be generated and placed as child objects of the <code>Environment</code> GameObject. You can check their visual representation by clicking consecutive elements in the scene hierarchy.</p>
-<p><img alt="" src="environment_components.png"></p>
-<h2 id="annotate-traffic-intersections">Annotate Traffic Intersections<a class="headerlink" href="#annotate-traffic-intersections" title="Permanent link">#</a></h2>
-<p><img alt="" src="traffic_intersection.png"></p>
-<p>To annotate intersection please, add an empty GameObject named <code>TrafficIntersections</code> at the same level as the <code>TrafficLanes</code> GameObject.</p>
-<p>For each intersection repeat the following steps:</p>
+<div><h1 id="dynamic-sensor-placement">Dynamic Sensor Placement<a class="headerlink" href="#dynamic-sensor-placement" title="Permanent link">#</a></h1>
+<p>This tool allows you to dynamically place sensors on a car using positions and rotations specified in a URDF file.</p>
+<h2 id="follow-the-steps-to-generate-the-urdf-file">Follow the steps to generate the urdf file:<a class="headerlink" href="#follow-the-steps-to-generate-the-urdf-file" title="Permanent link">#</a></h2>
 <ol>
-<li>Add an GameObject named <code>TrafficIntersection</code> as a child object of the <code>TrafficIntersections</code> object.</li>
-<li>Attach a <code>TrafficIntersection</code> component to it.</li>
-<li>Add a  <code>BoxCollider</code> as a component of GameObject. It's size and position should cover the whole intersection. This is used for detecting vehicles in the intersection.</li>
-<li>Set <code>TrafficLightGroups</code>. Each group is controlled to have different signals, so facing traffic lights should be added to the same group. These groupings are used in traffic signal control.</li>
-<li>Specify the signal control pattern.</li>
+<li>
+<p>Build Autoware by following the instruction in https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/.</p>
+</li>
+<li>
+<p>Modify L3-4 in
+    <code>$HOME/autoware/src/universe/autoware.universe/launch/tier4_vehicle_launch/urdf/vehicle.xacro</code>
+    as the following,</p>
+<div class="codehilite"><pre><span></span><code>    &lt;xacro:arg name="vehicle_model" default="sample_vehicle"/&gt;
+    &lt;xacro:arg name="sensor_model" default="awsim_sensor_kit"/&gt;
+</code></pre></div>
+
+</li>
+<li>
+<p>Run the following commands:</p>
+<div class="codehilite"><pre><span></span><code>source $HOME/autoware/install/setup.bash
+
+ros2 run xacro xacro -o awsim_vehicle.urdf $HOME/autoware/src/universe/autoware.universe/launch/tier4_vehicle_launch/urdf/vehicle.xacro
+</code></pre></div>
+
+</li>
+<li>
+<p>You should now have a URDF file named <code>awsim_vehicle.urdf</code>.</p>
+</li>
 </ol>
-<h2 id="annotate-right-of-ways-on-uncontrolled-intersections">Annotate right of ways on uncontrolled intersections<a class="headerlink" href="#annotate-right-of-ways-on-uncontrolled-intersections" title="Permanent link">#</a></h2>
-<p>For the vehicles to operate properly it is needed to annotate the right of way of <code>TrafficLane</code> manually on intersections without traffic lights.</p>
-<p><img alt="" src="select_traffic_light.png"></p>
-<p>To set the right of way, please:</p>
-<ul>
-<li>Select a straight lane that is not right of way in the intersection. The selected lane should be highlighted as presented below.</li>
-<li>Click the <code>Set RightOfWays</code> button to give the lane priority over other lanes.
-<img alt="" src="set_right_of_way.png"></li>
-<li>Please check if all lanes that intersect with the selected lane are highlighted yellow. This means that the right of way was applied correctly.
-<img alt="" src="right_of_ways.png"></li>
-</ul>
-<h2 id="annotate-stop-lines">Annotate stop lines<a class="headerlink" href="#annotate-stop-lines" title="Permanent link">#</a></h2>
-<p>For each right turn lane that yields to the opposite straight or left turn lane, a stop line needs to be defined near the center of the intersection.
-<img alt="" src="stop_lines.png">
-If there is no visible stop line, a <code>StopLine</code> component should be added to the scene, near the center of the intersection and associated with <code>TrafficLane</code>.</p>
-<h2 id="assign-intersection-trafficlanes">Assign Intersection TrafficLanes<a class="headerlink" href="#assign-intersection-trafficlanes" title="Permanent link">#</a></h2>
-<p>To make the yielding rules work properly, it is necessary to catagorize the <code>TrafficLanes</code>.
-The ones that belong to an intersection have the <code>IntersectionLane</code> variable set to true.</p>
-<p>To automate the assignment of the corresponding <code>IntersectionLane</code> to each <code>TrafficLane</code>, the script <code>AssignIntersectionTrafficLanes</code> can be used.
-<img alt="" src="intersectionlane_script.png"></p>
+<h2 id="using-the-dynamic-sensor-placement-tool">Using the Dynamic Sensor Placement tool:<a class="headerlink" href="#using-the-dynamic-sensor-placement-tool" title="Permanent link">#</a></h2>
 <ol>
-<li>At the time of assignment, add it as a component to some object in the scene (e.g. to the <code>Environment</code> object).</li>
-<li>Disable the component (uncheck the checkbox next to the script name).</li>
-<li>Assign to <code>TrafficLanesObjectsParent</code> <em>GameObject</em>, which contains all <code>TrafficLanes</code> objects.</li>
-<li>Check all 4 options.</li>
-<li>Enable the component (check the checkbox next to the script name).</li>
+<li>
+<p>Open up AWSIM and place the generated <code>awsim_vehicle.urdf</code> in the Externals folder so the path will be <code>./Assets/AWSIM/Externals/awsim_vehicle.urdf</code>.</p>
+<p><img alt="alt text" src="image.png"></p>
+</li>
+<li>
+<p>Now, under open up the <code>Dynamic sensor placement</code> tool under AWSIM menu.</p>
+<p><img alt="alt text" src="menu.gif"></p>
+</li>
+<li>
+<p>Enter the path to the URDF file</p>
+<p><img alt="alt text" src="image-1.png"></p>
+</li>
+<li>
+<p>Click "Place sensors". All the sensors should be automatically placed on the car.</p>
+</li>
 </ol>
-<p>Check the log to see if all operations were completed:
-<img alt="" src="log.png"></p>
-<p>As a result, the names of <code>TrafficLane</code> objects should have prefixes with sequential numbers and <code>TrafficLane</code> at intersections should be marked. <code>TrafficLanes</code> with <code>IntersectionLane</code> set to <em>True</em> are displayed by <em>Gizmos</em> in green color, if <code>IntersectionLane</code> is <em>False</em> their color is white.
-<br><img alt="" src="names.png">
-<img alt="" src="intersectionlane.png"></p>
-<h2 id="check-final-configuration">Check final configuration<a class="headerlink" href="#check-final-configuration" title="Permanent link">#</a></h2>
-<p>Once all the components are ready, the simulation can be run.
-Check carefully if the vehicles are moving around the map correctly.
-For each intersection, review the settings of the relevant components if vehicles are unable to proceed.</p></div>
+<h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Only the game object named sensor_kit_base_link and its direct children will be assigned transforms if they are mentioned in the URDF file as children of sensor_kit_base_link. You will need to manually place the base_link game object.</p>
+<p><img alt="alt text" src="image-2.png"></p>
+</li>
+<li>
+<p>Ensure the names of the game objects are exactly the same as those mentioned in the URDF file. Look for the name of the child of sensor_kit_base_link in the URDF file under the <code>&lt;joint&gt;</code> tag.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><code>&lt;joint name="velodyne_top_base_mount_joint" type="fixed"&gt;
+    &lt;origin rpy="0.0 0.0 1.575" xyz="0.0 0.0 0.0"/&gt;
+    &lt;parent link="sensor_kit_base_link"/&gt;
+    &lt;child link="velodyne_top_base_link"/&gt;
+&lt;/joint&gt;
+</code></pre></div>
+
+</li>
+<li>
+<p>Finally, ensure that all the direct children of the sensor game objects have their rotations and positions set to zero.</p>
+<p><img alt="alt text" src="image-3.png"></p>
+</li>
+</ol></div>
 
 
 
@@ -2681,7 +2591,7 @@ For each intersection, review the settings of the relevant components if vehicle
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../YieldingRules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Yielding Rules">
+          <a href="../URDFAndSensors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: URDF And Sensors">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2691,20 +2601,20 @@ For each intersection, review the settings of the relevant components if vehicle
                 Previous
               </span>
               <div class="md-ellipsis">
-                Yielding Rules
+                URDF And Sensors
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../NPCs/Pedestrian/" class="md-footer__link md-footer__link--next" aria-label="Next: Pedestrian">
+          <a href="../AddNewVehicle/AddAVehicle/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Vehicle">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pedestrian
+                Add Vehicle
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2738,12 +2648,12 @@ For each intersection, review the settings of the relevant components if vehicle
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
-        <script src="../../../../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
