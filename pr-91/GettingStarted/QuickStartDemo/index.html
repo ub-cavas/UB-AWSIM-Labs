@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -2866,7 +2866,7 @@ The generated path can be seen on the image below.
 <p>To make the vehicle start navigating please engage its operation using the command below.</p>
 <div class="highlight"><pre><span></span><code>cd autoware
 source install/setup.bash
-ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage '{engage: True}' -1
+ros2 topic pub /autoware/engage autoware_vehicle_msgs/msg/Engage '{engage: True}' -1
 </code></pre></div>
 <p><img alt="" src="Image_running.png"></p>
 <p>The self-driving simulation demo has been successfully launched!</p>

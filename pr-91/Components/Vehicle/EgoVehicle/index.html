@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -3166,7 +3166,7 @@ AccelerationInput &lt; 0
 <p><img alt="script_ros" src="script_ros.png"></p>
 <p><em>Vehicle Ros</em> (script) is responsible for subscribing to messages that are vehicle control commands.
 The values read from the message are set on the inputs of the <a href="#vehicle-script"><em>Vehicle</em> (script)</a> script.</p>
-<p>The concept for vehicle dynamics is suitable for <em>Autoware's</em> <a href="https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs/-/blob/master/autoware_auto_control_msgs/msg/AckermannControlCommand.idl"><code>autoware_auto_control_msgs/AckermannControlCommand</code></a> and <a href="https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs/-/blob/master/autoware_auto_vehicle_msgs/msg/GearCommand.idl"><code>autoware_auto_vehicle_msgs/GearCommand</code></a> messages interface usage.
+<p>The concept for vehicle dynamics is suitable for <em>Autoware's</em> <a href="https://github.com/autowarefoundation/autoware_msgs/blob/main/autoware_control_msgs/msg/Control.msg"><code>autoware_control_msgs/Control</code></a> and <a href="https://github.com/autowarefoundation/autoware_msgs/blob/main/autoware_vehicle_msgs/msg/GearCommand.msg"><code>autoware_vehicle_msgs/GearCommand</code></a> messages interface usage.
 The script sets gear, steering angle of wheels and acceleration of the vehicle (read from the aforementioned messages) to the <em>Vehicle</em> (script) input.
 In the case of <em>VehicleEmergencyStamped</em> message it sets the absolute acceleration equal to 0.
 In addition, also through <em>Vehicle</em> (script), the appropriate lights are turned on and off depending on <em>TurnIndicatorsCommand</em> and <em>HazardLightsCommand</em>  messages.</p>
@@ -3193,25 +3193,25 @@ In addition, also through <em>Vehicle</em> (script), the appropriate lights are 
 <tr>
 <td align="left"><em>TurnIndicatorsCommand</em></td>
 <td align="left"><code>/control/command/turn_indicators_cmd</code></td>
-<td align="left"><code>autoware_auto_vehicle_msgs/TurnIndicatorsCommand</code></td>
+<td align="left"><code>autoware_vehicle_msgs/TurnIndicatorsCommand</code></td>
 <td align="center"><code>10</code></td>
 </tr>
 <tr>
 <td align="left"><em>HazardLightsCommand</em></td>
 <td align="left"><code>/control/command/hazard_lights_cmd</code></td>
-<td align="left"><code>autoware_auto_vehicle_msgs/HazardLightsCommand</code></td>
+<td align="left"><code>autoware_vehicle_msgs/HazardLightsCommand</code></td>
 <td align="center"><code>10</code></td>
 </tr>
 <tr>
 <td align="left"><em>AckermannControlCommand</em></td>
 <td align="left"><code>/control/command/control_cmd</code></td>
-<td align="left"><code>autoware_auto_control_msgs/AckermannControlCommand</code></td>
+<td align="left"><code>autoware_control_msgs/Control</code></td>
 <td align="center"><code>60</code></td>
 </tr>
 <tr>
 <td align="left"><em>GearCommand</em></td>
 <td align="left"><code>/control/command/gear_cmd</code></td>
-<td align="left"><code>autoware_auto_vehicle_msgs/GearCommand</code></td>
+<td align="left"><code>autoware_vehicle_msgs/GearCommand</code></td>
 <td align="center"><code>10</code></td>
 </tr>
 <tr>

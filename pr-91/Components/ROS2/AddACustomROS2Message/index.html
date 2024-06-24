@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -2747,7 +2747,7 @@ Please, choose the appropriate option and follow the instructions.</p>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Below is an example of a file configured to pull 2 packages (<code>custom_msgs</code>,<code>autoware_auto_msgs</code>) of messages hosted on a <em>git</em> repository.
+<p>Below is an example of a file configured to pull 2 packages (<code>custom_msgs</code>,<code>autoware_msgs</code>) of messages hosted on a <em>git</em> repository.
 </p><div class="highlight"><pre><span></span><code># NOTE: Use this file if you want to build with custom messages that reside in a separate remote repo.
 # NOTE: use the following format
 
@@ -2756,9 +2756,9 @@ repositories:
         type: git
         url: https://github.com/tier4/custom_msgs.git
         version: main
-    src/ros2cs/custom_messages/autoware_auto_msgs:
+    src/ros2cs/custom_messages/autoware_msgs:
         type: git
-        url: https://github.com/tier4/autoware_auto_msgs.git
+        url: https://github.com/tier4/autoware_msgs.git
         version: tier4/main
 </code></pre></div>
 </div>
