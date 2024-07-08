@@ -2655,43 +2655,36 @@
 <p>AWSIM's Unity version is currently <strong>2022.3.36f1</strong></p>
 </div>
 <p>Follow the steps below to install Unity on your machine:</p>
+<h4 id="install-unityhub">Install UnityHub:<a class="headerlink" href="#install-unityhub" title="Permanent link">#</a></h4>
 <ol>
 <li>Install UnityHub to manage Unity projects. Please go to <a href="https://unity3d.com/get-unity/download">Unity download page</a> and download latest <code>UnityHub.AppImage</code>.</li>
-<li>Install Unity 2022.3.36f1 via UnityHub.<ul>
+<li>Install Unity 2022.3.36f1 via UnityHub:<ul>
 <li>Open new terminal, navigate to directory where <code>UnityHub.AppImage</code> is download and execute the following command:
 <div class="highlight"><pre><span></span><code>./UnityHub.AppImage
 </code></pre></div></li>
-<li>To install Unity Editor please follow the steps below:</li>
 </ul>
 </li>
+</ol>
+<h4 id="install-unity-editor">Install Unity Editor:<a class="headerlink" href="#install-unity-editor" title="Permanent link">#</a></h4>
+<ol>
 <li>Click <code>Installs</code> from the left menu and then click the <code>Install Editor</code> button from the top right.</li>
-<li>From the new window click the <code>Official releases</code> tab and check for the current version of Unity.</li>
-<li>If you can't find the version, click to <code>Archive</code> and search for the version in the Unity archives page. It will direct you to <a href="https://unity3d.com/get-unity/download/archive">Unity Archive</a>.</li>
+<li>From the new window click the <code>Official releases</code> tab and check for the current version of Unity.
+   - If you can't find the version, click to <code>Archive</code> and search for the version in the Unity archives page. It will direct you to <a href="https://unity3d.com/get-unity/download/archive">Unity Archive</a>.</li>
 <li>
-<p>After finding the version, click the download/install button to start the installation process.</p>
-<ul>
-<li>
-<p>At this point, your Unity installation process should have started.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu 22</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
-<ul>
-<li>*NOTE: If the installation process has not started after clicking the download/install button, please copy the hyperlink (by right clicking the button and selecting <code>Copy link address</code>) and add it as an argument for Unity Hub app. An example command:
-<div class="highlight"><pre><span></span><code>./UnityHub.AppImage unityhub://2022.3.21f1/d91830b65d9b
-</code></pre></div></li>
-</ul>
+<p>After finding the version, click the download/install button to start the installation process.
+   - At this point, your Unity installation process should have started.</p>
+<p>=== "Ubuntu 22"
+   - *NOTE: If the installation process has not started after clicking the download/install button, please copy the hyperlink (by right clicking the button and selecting <code>Copy link address</code>) and add it as an argument for Unity Hub app. An example command:
+   </p><div class="highlight"><pre><span></span><code>./UnityHub.AppImage unityhub://2022.3.21f1/d91830b65d9b
+</code></pre></div>
 </li>
-</ul>
-<ul>
-<li>After successful installation the version will be available in the <code>Installs</code> tab in Unity Hub.</li>
-</ul>
+<li>
+<p>After successful installation the version will be available in the <code>Installs</code> tab in Unity Hub.</p>
 </li>
 </ol>
 <h3 id="open-awsim-project">Open AWSIM project<a class="headerlink" href="#open-awsim-project" title="Permanent link">#</a></h3>
 <p>To open the Unity AWSIM project in Unity Editor:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Using Unity Hub</label><label for="__tabbed_4_2">Using Terminal</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Using Unity Hub</label><label for="__tabbed_3_2">Using Terminal</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -2730,11 +2723,12 @@
 </li>
 <li>
 <p>If your Unity Editor is in default location, run the project using the editor command.
-    </p><div class="highlight"><pre><span></span><code>~/Unity/Hub/Editor/2022.3.21f1/Editor/Unity -projectPath .
+    </p><div class="highlight"><pre><span></span><code>~/Unity/Hub/Editor/[your_editor_version]/Editor/Unity -projectPath .
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If your Unity Editor is installed in different location, please adjust the path accordingly.</p>
+<p>Please specify your Unity Editor version in the path.
+If your Unity Editor is installed in different location, please adjust the path accordingly.</p>
 </div>
 </li>
 </ol>
