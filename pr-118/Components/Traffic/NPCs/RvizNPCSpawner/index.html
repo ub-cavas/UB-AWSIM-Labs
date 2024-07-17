@@ -2506,23 +2506,45 @@
 <div><h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
 <p>This feature allows you to spawn NPCs (pedestrians, cars, buses) in the Unity scene (AWSIM) from Autoware (RVIZ). It includes bulk deletion, vehicle velocity specification, and ensures NPC vehicles move straight, only colliding with the ground.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h2>
-<p>You can change the configuration of the NPCs in the <code>RVIZNPCSpawner</code> component in AWSIM. It is attached to the Environment game object in the AutowareSimulation scene. You can also attach the <code>RVIZNPCSpawner</code> to any other game object and set all the required values in your custom scene.
-- Attach the <code>RVIZNPCSpawner</code> component to one of the game objects in the scene. By default, it's attached to <code>Environment</code>.
-- In AWSIM, you can add more cars (smaller vehicles) or buses (large vehicles) in the <code>Npc Car prefabs</code> / <code>Npc Bus prefabs</code> lists respectively.
-- Then, select the <code>parent objects</code> under which the Pedestrians or Vehicles will be spawned.
-- Finally, adjust the <code>Despawn time</code> to destroy the NPCs after a delay.
-    <img alt="alt text" src="image.png"></p>
+<p>You can change the configuration of the NPCs in the <code>RVIZNPCSpawner</code> component in AWSIM. It is attached to the Environment game object in the AutowareSimulation scene. You can also attach the <code>RVIZNPCSpawner</code> to any other game object and set all the required values in your custom scene.</p>
+<ol>
+<li>
+<p>Attach the <code>RVIZNPCSpawner</code> component to one of the game objects in the scene. By default, it's attached to <code>Environment</code>.</p>
+</li>
+<li>
+<p>In AWSIM, you can add more cars (smaller vehicles) or buses (large vehicles) in the <code>Npc Car prefabs</code> / <code>Npc Bus prefabs</code> lists respectively.</p>
+</li>
+<li>
+<p>Then, select the <code>parent objects</code> under which the Pedestrians or Vehicles will be spawned.</p>
+</li>
+<li>
+<p>Finally, adjust the <code>Despawn time</code> to destroy the NPCs after a delay.</p>
+</li>
+</ol>
+<p><img alt="alt text" src="rvizspawner.png"></p>
 <h2 id="spawning-npcs-from-autoware">Spawning NPCs from Autoware<a class="headerlink" href="#spawning-npcs-from-autoware" title="Permanent link">#</a></h2>
-<ul>
-<li>Open up Autoware.</li>
-<li>Click the <code>2D Dummy Car</code>,<code>2D Dummy Bus</code> or <code>2D Dummy Pedestrian</code> button in the toolbar.<br>
-<img alt="alt text" src="image-1.png"></li>
-<li>Set the pose of the dummy object by clicking and dragging on the map.
-    <img alt="alt text" src="spawnPedestrian.gif"></li>
-<li>Set the velocity of the object in <code>Tool Properties</code> -&gt; <code>2D Dummy Car/Pedestrian panel</code>.
-    <img alt="alt text" src="image-2.png"></li>
-<li>NPCs will not be spawned if the you try to place them outside the map.</li>
-</ul></div>
+<ol>
+<li>
+<p>Open up Autoware.</p>
+</li>
+<li>
+<p>Click the <code>2D Dummy Car</code>,<code>2D Dummy Bus</code> or <code>2D Dummy Pedestrian</code> button in the toolbar.  </p>
+</li>
+</ol>
+<p><img alt="alt text" src="image-1.png"></p>
+<ol>
+<li>Set the pose of the dummy object by clicking and dragging on the map.</li>
+</ol>
+<p><img alt="alt text" src="spawnPedestrian.gif"></p>
+<ol>
+<li>
+<p>Set the velocity of the object in <code>Tool Properties</code> -&gt; <code>2D Dummy Car/Pedestrian panel</code>.
+  <img alt="alt text" src="toolsprop.png"></p>
+</li>
+<li>
+<p>NPCs will not be spawned if the you try to place them outside the map.</p>
+</li>
+</ol></div>
 
 
 
