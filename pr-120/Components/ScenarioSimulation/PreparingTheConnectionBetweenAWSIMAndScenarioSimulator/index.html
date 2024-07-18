@@ -2521,9 +2521,9 @@
 - how to modify scenario to work with AWSIM Labs
 - how to prepare the AWSIM Labs scene to work with <code>scenario_simulator_v2</code></p>
 <h2 id="scenario-preparation-to-work-with-awsim-labs">Scenario preparation to work with AWSIM Labs<a class="headerlink" href="#scenario-preparation-to-work-with-awsim-labs" title="Permanent link">#</a></h2>
-<p>To run the created scenario with Awsim Labs, necessary adjustments need to be made. After opening the generated .yaml file with a text editor of your choice, follow the steps below:</p>
+<p>To run the created scenario with AWSIM Labs, necessary adjustments need to be made. After opening the generated <code>.yaml</code> file with a text editor of your choice, follow the steps below:</p>
 <ol>
-<li>'CatalogLocation: []' should be removed and replaced with lines specifying the vehicle's properties.
+<li><code>CatalogLocation: [ ]</code> should be removed and replaced with lines specifying the vehicle's properties.
 <div class="highlight"><pre><span></span><code>   VehicleCatalog:
    Directory:
    path: $(ros2 pkg prefix --share openscenario_experimental_catalog)/vehicle
@@ -2535,14 +2535,15 @@
     SceneGraphFile:
       filepath: /home/your-username/projects/autoware/src/simulator/shinjuku_map/map/lanelet2_map.osm
 </code></pre></div></li>
-<li>In order for the added NPC to be created by AWSIM Labs, the 'model3d:' definition and the name of the desired prefab to be used should be entered.</li>
+<li>In order for the added NPC to be created by AWSIM Labs, the <code>model3d:</code> definition and the name of the desired prefab to be used should be entered.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>    - name: Npc1
+<p></p><div class="highlight"><pre><span></span><code>    - name: Npc1
         Vehicle:
           name: ''
           vehicleCategory: car
           model3d: "small_car"
 </code></pre></div>
+4. The BoundingBox values should also be updated according to the preferred NPC model.<strong><em>"Default AWSIM Labs asset catalog"</em></strong> section provides features that can be utilized to use default models.
 <h3 id="default-awsim-labs-asset-catalog">Default AWSIM Labs asset catalog<a class="headerlink" href="#default-awsim-labs-asset-catalog" title="Permanent link">#</a></h3>
 <p>AWSIM Labs currently supports the following asset key values.</p>
 <p>The list can be extended if required. Appropriate values should be added to asst key list in the <code>ScenarioSimulatorConnector</code> component and the vehicle parameters in scenario simulator should match them.</p>

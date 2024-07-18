@@ -2536,14 +2536,14 @@ The instruction assumes using the Ubuntu OS.</p>
 <h2 id="build-autoware-with-scenario_simulator_v2">Build Autoware with <code>scenario_simulator_v2</code><a class="headerlink" href="#build-autoware-with-scenario_simulator_v2" title="Permanent link">#</a></h2>
 <p>In order to configure the Autoware software with the AWSIM Labs demo, please:</p>
 <ol>
-<li>Clone the <a href="https://github.com/RobotecAI/autoware-1/tree/awsim-ss2-stable">Autoware</a> and move to the directory.
+<li>Clone the <a href="https://github.com/autowarefoundation/autoware.git">Autoware</a> and move to the directory.
    <div class="highlight"><pre><span></span><code>git clone git@github.com:autowarefoundation/autoware.git
 cd autoware
 </code></pre></div></li>
-<li>Check out to the <code>awsim-labs-stable</code> branch (This is a temporary branch, and it will be used in the main branch later on.)
+<li>Check out to the <code>awsim-labs-stable</code> branch <em>(This is a temporary branch, and it will be used in the main branch later on.)</em>
    <div class="highlight"><pre><span></span><code>git checkout awsim-labs-stable
 </code></pre></div></li>
-<li>Configure the environment. (Skip if Autoware environment has been configured before)
+<li>Configure the environment. <em>(Skip if Autoware environment has been configured before)</em>
    <div class="highlight"><pre><span></span><code>./setup-dev-env.sh
 </code></pre></div></li>
 <li>Create the <code>src</code> directory and clone external dependent repositories into it.
@@ -2571,7 +2571,7 @@ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 </ol>
 <h2 id="running-the-demo">Running the demo<a class="headerlink" href="#running-the-demo" title="Permanent link">#</a></h2>
 <ol>
-<li>Open AutowareSimulationScenarioSimulator.unity scene placed under <code>Assets/AWSIM-Labs/Scenes/Main</code> directory</li>
+<li>Open AutowareSimulationScenarioSimulator.unity scene placed under <code>Assets/AWSIM/Scenes/Main</code> directory</li>
 <li>Run the simulation by clicking <code>Play</code> button placed at the top section of Editor.</li>
 <li>Launch <code>scenario_test_runner</code>.
    <div class="highlight"><pre><span></span><code>source install/setup.bash
