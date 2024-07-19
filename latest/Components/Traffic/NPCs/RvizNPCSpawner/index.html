@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/Components/Vehicle/URDFAndSensors/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/Components/Traffic/NPCs/RvizNPCSpawner/">
       
       
-        <link rel="prev" href="../EgoVehicle/">
+        <link rel="prev" href="../../RandomTraffic/AddRandomTrafficEnvironment/">
       
       
-        <link rel="next" href="../DynamicSensorPlacement/">
+        <link rel="next" href="../Pedestrian/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>URDF And Sensors - AWSIM Labs Documentation</title>
+        <title>Spawn NPCs from RVIZ - AWSIM Labs Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.76a95c52.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.76a95c52.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#urdf-and-sensors" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              URDF And Sensors
+              Spawn NPCs from RVIZ
             
           </span>
         </div>
@@ -231,7 +231,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
+      <a href="../../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
+      <a href="../../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
+      <a href="../../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Introduction/Autoware/" class="md-nav__link">
+      <a href="../../../../Introduction/Autoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Introduction/AWSIM/" class="md-nav__link">
+      <a href="../../../../Introduction/AWSIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
+      <a href="../../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ProjectGuide/Directory/" class="md-nav__link">
+      <a href="../../../../ProjectGuide/Directory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ProjectGuide/HotkeyList/" class="md-nav__link">
+      <a href="../../../../ProjectGuide/HotkeyList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ProjectGuide/Scenes/" class="md-nav__link">
+      <a href="../../../../ProjectGuide/Scenes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ProjectGuide/GitBranch/" class="md-nav__link">
+      <a href="../../../../ProjectGuide/GitBranch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
+      <a href="../../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clock/ClockPublisher/" class="md-nav__link">
+      <a href="../../../Clock/ClockPublisher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,8 +766,6 @@
                 
   
   
-    
-  
   
   
     
@@ -776,11 +774,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -794,7 +794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Vehicle
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EgoVehicle/" class="md-nav__link">
+      <a href="../../../Vehicle/EgoVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -826,30 +826,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    URDF And Sensors
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Vehicle/URDFAndSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,50 +838,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#base-link" class="md-nav__link">
-    <span class="md-ellipsis">
-      Base Link
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Base Link">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sensor-kit" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sensor Kit
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -914,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DynamicSensorPlacement/" class="md-nav__link">
+      <a href="../../../Vehicle/DynamicSensorPlacement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AddNewVehicle/AddAVehicle/" class="md-nav__link">
+      <a href="../../../Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -995,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AddNewVehicle/AddColliders/" class="md-nav__link">
+      <a href="../../../Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AddNewVehicle/AddSensors/" class="md-nav__link">
+      <a href="../../../Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AddNewVehicle/AddVisualElements/" class="md-nav__link">
+      <a href="../../../Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CustomizeSlip/" class="md-nav__link">
+      <a href="../../../Vehicle/CustomizeSlip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FollowCamera/" class="md-nav__link">
+      <a href="../../../Vehicle/FollowCamera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1215,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/CameraSensor/" class="md-nav__link">
+      <a href="../../../Sensors/CameraSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/IMUSensor/" class="md-nav__link">
+      <a href="../../../Sensors/IMUSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/GNSSSensor/" class="md-nav__link">
+      <a href="../../../Sensors/GNSSSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensors/VehicleStatusSensor/" class="md-nav__link">
+      <a href="../../../Sensors/VehicleStatusSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1417,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AWSIMEnvironment/" class="md-nav__link">
+      <a href="../../../Environment/AWSIMEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1477,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
+      <a href="../../../Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
+      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1558,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
+      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
+      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1608,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
+      <a href="../../../Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/CreatePCD/" class="md-nav__link">
+      <a href="../../../Environment/CreatePCD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1658,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/LaneletBoundsVisualizer/" class="md-nav__link">
+      <a href="../../../Environment/LaneletBoundsVisualizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1679,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/SmokeSimulator/" class="md-nav__link">
+      <a href="../../../Environment/SmokeSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1700,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Environment/V2I/" class="md-nav__link">
+      <a href="../../../Environment/V2I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1726,6 +1662,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1734,13 +1672,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
@@ -1754,7 +1690,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Traffic
@@ -1768,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/TrafficComponents/" class="md-nav__link">
+      <a href="../../TrafficComponents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1828,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
+      <a href="../../RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1849,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
+      <a href="../../RandomTraffic/YieldingRules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
+      <a href="../../RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,6 +1832,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1904,13 +1842,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
@@ -1924,7 +1860,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5_3">
             <span class="md-nav__icon md-icon"></span>
             NPCs
@@ -1935,10 +1871,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Traffic/NPCs/RvizNPCSpawner/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Spawn NPCs from RVIZ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1947,6 +1901,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spawning-npcs-from-autoware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawning NPCs from Autoware
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1959,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/NPCs/Pedestrian/" class="md-nav__link">
+      <a href="../Pedestrian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1980,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Traffic/NPCs/Vehicle/" class="md-nav__link">
+      <a href="../Vehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2056,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS2/ROS2TopicList/" class="md-nav__link">
+      <a href="../../../ROS2/ROS2TopicList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2077,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS2/AddACustomROS2Message/" class="md-nav__link">
+      <a href="../../../ROS2/AddACustomROS2Message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2098,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ROS2/ROS2ForUnity/" class="md-nav__link">
+      <a href="../../../ROS2/ROS2ForUnity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2166,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
+      <a href="../../../ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2187,7 +2186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
+      <a href="../../../ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2265,7 +2264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/HowToContribute/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/HowToContribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2286,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2307,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2349,7 +2348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2370,7 +2369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/Documentation/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/Documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2391,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/License/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/License/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2412,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DeveloperGuide/Contact/" class="md-nav__link">
+      <a href="../../../../DeveloperGuide/Contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2450,8 +2449,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2460,26 +2457,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-link" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Base Link
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Base Link">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sensor-kit" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sensor Kit
+      Introduction
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spawning-npcs-from-autoware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawning NPCs from Autoware
+    </span>
+  </a>
   
 </li>
       
@@ -2501,95 +2501,48 @@
   
 
 
-<div><h1 id="urdf-and-sensors">URDF and Sensors<a class="headerlink" href="#urdf-and-sensors" title="Permanent link">#</a></h1>
-<p>This section describes the placement of sensors in <code>EgoVehicle</code> on the example of a <code>Lexus RX450h 2015 Sample Sensor</code> prefab.</p>
-<p><code>URDF</code> (<em>Unified Robot Description Format</em>) is equivalent to the simplified <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/URDF-Main.html"><em>URDF</em></a> format used in <em>ROS2</em>.
-This format allows to define the positions of all sensors of the vehicle in relation to its main parent prefab coordinate system.</p>
-<p><img alt="urdf" src="urdf_links/urdf_link.png"></p>
-<p><code>URDF</code> is added directly to the main parent of the prefab and there are no transforms between these objects.
-It is built using multiple <em>GameObjects</em> as children appropriately transformed with relation to its parent.</p>
-<p><img alt="urdf" src="urdf_links/urdf.png"></p>
-<p>The transforms in the <code>URDF</code> object are defined using the data from the <em>sensor kit</em> documentation used in the vehicle.
-Such data can be obtained from <em>sensor kit</em> packages for <em>Autoware</em>, for example: <a href="https://github.com/RobotecAI/awsim_sensor_kit_launch"><code>awsim_sensor_kit_launch</code></a> - it is used in the <em>AWSIM</em> compatible version of <em>Autoware</em>.
-This package contains a description of transforms between coordinate systems (frames) in the form of <code>*.yaml</code> files: <a href="https://github.com/RobotecAI/awsim_sensor_kit_launch/blob/main/awsim_sensor_kit_description/config/sensors_calibration.yaml">sensors_calibration</a> and <a href="https://github.com/RobotecAI/awsim_sensor_kit_launch/blob/main/awsim_sensor_kit_description/config/sensor_kit_calibration.yaml">sensor_kit_calibration</a>.</p>
-<p>In the first file, the transform of the <em>sensor kit</em> frame (<code>sensor_kit_base_link</code>) relative to the local vehicle frame (<code>base_link</code>) is defined.
-In <em>Unity</em>, this transform is defined in the object <a href="#sensor-kit"><code>Sensor Kit</code></a>.
-While the second file contains a definition of the transformations of all sensors with respect to the <em>sensor kit</em> - they are described in the <a href="#sensor-kit"><code>Sensor Kit</code></a> subsections.</p>
-<div class="admonition note">
-<p class="admonition-title">Transformations</p>
-<p>Please note that the transformation <em>Objects</em> are intended to be a direct reflection of frames existing in <em>ROS2</em>.
-All <em>frame</em> <em>Objects</em> are defined as children of <code>base_link</code> and consist of nothing but a transformation - analogical to the one present in <em>ROS2</em> (keep in mind the coordinate system conversion).
-The sensor <em>Objects</em> are added to the transformation <em>Object</em> with <strong>no transformation of their own</strong>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Coordinate system conventions</p>
-<p><em>Unity</em> uses a left-handed convention for its coordinate system, while the <em>ROS2</em> uses a right-handed convention.
-For this reason, you should remember to perform conversions to get the correct transforms.</p>
-</div>
-<h2 id="base-link">Base Link<a class="headerlink" href="#base-link" title="Permanent link">#</a></h2>
-<p><code>Base Link</code> (frame named <code>base_link</code>) is the formalized local coordinate system in <code>URDF</code>.
-All sensors that publish data specified in some frame present in <em>Autoware</em> are defined in relation to <code>base_link</code>.
-It is a standard practice in ROS, that <code>base_link</code> is a parent transformation of the whole robot and all robot parts are defined in some relation to the <code>base_link</code>.</p>
-<p>If any device publishes data in the <code>base_link</code> frame - it is added as a direct child, with no additional transformation intermediate <em>Object</em> (<code>PoseSensor</code> is an example).
-However, if this device has its own frame, it is added as a child to its frame <em>Object</em> - which provides an additional transformation.
-The final transformation can consist of many intermediate transformation <em>Objects</em>.
-The frame <em>Objects</em> are added to the <code>base_link</code> (<code>GnssSensor</code> and its parent <code>gnss_link</code> are an example).</p>
-<p><img alt="baselink" src="urdf_links/baselink.png"></p>
-<h3 id="sensor-kit">Sensor Kit<a class="headerlink" href="#sensor-kit" title="Permanent link">#</a></h3>
-<p><code>Sensor Kit</code> (frame named <code>sensor_kit_base_link</code>) is a set of objects that consists of all simulated sensors that are physically present in an autonomous vehicle and have their own coordinate system (frame).
-This set of sensors has its own frame <code>sensor_kit_base_link</code> that is relative to the <code>base_link</code>.</p>
-<p>In the <code>Lexus RX450h 2015 Sample Sensor</code> prefab, it is added to the <code>base_link</code> <em>GameObject</em> with an appropriately defined transformation.
-It acts as an intermediate frame <em>GameObject</em>.
-<code>Sensor Kit</code> is located on the top of the vehicle, so it is significantly shifted about the <code>Oy</code> and <code>Oz</code> axes.
-Sensors can be defined directly in this <em>Object</em> (<code>VelodyneVLP16</code> is an example), or have their own transformation <em>Object</em> added on top of the <code>sensor_kit_base_link</code> (like <code>GnssSensor</code> mentioned in the <a href="#base-link"><code>base_link</code> section</a>).</p>
-<p>The sensors described in this subsection are defined in relation to the <code>sensor_kit_base_link</code> <em>frame</em>.</p>
-<p><img alt="sensor_kit" src="urdf_links/sensor_kit.png"></p>
-<h4 id="lidars">LiDARs<a class="headerlink" href="#lidars" title="Permanent link">#</a></h4>
-<p><code>LidarSensor</code> is the component that simulates the <em>LiDAR</em> (<em>Light Detection and Ranging</em>) sensor.
-The <em>LiDARs</em> mounted on the top of autonomous vehicles are primarily used to scan the environment for localization in space and for detection and identification of obstacles.
-<em>LiDARs</em> placed on the left and right sides of the vehicle are mainly used to monitor the traffic lane and detect vehicles moving in adjacent lanes.
-A detailed description of this sensor is available in this <a href="../../../Components/Sensors/LiDARSensor/LiDARSensor/">section</a>.</p>
-<p><code>Lexus RX450h 2015 Sample Sensor</code> prefab has one <code>VelodyneVLP16</code> prefab sensor configured on the top of the vehicle, mainly used for location in space, but also for object recognition.
-Since the top <em>LiDAR</em> publishes data directly in the <code>sensor_kit_base_link</code> frame, the prefab is added directly to it - there is no transform.
-The other two remaining <em>LiDARs</em> are defined, but disabled - they do <strong>not</strong> provide data from space (but you can enable them!).</p>
-<h5 id="top">Top<a class="headerlink" href="#top" title="Permanent link">#</a></h5>
-<p><img alt="velodyne_top" src="urdf_links/velodyne_top.png"></p>
-<h5 id="left-disabled">Left - <em>disabled</em><a class="headerlink" href="#left-disabled" title="Permanent link">#</a></h5>
-<p><img alt="velodyne_left" src="urdf_links/velodyne_left.png"></p>
-<h5 id="right-disabled">Right - <em>disabled</em><a class="headerlink" href="#right-disabled" title="Permanent link">#</a></h5>
-<p><img alt="velodyne_right" src="urdf_links/velodyne_right.png"></p>
-<h4 id="imu">IMU<a class="headerlink" href="#imu" title="Permanent link">#</a></h4>
-<p><code>IMUSensor</code> is a component that simulates an <em>IMU</em> (<em>Inertial Measurement Unit</em>) sensor.
-It measures acceleration and angular velocity of the <code>EgoVehicle</code>.
-A detailed description of this sensor is available in this <a href="../../../Components/Sensors/IMUSensor/">section</a>.</p>
-<p><code>Lexus RX450h 2015 Sample Sensor</code> has one such sensor located on the top of the vehicle.
-It is added to an <em>Object</em> <code>tamagawa/imu_link</code> that matches its <code>frame_id</code> and contains its transform with respect to <code>sensor_kit_base_link</code>.
-This transformation has no transition, but only rotation around the <code>Oy</code> and <code>Oz</code> axes.
-The transform is defined in such a way that its axis <code>Oy</code> points downwards - in accordance with the gravity vector.</p>
-<p><img alt="imu" src="urdf_links/imu.png"></p>
-<h4 id="gnss">GNSS<a class="headerlink" href="#gnss" title="Permanent link">#</a></h4>
-<p><code>GnssSensor</code> is a component which simulates the position of vehicle computed by the <em>Global Navigation Satellite</em>.
-A detailed description of this sensor is available in this <a href="../../../Components/Sensors/GNSSSensor/">section</a>.</p>
-<p><code>Lexus RX450h 2015 Sample Sensor</code> prefab has one such sensor located on top of the vehicle.
-It is added to an <em>Object</em> <code>gnss_link</code> that matches its <code>frame_id</code> and contains its transform with respect to <code>sensor_kit_base_link</code>.
-The frame is slightly moved back along the <code>Oy</code> and <code>Oz</code> axes.</p>
-<p><img alt="gnss" src="urdf_links/gnss.png"></p>
-<h4 id="camera">Camera<a class="headerlink" href="#camera" title="Permanent link">#</a></h4>
-<p><code>CameraSensor</code> is a component that simulates an <em>RGB</em> camera.
-Autonomous vehicles can be equipped with many cameras used for various purposes.
-A detailed description of this sensor is available in this <a href="../../../Components/Sensors/CameraSensor/">section</a>.</p>
-<p><code>Lexus RX450h 2015 Sample Sensor</code> prefab has one camera, positioned on top of the vehicle in such a way that the cameras field of view provides an image including traffic lights - the status of which must be recognized by <em>Autoware</em>.
-It is added to an <em>Object</em> <code>traffic_light_left_camera/camera_link</code> that matches its <code>frame_id</code> and contains its transform with respect to <code>sensor_kit_base_link</code>.</p>
-<p><img alt="camera" src="urdf_links/camera.png"></p>
-<h4 id="pose">Pose<a class="headerlink" href="#pose" title="Permanent link">#</a></h4>
-<p><code>PoseSensor</code> is a component which provides access to the current position and rotation of the <code>EgoVehicle</code> -  is added as a ground truth.</p>
-<p>The position and orientation of <code>EgoVehicle</code> is defined as the position of the frame <code>base_link</code> in the global frame, so this <em>Object</em> is added directly as its child without a transform.</p>
-<p><img alt="pose" src="urdf_links/pose.png"></p>
-<h4 id="vehiclesensor">VehicleSensor<a class="headerlink" href="#vehiclesensor" title="Permanent link">#</a></h4>
-<p><code>VehicleStatusSensor</code> is a component that is designed to aggregate information about the current state of the <code>EgoVehicle</code>, such as the active control mode, vehicle speed, steering of its wheels, or turn signal status.
-A detailed description of this sensor is available in this <a href="../../../Components/Sensors/VehicleStatusSensor/">section</a>.</p>
-<p>This <em>Object</em> is not strictly related to any frame, however, it is assumed as a sensor, therefore it is added to the <code>URDF</code>.</p>
-<p><img alt="vehicle" src="urdf_links/vehicle.png"></p></div>
+  <h1>Spawn NPCs from RVIZ</h1>
+
+<div><h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>This feature allows you to spawn NPCs (pedestrians, cars, buses) in the Unity scene (AWSIM) from Autoware (RVIZ). It includes bulk deletion, vehicle velocity specification, and ensures NPC vehicles move straight, only colliding with the ground.</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h2>
+<p>You can change the configuration of the NPCs in the <code>RVIZNPCSpawner</code> component in AWSIM. It is attached to the Environment game object in the AutowareSimulation scene. You can also attach the <code>RVIZNPCSpawner</code> to any other game object and set all the required values in your custom scene.</p>
+<ol>
+<li>
+<p>Attach the <code>RVIZNPCSpawner</code> component to one of the game objects in the scene. By default, it's attached to <code>Environment</code>.</p>
+</li>
+<li>
+<p>In AWSIM, you can add more cars (smaller vehicles) or buses (large vehicles) in the <code>Npc Car prefabs</code> / <code>Npc Bus prefabs</code> lists respectively.</p>
+</li>
+<li>
+<p>Then, select the <code>parent objects</code> under which the Pedestrians or Vehicles will be spawned.</p>
+</li>
+<li>
+<p>Finally, adjust the <code>Despawn time</code> to destroy the NPCs after a delay.</p>
+</li>
+</ol>
+<p><img alt="alt text" src="rvizspawner.png"></p>
+<h2 id="spawning-npcs-from-autoware">Spawning NPCs from Autoware<a class="headerlink" href="#spawning-npcs-from-autoware" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Open up Autoware.</p>
+</li>
+<li>
+<p>Click the <code>2D Dummy Car</code>,<code>2D Dummy Bus</code> or <code>2D Dummy Pedestrian</code> button in the toolbar.  </p>
+</li>
+</ol>
+<p><img alt="alt text" src="image-1.png"></p>
+<ol>
+<li>Set the pose of the dummy object by clicking and dragging on the map.</li>
+</ol>
+<p><img alt="alt text" src="spawnPedestrian.gif"></p>
+<ol>
+<li>Set the velocity of the object in <code>Tool Properties</code> -&gt; <code>2D Dummy Car/Pedestrian panel</code>.</li>
+</ol>
+<p><img alt="alt text" src="toolsprop.png"></p>
+<ol>
+<li>NPCs will not be spawned if the you try to place them outside the map.</li>
+</ol></div>
 
 
 
@@ -2627,7 +2580,7 @@ A detailed description of this sensor is available in this <a href="../../../Com
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../EgoVehicle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ego Vehicle">
+          <a href="../../RandomTraffic/AddRandomTrafficEnvironment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Random Traffic Environment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2637,20 +2590,20 @@ A detailed description of this sensor is available in this <a href="../../../Com
                 Previous
               </span>
               <div class="md-ellipsis">
-                Ego Vehicle
+                Add Random Traffic Environment
               </div>
             </div>
           </a>
         
         
           
-          <a href="../DynamicSensorPlacement/" class="md-footer__link md-footer__link--next" aria-label="Next: Dynamic Sensor Placement">
+          <a href="../Pedestrian/" class="md-footer__link md-footer__link--next" aria-label="Next: Pedestrian">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Dynamic Sensor Placement
+                Pedestrian
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2684,12 +2637,12 @@ A detailed description of this sensor is available in this <a href="../../../Com
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="../../../assets/js/mathjax.js"></script>
+        <script src="../../../../assets/js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
