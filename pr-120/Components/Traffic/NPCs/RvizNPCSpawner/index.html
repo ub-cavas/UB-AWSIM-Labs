@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/pr-120/Components/Sensors/LiDARSensor/AddNewLiDAR/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/pr-120/Components/Traffic/NPCs/RvizNPCSpawner/">
       
       
-        <link rel="prev" href="../LiDARSensor/">
+        <link rel="prev" href="../../RandomTraffic/AddRandomTrafficEnvironment/">
       
       
-        <link rel="next" href="../ReadMaterialInformation/">
+        <link rel="next" href="../Pedestrian/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Add New LiDAR - AWSIM Labs Documentation</title>
+        <title>Spawn NPCs from RVIZ - AWSIM Labs Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-a-new-lidar" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add New LiDAR
+              Spawn NPCs from RVIZ
             
           </span>
         </div>
@@ -1049,8 +1049,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1059,11 +1057,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1077,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Sensors
@@ -1088,8 +1088,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1098,11 +1096,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_1" >
         
           
           <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
@@ -1116,7 +1116,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_3_1">
             <span class="md-nav__icon md-icon"></span>
             LiDAR Sensor
@@ -1130,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LiDARSensor/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,30 +1148,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Add New LiDAR
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,53 +1160,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-add-a-new-lidar-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Add a new LiDAR model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-create-new-lidar-prefab" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create new LiDAR prefab
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-test-your-prefab" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Test your prefab
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1239,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ReadMaterialInformation/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RGLUnityPlugin/" class="md-nav__link">
+      <a href="../../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CameraSensor/" class="md-nav__link">
+      <a href="../../../Sensors/CameraSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../IMUSensor/" class="md-nav__link">
+      <a href="../../../Sensors/IMUSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1331,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GNSSSensor/" class="md-nav__link">
+      <a href="../../../Sensors/GNSSSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../VehicleStatusSensor/" class="md-nav__link">
+      <a href="../../../Sensors/VehicleStatusSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1729,6 +1662,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1737,13 +1672,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
@@ -1757,7 +1690,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Traffic
@@ -1771,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/TrafficComponents/" class="md-nav__link">
+      <a href="../../TrafficComponents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
+      <a href="../../RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
+      <a href="../../RandomTraffic/YieldingRules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
+      <a href="../../RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,6 +1832,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1907,13 +1842,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
@@ -1927,7 +1860,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_5_3">
             <span class="md-nav__icon md-icon"></span>
             NPCs
@@ -1938,10 +1871,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Traffic/NPCs/RvizNPCSpawner/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Spawn NPCs from RVIZ
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1950,6 +1901,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spawning-npcs-from-autoware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spawning NPCs from Autoware
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1962,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/NPCs/Pedestrian/" class="md-nav__link">
+      <a href="../Pedestrian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Traffic/NPCs/Vehicle/" class="md-nav__link">
+      <a href="../Vehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,8 +2449,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2463,27 +2457,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-add-a-new-lidar-model" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Add a new LiDAR model
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-create-new-lidar-prefab" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Create new LiDAR prefab
+      Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-test-your-prefab" class="md-nav__link">
+  <a href="#spawning-npcs-from-autoware" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Test your prefab
+      Spawning NPCs from Autoware
     </span>
   </a>
   
@@ -2507,141 +2501,48 @@
   
 
 
-<div><h1 id="add-a-new-lidar">Add a new LiDAR<a class="headerlink" href="#add-a-new-lidar" title="Permanent link">#</a></h1>
-<p><code>RGLUnityPlugin</code> (<code>RGL</code>) comes with a number of the most popular <em>LiDARs</em> model definitions and <a href="../../../../Components/Sensors/LiDARSensor/LiDARSensor/#prefabs">ready-to-use prefabs</a>. However, there is a way to create your custom <em>LiDAR</em>. This section describes how to add a new <em>LiDAR</em> model that works with <code>RGL</code>, then create a prefab for it and add it to the scene.</p>
-<div class="admonition warning">
-<p class="admonition-title">Supported LiDARs</p>
-<p>Not all lidar types are supported by <code>RGL</code>. Unfortunately, in the case of <code>MEMs</code> <em>LiDARs</em>, there is a non-repetitive phenomenon - for this reason, the current implementation is not able to reproduce their work.</p>
-</div>
-<h2 id="1-add-a-new-lidar-model">1. Add a new LiDAR model<a class="headerlink" href="#1-add-a-new-lidar-model" title="Permanent link">#</a></h2>
-<p>The example shows the addition of a <em>LiDAR</em> named <code>NewLidarModel</code>.</p>
-<p>To add a new <em>LiDAR</em> model, perform the following steps:</p>
-<ol>
-<li>
-<p>Navigate to <code>Assets/RGLUnityPlugin/Scripts/LidarModels</code>.</p>
-</li>
-<li>
-<p>Add its name to the <code>LidarModels.cs</code> at the end of the enumeration. The order of enums must not be changed to keep existing prefabs working.</p>
-<p><img alt="lidar_models" src="lidar_models.png"></p>
-</li>
-<li>
-<p>Now, it is time to define the laser (also called a channel) distribution of the <em>LiDAR</em>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If your <em>LiDAR</em>:</p>
-<div class="codehilite"><pre><span></span><code>- has a uniform laser distribution
-- has the equal range for all of the lasers
-- fire all of the rays (beams) at the same time
-</code></pre></div>
+  <h1>Spawn NPCs from RVIZ</h1>
 
-<p>You can skip this step and use our helper method to generate a simple uniform laser array definition (more information in the next step).</p>
-</div>
+<div><h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
+<p>This feature allows you to spawn NPCs (pedestrians, cars, buses) in the Unity scene (AWSIM) from Autoware (RVIZ). It includes bulk deletion, vehicle velocity specification, and ensures NPC vehicles move straight, only colliding with the ground.</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h2>
+<p>You can change the configuration of the NPCs in the <code>RVIZNPCSpawner</code> component in AWSIM. It is attached to the Environment game object in the AutowareSimulation scene. You can also attach the <code>RVIZNPCSpawner</code> to any other game object and set all the required values in your custom scene.</p>
 <ol>
 <li>
-<p>Laser distribution is represented by <code>LaserArray</code> consists of:</p>
-<ul>
-<li>
-<p><code>centerOfMeasurementLinearOffsetMm</code> - 3D translation from the game object's origin to <em>LiDAR's</em> origin. Preview in 2D:</p>
-<p><img src="img/LidarOriginParameter.png" width="300"></p>
-</li>
-</ul>
-<ul>
-<li>
-<p><code>focalDistanceMm</code> - Distance from the sensor center to the focal point where all laser beams intersect.</p>
-<p><img src="img/LidarFocalDistanceParamter.png" width="300"></p>
-</li>
-</ul>
-<ul>
-<li>
-<p><code>lasers</code> - array of lasers (channels) with a number of parameters:</p>
-<ul>
-<li><code>horizontalAngularOffsetDeg</code> - horizontal angle offset of the laser (Azimuth)</li>
-<li><code>verticalAngularOffsetDeg</code> - vertical angle offset of the laser (Elevation)</li>
-<li><code>verticalLinearOffsetMm</code> - vertical offset of the laser (translation from origin)</li>
-<li><code>ringId</code> - Id of the ring (in most cases laser Id)</li>
-<li><code>timeOffset</code> - time offset of the laser firing in milliseconds (with reference to the first laser in the array)</li>
-<li><code>minRange</code> - minimum range of the laser (set if lasers have different ranges)</li>
-<li><code>maxRange</code> - maximum range of the laser (set if lasers have different ranges)</li>
-</ul>
-</li>
-</ul>
+<p>Attach the <code>RVIZNPCSpawner</code> component to one of the game objects in the scene. By default, it's attached to <code>Environment</code>.</p>
 </li>
 <li>
-<p>To define a new laser distribution create a new class in the <code>LaserArrayLibrary.cs</code></p>
-<p><img alt="lidar_array" src="img/LidarLaserArray.png"></p>
-<ul>
-<li>Add a new public static instance of <code>LaserArray</code> with the definition.</li>
-</ul>
-<p>In this example, <code>NewLidarModel</code> laser distribution consists of 5 lasers with</p>
-<div class="codehilite"><pre><span></span><code>- elevations: 15, 10, 0, -10, -15 degrees
-- azimuths: 1.4, -1.4, 1.4, -1.4, 1.4 degrees
-- ring Ids: 1, 2, 3, 4, 5
-- time offsets: 0, 0.01, 0.02, 0.03, 0.04 milliseconds
-- an equal range that will be defined later
-</code></pre></div>
-
-<div class="admonition warning">
-<p class="admonition-title">Coordinate system</p>
-<p>Keep in mind that <em>Unity</em> has a left-handed coordinate system, while most of the <em>LiDAR's</em> manuals use a right-handed coordinate system. In that case, reverse sign of the values of the angles.</p>
-</div>
+<p>In AWSIM, you can add more cars (smaller vehicles) or buses (large vehicles) in the <code>Npc Car prefabs</code> / <code>Npc Bus prefabs</code> lists respectively.</p>
+</li>
+<li>
+<p>Then, select the <code>parent objects</code> under which the Pedestrians or Vehicles will be spawned.</p>
+</li>
+<li>
+<p>Finally, adjust the <code>Despawn time</code> to destroy the NPCs after a delay.</p>
 </li>
 </ol>
-</li>
-<li>
-<p>The last step is to create a <em>LiDAR</em> configuration by adding an entry to <code>LidarConfigurationLibrary.cs</code></p>
-<p><img alt="lidar_configuration" src="img/LidarConfiguration.png"></p>
-<p>Add a new item to the <code>ByModel</code> dictionary that collects <em>LiDAR</em> model enumerations with their <code>BaseLidarConfiguration</code> choosing one of the implementations:</p>
-<ul>
-<li><code>UniformRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with a uniform range for all the rays (it contains <code>minRange</code> and <code>maxRange</code> parameters additionally)</li>
-<li><code>LaserBasedRangeLidarConfiguration</code> - lidar configuration for uniformly distributed rays along the horizontal axis with ranges retrieved from lasers description</li>
-<li><em>Or create your custom implementations in <code>LidarConfiguration.cs</code> like:</em><ul>
-<li><code>HesaiAT128LidarConfiguration</code></li>
-<li><code>HesaiQT128C2XLidarConfiguration</code></li>
-<li><code>HesaiPandar128E4XLidarConfiguration</code></li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Lidar configuration parameters descrition</p>
-<p>Please refer to <a href="../LiDARSensor/#elements-configurable-from-the-editor-level">this section</a> for the detailed description of all configuration parameters.</p>
-</div>
-</li>
-<li>
-<p>Done. New <em>LiDAR</em> preset should be available via <em>Unity Inspector</em>.</p>
-<p><img alt="done" src="done.png"></p>
-<p>Frame rate of the <em>LiDAR</em> can be set in the <code>Automatic Capture Hz</code> parameter.</p>
-<p><em>Note: In the real-world LiDARs, frame rate affects horizontal resolution. Current implementation separates these two parameters. Keep in mind to change it manually.</em></p>
-</li>
-</ol>
-<h2 id="2-create-new-lidar-prefab">2. Create new LiDAR prefab<a class="headerlink" href="#2-create-new-lidar-prefab" title="Permanent link">#</a></h2>
+<p><img alt="alt text" src="rvizspawner.png"></p>
+<h2 id="spawning-npcs-from-autoware">Spawning NPCs from Autoware<a class="headerlink" href="#spawning-npcs-from-autoware" title="Permanent link">#</a></h2>
 <ol>
-<li>Create an empty object and name it appropriately according to the <em>LiDAR</em> model.</li>
-<li>Attach script <code>LidarSensor.cs</code> to created object.</li>
-<li>Set the new added <em>LiDAR</em> model in <code>Model Preset</code> field, check if the configuration loads correctly. You can now customize it however you like.</li>
-<li>(Optional) Attach script <code>PointCloudVisualization.cs</code> for visualization purposes.</li>
-<li>For publishing point cloud via <em>ROS2</em> attach script <code>RglLidarPublisher.cs</code> script to created object.</li>
-<li>Set the topics on which you want the data to be published and their frame.</li>
-<li>Save the prefab in the project.</li>
+<li>
+<p>Open up Autoware.</p>
+</li>
+<li>
+<p>Click the <code>2D Dummy Car</code>,<code>2D Dummy Bus</code> or <code>2D Dummy Pedestrian</code> button in the toolbar.  </p>
+</li>
 </ol>
-<h2 id="3-test-your-prefab">3. Test your prefab<a class="headerlink" href="#3-test-your-prefab" title="Permanent link">#</a></h2>
+<p><img alt="alt text" src="image-1.png"></p>
 <ol>
-<li>Create a new scene (remember to add the <a href="../../../../Components/Sensors/LiDARSensor/RGLUnityPlugin/#scenemanager"><code>SceneManager</code></a>) or use one of <a href="../../../../ProjectGuide/Scenes/#rgl-test-scenes">the existing sample scenes</a>.</li>
-<li>
-<p>Add the prepared <em>LiDAR</em> prefab by drag the prefab file and drop it into a scene.</p>
-<p><img src="img/AddPrefabLidar.png" width="700"></p>
-</li>
-<li>
-<p>A <em>LiDAR</em> <em>GameObject</em> should be instantiated automatically</p>
-<p><img src="img/PrefabLidarObject.png" width="700"></p>
-</li>
-<li>
-<p>Now you can run the scene and check how your <em>LiDAR</em> works.</p>
-</li>
+<li>Set the pose of the dummy object by clicking and dragging on the map.</li>
 </ol>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>We encourage you to develop a vehicle using the new <em>LiDAR</em> you have added - learn how to do this <a href="../../../../Components/Vehicle/AddNewVehicle/AddAVehicle/">here</a>.</p>
-</div></div>
+<p><img alt="alt text" src="spawnPedestrian.gif"></p>
+<ol>
+<li>Set the velocity of the object in <code>Tool Properties</code> -&gt; <code>2D Dummy Car/Pedestrian panel</code>.</li>
+</ol>
+<p><img alt="alt text" src="toolsprop.png"></p>
+<ol>
+<li>NPCs will not be spawned if the you try to place them outside the map.</li>
+</ol></div>
 
 
 
@@ -2679,7 +2580,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../LiDARSensor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LiDAR Sensor">
+          <a href="../../RandomTraffic/AddRandomTrafficEnvironment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Random Traffic Environment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2689,20 +2590,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                LiDAR Sensor
+                Add Random Traffic Environment
               </div>
             </div>
           </a>
         
         
           
-          <a href="../ReadMaterialInformation/" class="md-footer__link md-footer__link--next" aria-label="Next: Read Material Information">
+          <a href="../Pedestrian/" class="md-footer__link md-footer__link--next" aria-label="Next: Pedestrian">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Read Material Information
+                Pedestrian
               </div>
             </div>
             <div class="md-footer__button md-icon">

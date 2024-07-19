@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/AWSIM-Labs/pr-120/Components/Traffic/NPCs/RvizNPCSpawner/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/AWSIM-Labs/pr-120/Components/Traffic/NPCs/Vehicle/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
