@@ -2169,19 +2169,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scenario-preparation-to-work-with-awsim" class="md-nav__link">
+  <a href="#scenario-preparation-to-work-with-awsim-labs" class="md-nav__link">
     <span class="md-ellipsis">
-      Scenario preparation to work with AWSIM
+      Scenario preparation to work with AWSIM Labs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Scenario preparation to work with AWSIM">
+    <nav class="md-nav" aria-label="Scenario preparation to work with AWSIM Labs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-awsim-asset-catalog" class="md-nav__link">
+  <a href="#default-awsim-labs-asset-catalog" class="md-nav__link">
     <span class="md-ellipsis">
-      Default AWSIM asset catalog
+      Default AWSIM Labs asset catalog
     </span>
   </a>
   
@@ -2202,9 +2202,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#awsim-scene-preparation-to-work-with-scenario_simulator_v2" class="md-nav__link">
+  <a href="#awsim-labs-scene-preparation-to-work-with-scenario_simulator_v2" class="md-nav__link">
     <span class="md-ellipsis">
-      AWSIM scene preparation to work with scenario_simulator_v2
+      AWSIM Labs scene preparation to work with scenario_simulator_v2
     </span>
   </a>
   
@@ -2478,19 +2478,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scenario-preparation-to-work-with-awsim" class="md-nav__link">
+  <a href="#scenario-preparation-to-work-with-awsim-labs" class="md-nav__link">
     <span class="md-ellipsis">
-      Scenario preparation to work with AWSIM
+      Scenario preparation to work with AWSIM Labs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Scenario preparation to work with AWSIM">
+    <nav class="md-nav" aria-label="Scenario preparation to work with AWSIM Labs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#default-awsim-asset-catalog" class="md-nav__link">
+  <a href="#default-awsim-labs-asset-catalog" class="md-nav__link">
     <span class="md-ellipsis">
-      Default AWSIM asset catalog
+      Default AWSIM Labs asset catalog
     </span>
   </a>
   
@@ -2511,9 +2511,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#awsim-scene-preparation-to-work-with-scenario_simulator_v2" class="md-nav__link">
+  <a href="#awsim-labs-scene-preparation-to-work-with-scenario_simulator_v2" class="md-nav__link">
     <span class="md-ellipsis">
-      AWSIM scene preparation to work with scenario_simulator_v2
+      AWSIM Labs scene preparation to work with scenario_simulator_v2
     </span>
   </a>
   
@@ -2538,17 +2538,38 @@
 
 
 <div><h1 id="preparing-the-connection-between-awsim-and-scenario_simulator_v2">Preparing the connection between AWSIM and scenario_simulator_v2<a class="headerlink" href="#preparing-the-connection-between-awsim-and-scenario_simulator_v2" title="Permanent link">#</a></h1>
-<p>This tutorial describes:
-- how to modify scenario to work with AWSIM
-- how to prepare the AWSIM scene to work with <code>scenario_simulator_v2</code></p>
-<h2 id="scenario-preparation-to-work-with-awsim">Scenario preparation to work with AWSIM<a class="headerlink" href="#scenario-preparation-to-work-with-awsim" title="Permanent link">#</a></h2>
-<p>To prepare the scenario to work with AWSIM add <code>model3d</code> field to <a href="https://www.asam.net/static_downloads/ASAM_OpenSCENARIO_V1.2.0_Model_Documentation/modelDocumentation/content/Vehicle.html#:~:text=model3d,absolute%20file%20path.">entity specification</a></p>
-<p>It is utilized as an asset key to identify the proper prefab.</p>
-<p><img alt="model_3d_added.png" src="model_3d_added.png"></p>
-<p>Match the parameters of the configured vehicle to match the entities parameters in AWSIM as close as it is required. Especially the bounding box is crucial to validate the collisions correctly.</p>
-<h3 id="default-awsim-asset-catalog">Default AWSIM asset catalog<a class="headerlink" href="#default-awsim-asset-catalog" title="Permanent link">#</a></h3>
-<p>AWSIM currently supports the following asset key values.</p>
-<p>The list can be extended if required. Appropriate values should be added to asst key list in the <code>ScenarioSimulatorConnector</code> component and the vehicle parameters in scenario simulator should match them.</p>
+<p>This tutorial describes</p>
+<ul>
+<li>how to modify scenario to work with AWSIM Labs</li>
+<li>how to prepare the AWSIM Labs scene to work with <code>scenario_simulator_v2</code></li>
+</ul>
+<h2 id="scenario-preparation-to-work-with-awsim-labs">Scenario preparation to work with AWSIM Labs<a class="headerlink" href="#scenario-preparation-to-work-with-awsim-labs" title="Permanent link">#</a></h2>
+<p>To run the created scenario with AWSIM Labs, necessary adjustments need to be made. After opening the generated <code>.yaml</code> file with a text editor of your choice, follow the steps below:</p>
+<ol>
+<li><code>CatalogLocation: [ ]</code> should be removed and replaced with lines specifying the vehicle's properties.
+<div class="highlight"><pre><span></span><code>   VehicleCatalog:
+   Directory:
+   path: $(ros2 pkg prefix --share openscenario_experimental_catalog)/vehicle
+</code></pre></div></li>
+<li>The file locations of the vector map and pointcloud map need to be changed.
+<div class="highlight"><pre><span></span><code>  RoadNetwork:
+    LogicFile:
+      filepath: /home/your-username/projects/autoware/src/simulator/shinjuku_map/map/lanelet2_map.osm
+    SceneGraphFile:
+      filepath: /home/your-username/projects/autoware/src/simulator/shinjuku_map/map/lanelet2_map.osm
+</code></pre></div></li>
+<li>In order for the added NPC to be created by AWSIM Labs, the <code>model3d:</code> definition and the name of the desired prefab to be used should be entered.</li>
+</ol>
+<p></p><div class="highlight"><pre><span></span><code>    - name: Npc1
+        Vehicle:
+          name: ''
+          vehicleCategory: car
+          model3d: "small_car"
+</code></pre></div>
+4. The BoundingBox values should also be updated according to the preferred NPC model.<strong><em>"Default AWSIM Labs asset catalog"</em></strong> section provides features that can be utilized to use default models.
+<h3 id="default-awsim-labs-asset-catalog">Default AWSIM Labs asset catalog<a class="headerlink" href="#default-awsim-labs-asset-catalog" title="Permanent link">#</a></h3>
+<p>AWSIM Labs currently supports the following asset key values.</p>
+<p>The list can be extended if required. Appropriate values should be added to asset key list in the <code>ScenarioSimulatorConnector</code> component and the vehicle parameters in scenario simulator should match them.</p>
 <h4 id="ego-vehicle-entity-with-sensor">Ego Vehicle Entity (with sensor)<a class="headerlink" href="#ego-vehicle-entity-with-sensor" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2666,9 +2687,9 @@
 </tbody>
 </table>
 <h3 id="scenarios-limitations">Scenarios limitations<a class="headerlink" href="#scenarios-limitations" title="Permanent link">#</a></h3>
-<p>Vast majority of features supported by <code>scenario_simulator_v2</code> are supported with AWSIM as well. Currently supported features are described in the <a href="https://tier4.github.io/scenario_simulator_v2-docs/developer_guide/OpenSCENARIOSupport/">scenario_simulator_v2's documentation</a>.</p>
-<p>Features which are not supported when connected with AWSIM are listed below.</p>
-<ol>
+<p>Vast majority of features supported by <code>scenario_simulator_v2</code> are supported with AWSIM Labs as well. Currently supported features are described in the <a href="https://tier4.github.io/scenario_simulator_v2-docs/developer_guide/OpenSCENARIOSupport/">scenario_simulator_v2's documentation</a>.</p>
+<p>Features which are not supported when connected with AWSIM Labs are listed below.</p>
+<ul>
 <li>Controller properties used by <code>attach_*_sensor</code><ul>
 <li><code>pointcloudPublishingDelay</code></li>
 <li><code>isClairvoyant</code></li>
@@ -2678,34 +2699,30 @@
 <li><code>randomSeed</code></li>
 </ul>
 </li>
-</ol>
+</ul>
 <p>If those features are curcial for the scenario's execution, the scenario might not work properly.</p>
-<h2 id="awsim-scene-preparation-to-work-with-scenario_simulator_v2">AWSIM scene preparation to work with <code>scenario_simulator_v2</code><a class="headerlink" href="#awsim-scene-preparation-to-work-with-scenario_simulator_v2" title="Permanent link">#</a></h2>
-<ol>
+<h2 id="awsim-labs-scene-preparation-to-work-with-scenario_simulator_v2">AWSIM Labs scene preparation to work with <code>scenario_simulator_v2</code><a class="headerlink" href="#awsim-labs-scene-preparation-to-work-with-scenario_simulator_v2" title="Permanent link">#</a></h2>
+<ul>
 <li>Disable or remove random traffic and any pre-spawned NPCs</li>
 <li>Disable or remove V2I traffic lights publishing</li>
 <li>Disable or remove the clock publisher</li>
-</ol>
+</ul>
 <p><img alt="removed_objects.png" src="removed_objects.png"></p>
-<ol>
+<ul>
 <li>Add <code>ScenarioSimulatorConnector</code> prefab to the scene - located in <code>Assets/ScenarioSimulatorConnector</code></li>
-</ol>
+</ul>
 <p><img alt="scene_tree.png" src="scene_tree.png"></p>
-<ol>
-<li>Add Ego Follow Camera object - most likely Main Camera</li>
-</ol>
-<p><img alt="follow_camera.png" src="follow_camera.png"></p>
-<ol>
+<ul>
 <li>If necessary update the asset_id to prefab mapping - key in the map can be used in the scenario</li>
-</ol>
+</ul>
 <p><img alt="entities.png" src="entities.png"></p>
-<ol>
+<ul>
 <li>Add TimeSourceSelector prefab to the scene - located in <code>Assets/AWSIM/Scripts/Clock/Prefabs</code></li>
-</ol>
+</ul>
 <p><img alt="scene_tree_time_selector.png" src="scene_tree_time_selector.png"></p>
-<ol>
+<ul>
 <li>Configure Type in the TimeSourceSelector component to SS2</li>
-</ol>
+</ul>
 <p><img alt="time_selector_ss2.png" src="time_selector_ss2.png"></p></div>
 
 
