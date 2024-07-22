@@ -2539,8 +2539,8 @@
 
 <div><h1 id="preparing-the-connection-between-awsim-and-scenario_simulator_v2">Preparing the connection between AWSIM and scenario_simulator_v2<a class="headerlink" href="#preparing-the-connection-between-awsim-and-scenario_simulator_v2" title="Permanent link">#</a></h1>
 <p>This tutorial describes:
-- how to modify scenario to work with AWSIM Labs
-- how to prepare the AWSIM Labs scene to work with <code>scenario_simulator_v2</code></p>
+* how to modify scenario to work with AWSIM Labs
+* how to prepare the AWSIM Labs scene to work with <code>scenario_simulator_v2</code></p>
 <h2 id="scenario-preparation-to-work-with-awsim-labs">Scenario preparation to work with AWSIM Labs<a class="headerlink" href="#scenario-preparation-to-work-with-awsim-labs" title="Permanent link">#</a></h2>
 <p>To run the created scenario with AWSIM Labs, necessary adjustments need to be made. After opening the generated <code>.yaml</code> file with a text editor of your choice, follow the steps below:</p>
 <ol>
@@ -2703,18 +2703,16 @@
 <ol>
 <li>Disable or remove random traffic and any pre-spawned NPCs</li>
 <li>Disable or remove V2I traffic lights publishing</li>
-<li>Disable or remove the clock publisher
-  <img alt="removed_objects.png" src="removed_objects.png"></li>
+<li>Disable or remove the clock publisher 
+<img alt="removed_objects.png" src="removed_objects.png"></li>
 <li>Add <code>ScenarioSimulatorConnector</code> prefab to the scene - located in <code>Assets/ScenarioSimulatorConnector</code>
-  <img alt="scene_tree.png" src="scene_tree.png"></li>
-<li>Add Ego Follow Camera object - most likely Main Camera
-  <img alt="follow_camera.png" src="follow_camera.png"></li>
+<img alt="scene_tree.png" src="scene_tree.png"></li>
 <li>If necessary update the asset_id to prefab mapping - key in the map can be used in the scenario
-  <img alt="entities.png" src="entities.png"></li>
+<img alt="entities.png" src="entities.png"></li>
 <li>Add TimeSourceSelector prefab to the scene - located in <code>Assets/AWSIM/Scripts/Clock/Prefabs</code>
-  <img alt="scene_tree_time_selector.png" src="scene_tree_time_selector.png"></li>
+<img alt="scene_tree_time_selector.png" src="scene_tree_time_selector.png"></li>
 <li>Configure Type in the TimeSourceSelector component to SS2
-  <img alt="time_selector_ss2.png" src="time_selector_ss2.png"></li>
+<img alt="time_selector_ss2.png" src="time_selector_ss2.png"></li>
 </ol></div>
 
 
