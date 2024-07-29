@@ -2779,21 +2779,33 @@ You can also find the Lexus's pedal maps in the same location.</p>
 <h2 id="setting-up-the-child-objects">Setting up the child objects<a class="headerlink" href="#setting-up-the-child-objects" title="Permanent link">#</a></h2>
 <p>For the VPP to work correctly, you need to set up the child objects of the vehicle prefab.</p>
 <h3 id="setting-up-reference-for-ackermann-steering">Setting up reference for Ackermann Steering:<a class="headerlink" href="#setting-up-reference-for-ackermann-steering" title="Permanent link">#</a></h3>
-<p>1) Create an empty game object named <code>"Ackermann"</code> and set as the direct child of the prefab. Then assign reference in
-   the <code>Vehicle Controller</code>.<br>
-2) Move position of the created game object to the middle of the rear axle and set its height to the bottom of the rear
-   wheels. Make sure the rotations are <code>(0,0,0)</code></p>
+<ol>
+<li>Create an empty game object named <code>"Ackermann"</code> and set as the direct child of the prefab. Then assign reference in
+   the <code>Vehicle Controller</code>.  </li>
+<li>Move position of the created game object to the middle of the rear axle and set its height to the bottom of the rear
+   wheels. Make sure the rotations are <code>(0,0,0)</code></li>
+</ol>
 <p>Assign the reference in the <code>Vehicle Controller</code>. For details, you can refer to the VPP.</p>
 <p>VPP Reference:<br>
 <a href="https://vehiclephysics.com/blocks/steering/">Ackermann</a></p>
 <h3 id="setting-up-the-reference-for-dynamics">Setting up the reference for Dynamics:<a class="headerlink" href="#setting-up-the-reference-for-dynamics" title="Permanent link">#</a></h3>
-<p>1) Create an empty game object named <code>"Dynamics"</code> and set as the direct child of the prefab. Add the following
-   components to this object:<br>
-    - <code>Rolling Friction</code>
-    - <code>Anti-roll Bar</code> (x2)</p>
-<p>2) Create an empty game object named <code>"Aero"</code> and set as the child of the "Dynamics". Add the following
-   components to this object:<br>
-    - <code>Aerodynamic Surface</code></p>
+<ol>
+<li>
+<p>Create an empty game object named <code>"Dynamics"</code> and set as the direct child of the prefab. Add the following
+   components to this object:  </p>
+<ul>
+<li><code>Rolling Friction</code></li>
+<li><code>Anti-roll Bar</code> (x2)</li>
+</ul>
+</li>
+<li>
+<p>Create an empty game object named <code>"Aero"</code> and set as the child of the "Dynamics". Add the following
+   components to this object:  </p>
+<ul>
+<li><code>Aerodynamic Surface</code></li>
+</ul>
+</li>
+</ol>
 <p>Assign the references in the <code>Vehicle Controller</code>. For configuring these components, you can refer to the VPP.</p>
 <p>VPP Reference:<br>
 <a href="https://vehiclephysics.com/components/vehicle-dynamics/">Dynamics</a></p></div>
