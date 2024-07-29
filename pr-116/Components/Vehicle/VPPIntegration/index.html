@@ -2683,8 +2683,8 @@
 Ego Vehicle.</p>
 <div class="admonition tip">
 <p class="admonition-title">Example Vehicle</p>
-</div>
 <p>It is recommended to take a look at the default Lexus vehicle prefab as example to see how the components are set up.</p>
+</div>
 <h2 id="initial-setup">Initial setup<a class="headerlink" href="#initial-setup" title="Permanent link">#</a></h2>
 <p>To be able to use VPP with the ego vehicle, please attach these components to the vehicle prefab:
 From the VPP package:</p>
@@ -2699,9 +2699,9 @@ From the VPP package:</p>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Wheel Colliders</p>
-</div>
 <p>VPP uses its own implementation of the <code>Wheel Colliders</code>! For the wheel colliders, please add the <code>Wheel Colliders</code>
 provided by the VPP package. They share the same name with the default Unity components.</p>
+</div>
 <p>After adding those scripts continue with adding the following components to the vehicle prefab:</p>
 <p>Added to prefab root:</p>
 <ul>
@@ -2725,10 +2725,10 @@ information about the VPP components.</p>
 <p>As for the other components we've added to the vehicle, we have to give their necessary references.</p>
 <div class="admonition warning">
 <p class="admonition-title">Camera Controller</p>
-</div>
 <p>If you've added the <code>Camera Target</code> component, you'll need a separate gameObject with a <code>Camera Controller</code>. Don't
 forget to assign vehicle Transform reference in this component. This is used by default in the <code>AutowareSimulation</code>
 scene.</p>
+</div>
 <h3 id="autowarevppadaptercs">AutowareVPPAdapter.cs<a class="headerlink" href="#autowarevppadaptercs" title="Permanent link">#</a></h3>
 <ul>
 <li><code>Front Wheel Collider 1/2</code>: Used for handling the steering input. Give front wheel colliders of the vehicle.</li>
@@ -2780,7 +2780,7 @@ You can also find the Lexus's pedal maps in the same location.</p>
 <p>For the VPP to work correctly, you need to set up the child objects of the vehicle prefab.</p>
 <h3 id="setting-up-reference-for-ackermann-steering">Setting up reference for Ackermann Steering:<a class="headerlink" href="#setting-up-reference-for-ackermann-steering" title="Permanent link">#</a></h3>
 <p>1) Create an empty game object named <code>"Ackermann"</code> and set as the direct child of the prefab. Then assign reference in
-   the <code>Vehicle Controller</code>.
+   the <code>Vehicle Controller</code>.<br>
 2) Move position of the created game object to the middle of the rear axle and set its height to the bottom of the rear
    wheels. Make sure the rotations are <code>(0,0,0)</code></p>
 <p>Assign the reference in the <code>Vehicle Controller</code>. For details, you can refer to the VPP.</p>
@@ -2788,11 +2788,11 @@ You can also find the Lexus's pedal maps in the same location.</p>
 <a href="https://vehiclephysics.com/blocks/steering/">Ackermann</a></p>
 <h3 id="setting-up-the-reference-for-dynamics">Setting up the reference for Dynamics:<a class="headerlink" href="#setting-up-the-reference-for-dynamics" title="Permanent link">#</a></h3>
 <p>1) Create an empty game object named <code>"Dynamics"</code> and set as the direct child of the prefab. Add the following
-   components to this object:
+   components to this object:<br>
     - <code>Rolling Friction</code>
     - <code>Anti-roll Bar</code> (x2)</p>
 <p>2) Create an empty game object named <code>"Aero"</code> and set as the child of the "Dynamics". Add the following
-   components to this object:
+   components to this object:<br>
     - <code>Aerodynamic Surface</code></p>
 <p>Assign the references in the <code>Vehicle Controller</code>. For configuring these components, you can refer to the VPP.</p>
 <p>VPP Reference:<br>
