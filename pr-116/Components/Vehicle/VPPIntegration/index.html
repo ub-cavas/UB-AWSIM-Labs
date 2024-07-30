@@ -2683,8 +2683,8 @@
 Ego Vehicle.</p>
 <div class="admonition tip">
 <p class="admonition-title">Example Vehicle</p>
-</div>
 <p>It is recommended to take a look at the default Lexus vehicle prefab as example to see how the components are set up.</p>
+</div>
 <h2 id="initial-setup">Initial setup<a class="headerlink" href="#initial-setup" title="Permanent link">#</a></h2>
 <p>To be able to use VPP with the ego vehicle, please attach these components to the vehicle prefab:
 From the VPP package:</p>
@@ -2699,9 +2699,9 @@ From the VPP package:</p>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Wheel Colliders</p>
-</div>
 <p>VPP uses its own implementation of the <code>Wheel Colliders</code>! For the wheel colliders, please add the <code>Wheel Colliders</code>
-   provided by the VPP package. They share the same name with the default Unity components.</p>
+provided by the VPP package. They share the same name with the default Unity components.</p>
+</div>
 <p>After adding those scripts continue with adding the following components to the vehicle prefab:</p>
 <p>Added to prefab root:</p>
 <ul>
@@ -2725,10 +2725,10 @@ information about the VPP components.</p>
 <p>As for the other components we've added to the vehicle, we have to give their necessary references.</p>
 <div class="admonition warning">
 <p class="admonition-title">Camera Controller</p>
-</div>
 <p>If you've added the <code>Camera Target</code> component, you'll need a separate gameObject with a <code>Camera Controller</code>. Don't
-   forget to assign vehicle Transform reference in this component. This is used by default in the <code>AutowareSimulation</code>
-   scene.</p>
+forget to assign vehicle Transform reference in this component. This is used by default in the <code>AutowareSimulation</code>
+scene.</p>
+</div>
 <h3 id="autowarevppadaptercs">AutowareVPPAdapter.cs<a class="headerlink" href="#autowarevppadaptercs" title="Permanent link">#</a></h3>
 <table>
 <thead>
