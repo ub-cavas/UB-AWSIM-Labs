@@ -1136,15 +1136,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vehiclepedalmaploadercs" class="md-nav__link">
-    <span class="md-ellipsis">
-      VehiclePedalMapLoader.cs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#vpptoros2publishercs" class="md-nav__link">
     <span class="md-ellipsis">
       VPPToRos2Publisher.cs
@@ -1169,9 +1160,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-reference-for-ackermann-steering" class="md-nav__link">
+  <a href="#setting-up-the-reference-for-ackermann-steering" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up reference for Ackermann Steering:
+      Setting up the reference for Ackermann Steering:
     </span>
   </a>
   
@@ -2626,15 +2617,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vehiclepedalmaploadercs" class="md-nav__link">
-    <span class="md-ellipsis">
-      VehiclePedalMapLoader.cs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#vpptoros2publishercs" class="md-nav__link">
     <span class="md-ellipsis">
       VPPToRos2Publisher.cs
@@ -2659,9 +2641,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-reference-for-ackermann-steering" class="md-nav__link">
+  <a href="#setting-up-the-reference-for-ackermann-steering" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up reference for Ackermann Steering:
+      Setting up the reference for Ackermann Steering:
     </span>
   </a>
   
@@ -2716,7 +2698,6 @@ From the VPP package:</p>
 <li><code>Camera Target</code> (Optional, you can use your own implementation)</li>
 <li><code>Telemetry Window</code> (Optional, used to display telemetry data)</li>
 <li><code>Visual Effects</code> (Optional, used to visualize the steering wheel)</li>
-<li><code>VP Vehicle Toolkit</code></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Wheel Colliders</p>
@@ -2729,7 +2710,6 @@ provided by the VPP package. They share the same name with the default Unity com
 <li><code>AutowareVPPAdapter.cs</code>: Used for applying the control inputs to the vehicle.</li>
 <li><code>Ros2ToVPPInput.cs</code>: Used for receiving the control inputs from the Autoware.</li>
 <li><code>VPPVehicleSignalHandler.cs</code>: Used for handling the signals from the vehicle.</li>
-<li><code>VehiclePedalMapLoader.cs</code>: Used for loading the pedal maps for the vehicle.</li>
 </ul>
 <p>To be able to report the vehicle state to the Autoware, you'll need this script in the URDF.
 <em>This script is added in the <code>VehicleStatusSensor</code> prefab by default.</em></p>
@@ -2772,10 +2752,6 @@ scene.</p>
 <td>Change applied to steering wheel when simulating steering. Applied every in fixed update as an input to the VPP steering. <em>(0-100)</em></td>
 </tr>
 <tr>
-<td><code>Do Use Pedal Maps</code></td>
-<td>Whether to use the pedal maps for the vehicle or not. If set to false the vehicle will use the PID Controller for the longitudinal control.</td>
-</tr>
-<tr>
 <td><code>Emergency Brake Percent</code></td>
 <td>The amount of brake pedal percent applied when the emergency is triggered. <em>(0-1)</em></td>
 </tr>
@@ -2786,6 +2762,10 @@ scene.</p>
 <tr>
 <td><code>Update Position Ray Origin Y</code></td>
 <td>The height of the raycast origin for the vehicle position when initializing position of the vehicle from the Rviz. <em>(In meters)</em></td>
+</tr>
+<tr>
+<td><code>Do Pedal Calibration</code></td>
+<td>Mode for vehicle pedal calibration. If enabled the vehicle pedals can be set to certain percentages with Numbad(-,+,0) keys.</td>
 </tr>
 </tbody>
 </table>
@@ -2886,35 +2866,11 @@ scene.</p>
 </tbody>
 </table>
 <p>Rest of the signal related settings are same as <code>VehicleVisualEffect.cs</code>. These two scripts are basically same.</p>
-<h3 id="vehiclepedalmaploadercs">VehiclePedalMapLoader.cs<a class="headerlink" href="#vehiclepedalmaploadercs" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Accel Map Csv</code></td>
-<td>The file reference of the acceleration pedal map. <em>(Drag the corresponding csv file from the Project Window)</em></td>
-</tr>
-<tr>
-<td><code>Brake Map Csv</code></td>
-<td>The file reference of the brake pedal map. <em>(Drag the corresponding csv file from the Project Window)</em></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Pedal Maps</p>
-<p>These pedal maps are loaded in runtime. The default location for the pedal maps is <code>Assets/Resources/Pedal Maps/...</code>.
-You can find the Lexus's pedal maps in the same location.</p>
-</div>
 <h3 id="vpptoros2publishercs">VPPToRos2Publisher.cs<a class="headerlink" href="#vpptoros2publishercs" title="Permanent link">#</a></h3>
 <p>Same as <code>VehicleStatusSensor.cs</code> but the <code>Adapter</code> reference is the <code>AutowareVPPAdapter</code> script.</p>
 <h2 id="setting-up-the-child-objects">Setting up the child objects<a class="headerlink" href="#setting-up-the-child-objects" title="Permanent link">#</a></h2>
 <p>For the VPP to work correctly, you need to set up the child objects of the vehicle prefab.</p>
-<h3 id="setting-up-reference-for-ackermann-steering">Setting up reference for Ackermann Steering:<a class="headerlink" href="#setting-up-reference-for-ackermann-steering" title="Permanent link">#</a></h3>
+<h3 id="setting-up-the-reference-for-ackermann-steering">Setting up the reference for Ackermann Steering:<a class="headerlink" href="#setting-up-the-reference-for-ackermann-steering" title="Permanent link">#</a></h3>
 <ol>
 <li>Create an empty game object named <code>"Ackermann"</code> and set as the direct child of the prefab. Then assign reference in
    the <code>Vehicle Controller</code>.</li>
@@ -2941,7 +2897,7 @@ You can find the Lexus's pedal maps in the same location.</p>
 </ul>
 </li>
 </ol>
-<p>Assign the references in the <code>Vehicle Controller</code>. For configuring these components, you can refer to the VPP.</p>
+<p>Assign the references in the <code>Vehicle Controller</code>. For configuring these components, you can refer to the VPP documentation.</p>
 <p>VPP Reference: <a href="https://vehiclephysics.com/components/vehicle-dynamics/">Dynamics</a></p></div>
 
 
