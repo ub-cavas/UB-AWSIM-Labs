@@ -246,6 +246,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/AWSIM-Labs/latest/GettingStarted/ParkingArea/</loc>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/AWSIM-Labs/latest/GettingStarted/QuickStartDemo/</loc>
          <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>

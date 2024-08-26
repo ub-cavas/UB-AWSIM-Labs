@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/Components/Traffic/NPCs/Pedestrian/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/GettingStarted/ParkingArea/">
       
       
-        <link rel="prev" href="../RvizNPCSpawner/">
+        <link rel="prev" href="../UsingOpenSCENARIO/">
       
       
-        <link rel="next" href="../Vehicle/">
+        <link rel="next" href="../../Introduction/Autoware/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
-        <title>Pedestrian - AWSIM Labs Documentation</title>
+        <title>Parking Area - AWSIM Labs Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#parking-area-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pedestrian
+              Parking Area
             
           </span>
         </div>
@@ -231,7 +231,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4zm-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -278,8 +278,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -289,13 +291,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -309,7 +309,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting started
@@ -323,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
+      <a href="../QuickStartDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
+      <a href="../SetupUnityProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
+      <a href="../UsingOpenSCENARIO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,10 +383,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../GettingStarted/ParkingArea/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -395,6 +404,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -456,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/Autoware/" class="md-nav__link">
+      <a href="../../Introduction/Autoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/AWSIM/" class="md-nav__link">
+      <a href="../../Introduction/AWSIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
+      <a href="../../Introduction/CombinationWithAutoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/Directory/" class="md-nav__link">
+      <a href="../../ProjectGuide/Directory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/HotkeyList/" class="md-nav__link">
+      <a href="../../ProjectGuide/HotkeyList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/Scenes/" class="md-nav__link">
+      <a href="../../ProjectGuide/Scenes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/GitBranch/" class="md-nav__link">
+      <a href="../../ProjectGuide/GitBranch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
+      <a href="../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -677,8 +687,6 @@
       
   
   
-    
-  
   
   
     
@@ -690,11 +698,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -708,7 +718,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Components
@@ -761,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Clock/ClockPublisher/" class="md-nav__link">
+      <a href="../../Components/Clock/ClockPublisher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/EgoVehicle/" class="md-nav__link">
+      <a href="../../Components/Vehicle/EgoVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/URDFAndSensors/" class="md-nav__link">
+      <a href="../../Components/Vehicle/URDFAndSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/DynamicSensorPlacement/" class="md-nav__link">
+      <a href="../../Components/Vehicle/DynamicSensorPlacement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
+      <a href="../../Components/Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
+      <a href="../../Components/Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
+      <a href="../../Components/Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
+      <a href="../../Components/Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/CustomizeSlip/" class="md-nav__link">
+      <a href="../../Components/Vehicle/CustomizeSlip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Vehicle/FollowCamera/" class="md-nav__link">
+      <a href="../../Components/Vehicle/FollowCamera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
+      <a href="../../Components/Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
+      <a href="../../Components/Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
+      <a href="../../Components/Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
+      <a href="../../Components/Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/CameraSensor/" class="md-nav__link">
+      <a href="../../Components/Sensors/CameraSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/IMUSensor/" class="md-nav__link">
+      <a href="../../Components/Sensors/IMUSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/GNSSSensor/" class="md-nav__link">
+      <a href="../../Components/Sensors/GNSSSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensors/VehicleStatusSensor/" class="md-nav__link">
+      <a href="../../Components/Sensors/VehicleStatusSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AWSIMEnvironment/" class="md-nav__link">
+      <a href="../../Components/Environment/AWSIMEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1434,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
+      <a href="../../Components/Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1494,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
+      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1515,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
+      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1536,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
+      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1565,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
+      <a href="../../Components/Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/CreatePCD/" class="md-nav__link">
+      <a href="../../Components/Environment/CreatePCD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/LaneletBoundsVisualizer/" class="md-nav__link">
+      <a href="../../Components/Environment/LaneletBoundsVisualizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/SmokeSimulator/" class="md-nav__link">
+      <a href="../../Components/Environment/SmokeSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1657,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Environment/V2I/" class="md-nav__link">
+      <a href="../../Components/Environment/V2I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,8 +1693,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1693,11 +1701,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
         
           
           <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
@@ -1711,7 +1721,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5">
             <span class="md-nav__icon md-icon"></span>
             Traffic
@@ -1725,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TrafficComponents/" class="md-nav__link">
+      <a href="../../Components/Traffic/TrafficComponents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
+      <a href="../../Components/Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,7 +1816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../RandomTraffic/YieldingRules/" class="md-nav__link">
+      <a href="../../Components/Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1827,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
+      <a href="../../Components/Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,8 +1863,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1863,11 +1871,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5_3" >
         
           
           <label class="md-nav__link" for="__nav_5_5_3" id="__nav_5_5_3_label" tabindex="0">
@@ -1881,7 +1891,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_5_3">
             <span class="md-nav__icon md-icon"></span>
             NPCs
@@ -1895,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RvizNPCSpawner/" class="md-nav__link">
+      <a href="../../Components/Traffic/NPCs/RvizNPCSpawner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1913,28 +1923,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Pedestrian
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Components/Traffic/NPCs/Pedestrian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,129 +1935,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prefab-and-fbx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefab and Fbx
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visual elements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#link-in-the-default-scene" class="md-nav__link">
-    <span class="md-ellipsis">
-      Link in the default Scene
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rigidbody" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rigidbody
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lod-level-of-detail" class="md-nav__link">
-    <span class="md-ellipsis">
-      LOD (Level of Detail)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#animator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Animator
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#npc-pedestrian-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      NPC Pedestrian (script)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-pedestrian-walker-controller-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple Pedestrian Walker Controller (script)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collider" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collider
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2078,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vehicle/" class="md-nav__link">
+      <a href="../../Components/Traffic/NPCs/Vehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2154,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/ROS2TopicList/" class="md-nav__link">
+      <a href="../../Components/ROS2/ROS2TopicList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2175,7 +2044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/AddACustomROS2Message/" class="md-nav__link">
+      <a href="../../Components/ROS2/AddACustomROS2Message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2196,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ROS2/ROS2ForUnity/" class="md-nav__link">
+      <a href="../../Components/ROS2/ROS2ForUnity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
+      <a href="../../Components/ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2285,7 +2154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
+      <a href="../../Components/ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2363,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/HowToContribute/" class="md-nav__link">
+      <a href="../../DeveloperGuide/HowToContribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2384,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
+      <a href="../../DeveloperGuide/EditorSetup/VSCode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2405,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
+      <a href="../../DeveloperGuide/EditorSetup/JetBrainsRider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2426,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
+      <a href="../../DeveloperGuide/EditorSetup/Graphy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2447,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
+      <a href="../../DeveloperGuide/TroubleShooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2468,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/Documentation/" class="md-nav__link">
+      <a href="../../DeveloperGuide/Documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2489,7 +2358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/License/" class="md-nav__link">
+      <a href="../../DeveloperGuide/License/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2510,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperGuide/Contact/" class="md-nav__link">
+      <a href="../../DeveloperGuide/Contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2548,119 +2417,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prefab-and-fbx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefab and Fbx
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visual elements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#link-in-the-default-scene" class="md-nav__link">
-    <span class="md-ellipsis">
-      Link in the default Scene
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rigidbody" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rigidbody
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lod-level-of-detail" class="md-nav__link">
-    <span class="md-ellipsis">
-      LOD (Level of Detail)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#animator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Animator
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#npc-pedestrian-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      NPC Pedestrian (script)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-pedestrian-walker-controller-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple Pedestrian Walker Controller (script)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#collider" class="md-nav__link">
-    <span class="md-ellipsis">
-      Collider
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2678,136 +2436,60 @@
   
 
 
-  <h1>Pedestrian</h1>
-
-<div><h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
-<p><code>NPCPedestrian</code> is an object that simulates a human standing or moving on the scene.
-It can move cyclically in any chosen place thanks to the available scripts.
-Traffic light tracking will be implemented in the future.</p>
-<p><img alt="" src="model.png"></p>
-<div class="admonition note">
-<p class="admonition-title">Sample scene</p>
-<p>If you would like to see how <code>NPCPedestrian</code> works or run some tests, we encourage you to familiarize yourself with the <code>NPCPedestrianSample</code> default scene described in this <a href="../../../../ProjectGuide/Scenes/#npcpedestriansample">section</a>.</p>
+<div><h1 id="parking-area-demo">PARKING AREA DEMO<a class="headerlink" href="#parking-area-demo" title="Permanent link">#</a></h1>
+<p><em>After completing the Quick Start demo, you can proceed to this section.</em></p>
+<ol>
+<li>
+<p>Download the latest release from:</p>
+<p><a class="md-button md-button--primary" href="https://github.com/autowarefoundation/AWSIM-Labs/releases">AWSIM Labs GitHub Releases Page</a>
+ and launch <code>awsim_labs.x86_64</code>.</p>
+</li>
+<li>
+<p>From the Map option, select <strong>'Parking Area'</strong>.</p>
+</li>
+<li>
+<p>Set the Ego position to <em><strong>'81580.52, 50083.58, 41'</strong></em> and rotation to <em><strong>'0,0,100'</strong></em> for the starting point. You can later change the position by providing a 2D pose in the RViz2 screen to update the location.</p>
+</li>
+<li>
+<p>Uncheck the Traffic Control box.</p>
+</li>
+<li>
+<p>Start the simulation by clicking the <strong>'Load'</strong> button.</p>
+</li>
+</ol>
+<h1 id="scenarios">Scenarios:<a class="headerlink" href="#scenarios" title="Permanent link">#</a></h1>
+<p>Four simple scenarios have been created using the <a href="https://github.com/tier4/scenario_simulator_v2">scenario editor</a> for use in the Parking Area environment. Before the scenarios can be used with the scenario simulator, the tutorial provided <a href="https://autowarefoundation.github.io/AWSIM-Labs/main/GettingStarted/UsingOpenSCENARIO/">here</a> must be completed.
+Below are illustrated explanations of the scenarios.</p>
+<p><em>The file named 'awsim_labs_parking_area_ss2' should be downloaded from the latest release.</em></p>
+<p><a class="md-button md-button--primary" href="https://github.com/autowarefoundation/AWSIM-Labs/releases">AWSIM Labs GitHub Releases Page</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The titles can be clicked to download the scenarios.</p>
 </div>
-<h3 id="prefab-and-fbx">Prefab and Fbx<a class="headerlink" href="#prefab-and-fbx" title="Permanent link">#</a></h3>
-<p>Prefab can be found under the following path:</p>
-<div class="highlight"><pre><span></span><code>Assets/AWSIM/Prefabs/NPCs/Pedestrians/humanElegant.prefab
-</code></pre></div>
-<h3 id="visual-elements">Visual elements<a class="headerlink" href="#visual-elements" title="Permanent link">#</a></h3>
-<p>Prefab is developed using models available in the form of <code>*.fbx</code> file.
-From this file, the visual elements of the model, <code>Animator</code> and <code>LOD</code> were loaded.
-The <code>Animator</code> and <code>LOD</code> are added as components of the main-parent <em>GameObject</em> in prefab, while the visual elements of the model are added as its children.</p>
-<p><code>*.fbx</code> file can be found under the following path:</p>
-<div class="highlight"><pre><span></span><code>Assets/AWSIM/Models/NPCs/Pedestrians/Human/humanElegant.fbx
-</code></pre></div>
-<p><code>NPCPedestrian</code> prefab has the following content:</p>
-<p><img alt="" src="prefab_link.png"></p>
-<p>The <code>ReferencePoint</code> is used by the <em>NPC Pedestrian</em> (script) described <a href="#npc-pedestrian-script">here</a>.</p>
-<h3 id="link-in-the-default-scene">Link in the default Scene<a class="headerlink" href="#link-in-the-default-scene" title="Permanent link">#</a></h3>
-<p><img alt="" src="link.png"></p>
-<p>Pedestrians implemented in the scene are usually added in one aggregating object - in this case it is <code>NPCPedestrians</code>.
-This object is added to the <code>Environment</code> prefab.</p>
-<h3 id="components">Components<a class="headerlink" href="#components" title="Permanent link">#</a></h3>
-<p><img alt="" src="prefab.png"></p>
-<p>There are several components responsible for the full functionality of <code>NPCPedestrian</code>:</p>
+<p><a href="https://drive.google.com/file/d/1734TvS6G1IiF3dbVNyrzXm3pQFtAGnj9/view?usp=drive_link"><strong>Test 1: (L parking next to vehicle)</strong>
+</a></p>
+<p><img alt="1.png" src="1.png"></p>
+<p><a href="https://drive.google.com/file/d/1rNGgOTXZO_X-FmLKAkTBaitx2r2jnYO3/view?usp=drive_link"><strong>Test 2: (L parking between 2 vehicles)</strong>
+</a></p>
+<p><img alt="2.png" src="2.png"></p>
+<p><a href="https://drive.google.com/file/d/1pTGwo2SbF6yFIvij6n9iSkjIYZVd6EsJ/view?usp=drive_link"><strong>Test 3: (Angled parking next to vehicle)</strong>
+</a></p>
+<p><img alt="3.png" src="3.png"></p>
+<p><a href="https://drive.google.com/file/d/1--UMYejSgnzD_gwW2JpB8kUtMRin48iV/view?usp=drive_link"><strong>Test 4: (Parallel parking)</strong>
+</a></p>
+<p><img alt="4.png" src="4.png"></p>
+<h1 id="dimensions-of-parking-areas">Dimensions of Parking Areas<a class="headerlink" href="#dimensions-of-parking-areas" title="Permanent link">#</a></h1>
+<p>The dimensions of the parking spaces were made based on this reference:</p>
 <ul>
-<li><em><a href="https://docs.unity3d.com/Manual/class-Animator.html">Animator</a></em> - provides motion animations in the scene, which are composed of clips controlled by the controller.</li>
-<li><em><a href="https://docs.unity3d.com/Manual/class-LODGroup.html">LOD Group</a></em> - provides level of detail configuration for shaders - affects <em>GPU</em> usage.</li>
-<li><em><a href="https://docs.unity3d.com/ScriptReference/Rigidbody.html">Rigidbody</a></em> - ensures that the object is controlled by the physics engine in <em>Unity</em> - e.g. pulled downward by gravity.</li>
-<li><em>NPC Pedestrian</em> (script) - ensures that the movement of the object is combined with animation.</li>
-<li><em>Simple Pedestrian Walker Controller</em> (script) - provides pedestrian movement in a specific direction and distance in a cyclical manner.</li>
+<li><a href="https://cdn-wordpress.webspec.cloud/intrans.iastate.edu/uploads/sites/15/2018/12/Chapter_08-2018.pdf">https://cdn-wordpress.webspec.cloud/intrans.iastate.edu/uploads/sites/15/2018/12/Chapter_08-2018.pdf</a></li>
+<li><a href="https://www.dimensions.com/element/30-degree-parking-spaces-layouts">https://www.dimensions.com/element/30-degree-parking-spaces-layouts</a></li>
 </ul>
-<p>Scripts can be found under the following path:</p>
-<div class="highlight"><pre><span></span><code>Assets/AWSIM/Scripts/NPCs/Pedestrians/*
-</code></pre></div>
-<h2 id="rigidbody">Rigidbody<a class="headerlink" href="#rigidbody" title="Permanent link">#</a></h2>
-<p><img alt="rigidbody pedestrian" src="rigidbody.png"></p>
-<p><code>Rigidbody</code> ensures that the object is controlled by the physics engine.
-In order to connect the animation to the object, the <code>Is Kinematic</code> option must be enabled.
-By setting  <code>Is Kinematic</code>, each <code>NPCPedestrian</code> object will have no physical interaction with other objects - it will not react to a vehicle that hits it.
-The <code>Use Gravity</code> should be turned off - the correct position of the pedestrian in relation to the ground is ensured by the <em>NPC Pedestrian</em> (script).
-In addition, <code>Interpolate</code> should be turned on to ensure the physics engine's effects are smoothed out.</p>
-<h2 id="lod-level-of-detail">LOD (Level of Detail)<a class="headerlink" href="#lod-level-of-detail" title="Permanent link">#</a></h2>
-<p><img alt="" src="lod.png"></p>
-<p><code>LOD</code> provides dependence of the level of detail of the object depending on the ratio of the <em>GameObject’s</em> screen space height to the total screen height.
-The pedestrian model has two object groups: suffixed <code>LOD0</code> and <code>LOD1</code>.
-<code>LOD0</code> objects are much more detailed than <code>LOD1</code> - they have many more vertices in the <em>Meshes</em>.
-Displaying complex meshes requires more performance, so if the <em>GameObject</em> is a small part of the screen, less complex <code>LOD1</code> objects are used.</p>
-<p>In the case of the <code>NPCPedestrian</code> prefab, if its object is less than 25% of the height of the screen then objects with the <code>LOD1</code> suffix are used.
-For values less than 1% the object is culled.</p>
-<h2 id="animator">Animator<a class="headerlink" href="#animator" title="Permanent link">#</a></h2>
-<p><img alt="" src="animator.png"></p>
-<p><code>Animator</code> component provides animation assignments to a <em>GameObject</em> in the scene.
-It uses a developed <a href="https://docs.unity3d.com/Manual/class-AnimatorController.html"><code>Controller</code></a> which defines which animation clips to use and controls when and how to blend and transition between them.</p>
-<p>The <code>AnimationController</code> for humans should have the two float parameters for proper transitions.
-Transitions between animation clips are made depending on the values of these parameters:</p>
-<ul>
-<li><code>moveSpeed</code> - pedestrian movement speed in <span class="arithmatex">\({m}/{s}\)</span>,</li>
-<li><code>rotateSpeed</code> - pedestrian rotation speed in <span class="arithmatex">\({rad}/{s}\)</span>.</li>
-</ul>
-<p>Developed controller can be found in the following path:<br>
-<code>Assets/AWSIM/Models/NPCs/Pedestrians/Human/Human.controller</code></p>
-<p><img alt="" src="animator_param.png"></p>
-<div class="admonition example">
-<p class="admonition-title">Walking to running transition</p>
-<p>The example shows the state of walking and then transitions to running as a result of exceeding the condition <span class="arithmatex">\(\mathrm{moveSpeed} &gt; 1.6\)</span></p>
-<p><video width="1920" controls>
-    <source src="animator.mp4" type="video/mp4">
-</source></video></p>
-</div>
-<h2 id="npc-pedestrian-script">NPC Pedestrian (script)<a class="headerlink" href="#npc-pedestrian-script" title="Permanent link">#</a></h2>
-<p><img alt="" src="script.png"></p>
-<p>The script takes the <code>Rigidbody</code> and <code>Animator</code> components and combines them in such a way that the actual animation depends on the movement of <code>Rigidbody</code>.
-It provides an inputs that allows the pedestrian to move - change his position and orientation.
-In addition, the <code>ReferencePoint</code> point is used to ensure that the pedestrian follows the ground plane correctly.</p>
-<h4 id="elements-configurable-from-the-editor-level">Elements configurable from the editor level<a class="headerlink" href="#elements-configurable-from-the-editor-level" title="Permanent link">#</a></h4>
-<ul>
-<li><code>Ray Cast Max Distance</code> - ray-cast max distance for locating the ground.</li>
-<li><code>Ray Cast Origin Offset</code> - upward offset of the ray-cast origin from the <em>GameObject</em> local origin for locating the ground.</li>
-</ul>
-<h4 id="input-data">Input Data<a class="headerlink" href="#input-data" title="Permanent link">#</a></h4>
-<table>
-<thead>
-<tr>
-<th align="left">Category</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><em>SetPosition</em></td>
-<td align="left">Vector3</td>
-<td align="left">Move the <code>NPCPedestrian</code> so that the reference point is at the specified coordinates.</td>
-</tr>
-<tr>
-<td align="left"><em>SetRotation</em></td>
-<td align="left">Vector3</td>
-<td align="left">Rotate the <code>NPCPedestrian</code> so that the orientation of the reference point becomes the specified one.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="simple-pedestrian-walker-controller-script">Simple Pedestrian Walker Controller (script)<a class="headerlink" href="#simple-pedestrian-walker-controller-script" title="Permanent link">#</a></h2>
-<p><img alt="" src="simple_walk.png"></p>
-<p><em>Simple Pedestrian Walker Controller</em> is a script that allows the pedestrian to cyclically move back and forth along a straight line.
-One-way motion is performed with a fixed time as parameter <code>Duration</code> and a constant linear velocity as parameter <code>Speed</code>.
-The script obviously uses the <code>NPCPedestrian</code> controls provided by the <em>NPC Pedestrian</em> (script) inputs.</p>
-<div class="admonition example">
-<p class="admonition-title">Pedestrian walking on the sidewalk</p>
-<p><video width="1920" controls>
-    <source src="walk.mp4" type="video/mp4">
-</source></video></p>
-</div>
-<h2 id="collider">Collider<a class="headerlink" href="#collider" title="Permanent link">#</a></h2>
-<p><img alt="" src="collider.png"></p>
-<p><code>Collider</code> is an optional pedestrian component.
-By default, <code>NPCPedestrian</code> doesn't have this component added, It can be added if you want to detect a collision, e.g. with an <code>EgoVehicle</code>.
-There are several types of <a href="https://docs.unity3d.com/ScriptReference/Collider.html">colliders</a>, choose the right one and configure it for your own requirements.</p>
-<div class="admonition example">
-<p class="admonition-title">Capsule Collider</p>
-<p>An example of a <code>CapsuleCollider</code> that covers almost the entire pedestrian.</p>
-<p><img alt="" src="collider_example.png"></p>
-</div></div>
+<p><strong>Parallel Parking:</strong> 3m x 7.275m   <em>(The dimensions were set to 1.5 times the size of the Lexus vehicle.)</em></p>
+<p><img alt="paralel_p.png" src="paralel_p.png"></p>
+<p><strong>L Parking:</strong> 2.5m x 6m</p>
+<p><img alt="l_p.png" src="l_p.png"></p>
+<p><strong>Angled parking:</strong> 7m x 3m  &amp;  60-degree</p>
+<p><img alt="angeled_p.png" src="angeled_p.png"></p></div>
 
 
 
@@ -2845,7 +2527,7 @@ There are several types of <a href="https://docs.unity3d.com/ScriptReference/Col
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../RvizNPCSpawner/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Spawn NPCs from RVIZ">
+          <a href="../UsingOpenSCENARIO/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using OpenSCENARIO">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2855,20 +2537,20 @@ There are several types of <a href="https://docs.unity3d.com/ScriptReference/Col
                 Previous
               </span>
               <div class="md-ellipsis">
-                Spawn NPCs from RVIZ
+                Using OpenSCENARIO
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Vehicle/" class="md-footer__link md-footer__link--next" aria-label="Next: Vehicle">
+          <a href="../../Introduction/Autoware/" class="md-footer__link md-footer__link--next" aria-label="Next: Autoware">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Vehicle
+                Autoware
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2902,12 +2584,12 @@ There are several types of <a href="https://docs.unity3d.com/ScriptReference/Col
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
-        <script src="../../../../assets/js/mathjax.js"></script>
+        <script src="../../assets/js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
