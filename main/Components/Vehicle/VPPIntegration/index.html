@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/main/Components/Vehicle/DynamicSensorPlacement/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/main/Components/Vehicle/VPPIntegration/">
       
       
-        <link rel="prev" href="../URDFAndSensors/">
+        <link rel="prev" href="../FollowCamera/">
       
       
-        <link rel="next" href="../AddNewVehicle/AddAVehicle/">
+        <link rel="next" href="../../Sensors/LiDARSensor/LiDARSensor/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Dynamic Sensor Placement - AWSIM Labs Documentation</title>
+        <title>VPP Integration - AWSIM Labs Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-sensor-placement" class="md-skip">
+        <a href="#vpp-integration-with-the-ego-vehicle" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Sensor Placement
+              VPP Integration
             
           </span>
         </div>
@@ -868,30 +868,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Dynamic Sensor Placement
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../DynamicSensorPlacement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,53 +880,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#follow-the-steps-to-generate-the-urdf-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Follow the steps to generate the urdf file:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-dynamic-sensor-placement-tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the Dynamic Sensor Placement tool:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
-    <span class="md-ellipsis">
-      Note
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1129,10 +1062,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../VPPIntegration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VPP Integration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1141,6 +1094,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autowarevppadaptercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutowareVPPAdapter.cs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros2tovppinputcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ros2ToVPPInput.cs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehiclesignalhandlercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VehicleSignalHandler.cs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpptoros2publishercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPPToRos2Publisher.cs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-child-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the child objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the child objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-reference-for-ackermann-steering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the reference for Ackermann Steering:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-reference-for-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the reference for Dynamics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2526,29 +2592,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#follow-the-steps-to-generate-the-urdf-file" class="md-nav__link">
+  <a href="#initial-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Follow the steps to generate the urdf file:
+      Initial setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-dynamic-sensor-placement-tool" class="md-nav__link">
+  <a href="#setting-up-the-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the Dynamic Sensor Placement tool:
+      Setting up the components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autowarevppadaptercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      AutowareVPPAdapter.cs
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#note" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ros2tovppinputcs" class="md-nav__link">
     <span class="md-ellipsis">
-      Note
+      Ros2ToVPPInput.cs
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehiclesignalhandlercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VehicleSignalHandler.cs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpptoros2publishercs" class="md-nav__link">
+    <span class="md-ellipsis">
+      VPPToRos2Publisher.cs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-child-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the child objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the child objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-reference-for-ackermann-steering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the reference for Ackermann Steering:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-reference-for-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up the reference for Dynamics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2570,74 +2702,254 @@
   
 
 
-<div><h1 id="dynamic-sensor-placement">Dynamic Sensor Placement<a class="headerlink" href="#dynamic-sensor-placement" title="Permanent link">#</a></h1>
-<p>This tool allows you to dynamically place sensors on a car using positions and rotations specified in a URDF file.</p>
-<h2 id="follow-the-steps-to-generate-the-urdf-file">Follow the steps to generate the urdf file:<a class="headerlink" href="#follow-the-steps-to-generate-the-urdf-file" title="Permanent link">#</a></h2>
+<div><h1 id="vpp-integration-with-the-ego-vehicle">VPP Integration with the Ego Vehicle<a class="headerlink" href="#vpp-integration-with-the-ego-vehicle" title="Permanent link">#</a></h1>
+<p>VPP is a package that provides realistic vehicle simulation. Here you can find a guide on how to integrate VPP with the
+Ego Vehicle.</p>
+<div class="admonition tip">
+<p class="admonition-title">Example Vehicle</p>
+<p>It is recommended to take a look at the default Lexus vehicle prefab as example to see how the components are set up.</p>
+</div>
+<h2 id="initial-setup">Initial setup<a class="headerlink" href="#initial-setup" title="Permanent link">#</a></h2>
+<p>To be able to use VPP with the ego vehicle, please attach these components to the vehicle prefab:
+From the VPP package:</p>
+<p>Added to prefab root:</p>
+<ul>
+<li><code>Vehicle Controller</code></li>
+<li><code>Standard Input</code></li>
+<li><code>Camera Target</code> (Optional, you can use your own implementation)</li>
+<li><code>Telemetry Window</code> (Optional, used to display telemetry data)</li>
+<li><code>Visual Effects</code> (Optional, used to visualize the steering wheel)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Wheel Colliders</p>
+<p>VPP uses its own implementation of the <code>Wheel Colliders</code>! For the wheel colliders, please add the <code>Wheel Colliders</code>
+provided by the VPP package. They share the same name with the default Unity components.</p>
+</div>
+<p>After adding those scripts continue with adding the following components to the vehicle prefab:</p>
+<p>Added to prefab root:</p>
+<ul>
+<li><code>AutowareVPPAdapter.cs</code>: Used for applying the control inputs to the vehicle.</li>
+<li><code>Ros2ToVPPInput.cs</code>: Used for receiving the control inputs from the Autoware.</li>
+<li><code>VPPVehicleSignalHandler.cs</code>: Used for handling the signals from the vehicle.</li>
+<li><code>BirdEyeView.cs</code>: Used for providing top-down ortho view.</li>
+</ul>
+<p>To be able to report the vehicle state to the Autoware, you'll need this script in the URDF.
+<em>This script is added in the <code>VehicleStatusSensor</code> prefab by default.</em></p>
+<p>Added to URDF:</p>
+<ul>
+<li><code>VPPToRos2Publisher.cs</code>: Used for publishing the vehicle state to the Autoware.</li>
+</ul>
+<h2 id="setting-up-the-components">Setting up the components<a class="headerlink" href="#setting-up-the-components" title="Permanent link">#</a></h2>
+<p>After doing the initial setup, we will need to configure the components for your vehicle.</p>
+<p>Set up the <code>Vehicle Controller</code> and the <code>Wheel Colliders</code> with the correct values for your vehicle. Using values from
+the real vehicles will result in a more realistic simulation.</p>
+<p>You can refer to <a href="https://vehiclephysics.com/components/component-guide/">VPP documentation</a> for more detailed
+information about the VPP components.</p>
+<p>As for the other components we've added to the vehicle, we have to give their necessary references.</p>
+<div class="admonition warning">
+<p class="admonition-title">Camera Controller</p>
+<p>If you've added the <code>Camera Target</code> component, you'll need a separate gameObject with a <code>Camera Controller</code>. Don't
+forget to assign vehicle Transform reference in this component. This is used by default in the <code>AutowareSimulation</code>
+scene.</p>
+</div>
+<h3 id="autowarevppadaptercs">AutowareVPPAdapter.cs<a class="headerlink" href="#autowarevppadaptercs" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Front Wheels</code></td>
+<td>Used for handling the steering input. Assign the front wheel colliders of the vehicle.</td>
+</tr>
+<tr>
+<td><code>Simulate Steering</code></td>
+<td>Simulate the steering instead of assigning wheel angles directly.</td>
+</tr>
+<tr>
+<td><code>Steer Wheel Input</code></td>
+<td>Change applied to steering wheel when simulating steering. Applied every in fixed update as an input to the VPP steering. <em>(0-100)</em></td>
+</tr>
+<tr>
+<td><code>Emergency Brake Percent</code></td>
+<td>The amount of brake pedal percent applied when the emergency is triggered. <em>(0-100)</em></td>
+</tr>
+<tr>
+<td><code>Update Position Offset Y</code></td>
+<td>The height offset value for the vehicle position when initializing position of the vehicle from the Rviz. <em>(In meters)</em></td>
+</tr>
+<tr>
+<td><code>Update Position Ray Origin Y</code></td>
+<td>The height of the raycast origin for the vehicle position when initializing position of the vehicle from the Rviz. <em>(In meters)</em></td>
+</tr>
+<tr>
+<td><code>Do Pedal Calibration</code></td>
+<td>Mode for vehicle pedal calibration. If enabled the vehicle pedals can be set to certain percentages with Numpad(-,+,0) keys. Uses %10 increments by default.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ros2tovppinputcs">Ros2ToVPPInput.cs<a class="headerlink" href="#ros2tovppinputcs" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Adapter</code></td>
+<td>Reference to the <code>AutowareVPPAdapter</code> script. <em>(Drag the object that has the corresponding component.)</em></td>
+</tr>
+<tr>
+<td><code>Topics</code></td>
+<td>Topics used in the Ros2 communication. You can change the topics according to your case.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>QoS Settings</code>: Quality of Service settings for the Ros2 communication. Currently, it is as follows:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Reliability Policy</code></td>
+<td>Reliable</td>
+</tr>
+<tr>
+<td><code>Durability Policy</code></td>
+<td>Transient Local</td>
+</tr>
+<tr>
+<td><code>History Policy</code></td>
+<td>Keep Last</td>
+</tr>
+<tr>
+<td><code>Depth</code></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Position QoS Setttings</code>: QoS settings for the position topic:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Reliability Policy</code></td>
+<td>Reliable</td>
+</tr>
+<tr>
+<td><code>Durability Policy</code></td>
+<td>Volatile</td>
+</tr>
+<tr>
+<td><code>History Policy</code></td>
+<td>Keep Last</td>
+</tr>
+<tr>
+<td><code>Depth</code></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>Actuation QoS Setttings</code>: QoS settings for the actuation topic:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Reliability Policy</code></td>
+<td>Reliable</td>
+</tr>
+<tr>
+<td><code>Durability Policy</code></td>
+<td>Volatile</td>
+</tr>
+<tr>
+<td><code>History Policy</code></td>
+<td>Keep Last</td>
+</tr>
+<tr>
+<td><code>Depth</code></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehiclesignalhandlercs">VehicleSignalHandler.cs<a class="headerlink" href="#vehiclesignalhandlercs" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Adapter</code></td>
+<td>Reference to the <code>AutowareVPPAdapter</code> script. <em>(Drag the object that has the corresponding component.)</em></td>
+</tr>
+<tr>
+<td><code>Vp Vehicle</code></td>
+<td>Reference to the <code>Vehicle Controller</code> script. <em>(Drag the object that has the corresponding component.)</em></td>
+</tr>
+</tbody>
+</table>
+<p>Rest of the signal related settings are same as <code>VehicleVisualEffect.cs</code>. These two scripts are basically same.</p>
+<h3 id="vpptoros2publishercs">VPPToRos2Publisher.cs<a class="headerlink" href="#vpptoros2publishercs" title="Permanent link">#</a></h3>
+<p>Same as <code>VehicleStatusSensor.cs</code> but the <code>Adapter</code> reference is the <code>AutowareVPPAdapter</code> script.</p>
+<h2 id="setting-up-the-child-objects">Setting up the child objects<a class="headerlink" href="#setting-up-the-child-objects" title="Permanent link">#</a></h2>
+<p>For the VPP to work correctly, you need to set up the child objects of the vehicle prefab.</p>
+<h3 id="setting-up-the-reference-for-ackermann-steering">Setting up the reference for Ackermann Steering:<a class="headerlink" href="#setting-up-the-reference-for-ackermann-steering" title="Permanent link">#</a></h3>
+<ol>
+<li>Create an empty game object named <code>"Ackermann"</code> and set as the direct child of the prefab. Then assign reference in
+   the <code>Vehicle Controller</code>.</li>
+<li>Move position of the created game object to the middle of the rear axle and set its height to the bottom of the rear
+   wheels. Make sure the rotations are <code>(0,0,0)</code></li>
+</ol>
+<p>Assign the reference in the <code>Vehicle Controller</code>. For details, you can refer to the VPP.</p>
+<p>VPP Reference: <a href="https://vehiclephysics.com/blocks/steering/">Ackermann</a></p>
+<h3 id="setting-up-the-reference-for-dynamics">Setting up the reference for Dynamics:<a class="headerlink" href="#setting-up-the-reference-for-dynamics" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>Build Autoware by following the instruction in https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/.</p>
+<p>Create an empty game object named <code>"Dynamics"</code> and set as the direct child of the prefab. Add the following
+   components to this object:</p>
+<ul>
+<li><code>Rolling Friction</code></li>
+<li><code>Anti-roll Bar</code> (x2)</li>
+</ul>
 </li>
 <li>
-<p>Modify L3-4 in
-    <code>$HOME/autoware/src/universe/autoware.universe/launch/tier4_vehicle_launch/urdf/vehicle.xacro</code>
-    as the following,</p>
-<div class="codehilite"><pre><span></span><code>    &lt;xacro:arg name="vehicle_model" default="sample_vehicle"/&gt;
-    &lt;xacro:arg name="sensor_model" default="awsim_sensor_kit"/&gt;
-</code></pre></div>
-
-</li>
-<li>
-<p>Run the following commands:</p>
-<div class="codehilite"><pre><span></span><code>source $HOME/autoware/install/setup.bash
-
-ros2 run xacro xacro -o awsim_vehicle.urdf $HOME/autoware/src/universe/autoware.universe/launch/tier4_vehicle_launch/urdf/vehicle.xacro
-</code></pre></div>
-
-</li>
-<li>
-<p>You should now have a URDF file named <code>awsim_vehicle.urdf</code>.</p>
+<p>Create an empty game object named <code>"Aero"</code> and set as the child of the "Dynamics". Add the following
+   components to this object:</p>
+<ul>
+<li><code>Aerodynamic Surface</code></li>
+</ul>
 </li>
 </ol>
-<h2 id="using-the-dynamic-sensor-placement-tool">Using the Dynamic Sensor Placement tool:<a class="headerlink" href="#using-the-dynamic-sensor-placement-tool" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p>Open up AWSIM and place the generated <code>awsim_vehicle.urdf</code> in the Externals folder so the path will be <code>./Assets/AWSIM/Externals/awsim_vehicle.urdf</code>.</p>
-<p><img alt="alt text" src="image.png"></p>
-</li>
-<li>
-<p>Now, under open up the <code>Dynamic sensor placement</code> tool under AWSIM menu.</p>
-<p><img alt="alt text" src="menu.gif"></p>
-</li>
-<li>
-<p>Enter the path to the URDF file</p>
-<p><img alt="alt text" src="image-1.png"></p>
-</li>
-<li>
-<p>Click "Place sensors". All the sensors should be automatically placed on the car.</p>
-</li>
-</ol>
-<h2 id="note">Note<a class="headerlink" href="#note" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p>Only the game object named sensor_kit_base_link and its direct children will be assigned transforms if they are mentioned in the URDF file as children of sensor_kit_base_link. You will need to manually place the base_link game object.</p>
-<p><img alt="alt text" src="image-2.png"></p>
-</li>
-<li>
-<p>Ensure the names of the game objects are exactly the same as those mentioned in the URDF file. Look for the name of the child of sensor_kit_base_link in the URDF file under the <code>&lt;joint&gt;</code> tag.</p>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code>&lt;joint name="velodyne_top_base_mount_joint" type="fixed"&gt;
-    &lt;origin rpy="0.0 0.0 1.575" xyz="0.0 0.0 0.0"/&gt;
-    &lt;parent link="sensor_kit_base_link"/&gt;
-    &lt;child link="velodyne_top_base_link"/&gt;
-&lt;/joint&gt;
-</code></pre></div>
-
-</li>
-<li>
-<p>Finally, ensure that all the direct children of the sensor game objects have their rotations and positions set to zero.</p>
-<p><img alt="alt text" src="image-3.png"></p>
-</li>
-</ol></div>
+<p>Assign the references in the <code>Vehicle Controller</code>. For configuring these components, you can refer to the VPP documentation.</p>
+<p>VPP Reference: <a href="https://vehiclephysics.com/components/vehicle-dynamics/">Dynamics</a></p></div>
 
 
 
@@ -2675,7 +2987,7 @@ ros2 run xacro xacro -o awsim_vehicle.urdf $HOME/autoware/src/universe/autoware.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../URDFAndSensors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: URDF And Sensors">
+          <a href="../FollowCamera/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FollowCamera">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2685,20 +2997,20 @@ ros2 run xacro xacro -o awsim_vehicle.urdf $HOME/autoware/src/universe/autoware.
                 Previous
               </span>
               <div class="md-ellipsis">
-                URDF And Sensors
+                FollowCamera
               </div>
             </div>
           </a>
         
         
           
-          <a href="../AddNewVehicle/AddAVehicle/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Vehicle">
+          <a href="../../Sensors/LiDARSensor/LiDARSensor/" class="md-footer__link md-footer__link--next" aria-label="Next: LiDAR Sensor">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Add Vehicle
+                LiDAR Sensor
               </div>
             </div>
             <div class="md-footer__button md-icon">
