@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/DeveloperGuide/HowToContribute/">
+        <link rel="canonical" href="https://autowarefoundation.github.io/AWSIM-Labs/latest/DeveloperGuide/EditorSetup/VPPCommunityEdition/">
       
       
-        <link rel="prev" href="../../Components/ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/">
+        <link rel="prev" href="../Graphy/">
       
       
-        <link rel="next" href="../EditorSetup/VSCode/">
+        <link rel="next" href="../../TroubleShooting/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>How to Contribute - AWSIM Labs Documentation</title>
+        <title>Vehicle Physics Pro CE Setup - AWSIM Labs Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/css/extra.css">
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-contribute" class="md-skip">
+        <a href="#vehicle-physics-pro-community-edition" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../.." title="AWSIM Labs Documentation" class="md-header__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Contribute
+              Vehicle Physics Pro CE Setup
             
           </span>
         </div>
@@ -231,7 +231,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
+    <a href="../../.." title="AWSIM Labs Documentation" class="md-nav__button md-logo" aria-label="AWSIM Labs Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M135.2 117.4 109.1 192h293.8l-26.1-74.6c-4.5-12.8-16.6-21.4-30.2-21.4H165.4c-13.6 0-25.7 8.6-30.2 21.4m-95.6 79.4L74.8 96.3C88.3 57.8 124.6 32 165.4 32h181.2c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2v192c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32v-48H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256c0-26.7 16.4-49.6 39.6-59.2M128 288a32 32 0 1 0-64 0 32 32 0 1 0 64 0m288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
@@ -261,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GettingStarted/QuickStartDemo/" class="md-nav__link">
+      <a href="../../../GettingStarted/QuickStartDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GettingStarted/SetupUnityProject/" class="md-nav__link">
+      <a href="../../../GettingStarted/SetupUnityProject/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
+      <a href="../../../GettingStarted/UsingOpenSCENARIO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GettingStarted/ParkingArea/" class="md-nav__link">
+      <a href="../../../GettingStarted/ParkingArea/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction/Autoware/" class="md-nav__link">
+      <a href="../../../Introduction/Autoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction/AWSIM/" class="md-nav__link">
+      <a href="../../../Introduction/AWSIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Introduction/CombinationWithAutoware/" class="md-nav__link">
+      <a href="../../../Introduction/CombinationWithAutoware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProjectGuide/Directory/" class="md-nav__link">
+      <a href="../../../ProjectGuide/Directory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProjectGuide/HotkeyList/" class="md-nav__link">
+      <a href="../../../ProjectGuide/HotkeyList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProjectGuide/Scenes/" class="md-nav__link">
+      <a href="../../../ProjectGuide/Scenes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProjectGuide/GitBranch/" class="md-nav__link">
+      <a href="../../../ProjectGuide/GitBranch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
+      <a href="../../../ProjectGuide/ExternalLibraries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Clock/ClockPublisher/" class="md-nav__link">
+      <a href="../../../Components/Clock/ClockPublisher/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/EgoVehicle/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/EgoVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/URDFAndSensors/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/URDFAndSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/DynamicSensorPlacement/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/DynamicSensorPlacement/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/AddNewVehicle/AddAVehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/AddNewVehicle/AddColliders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/AddNewVehicle/AddSensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/AddNewVehicle/AddVisualElements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/CustomizeSlip/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/CustomizeSlip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/FollowCamera/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/FollowCamera/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Vehicle/VPPIntegration/" class="md-nav__link">
+      <a href="../../../Components/Vehicle/VPPIntegration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
+      <a href="../../../Components/Sensors/LiDARSensor/LiDARSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
+      <a href="../../../Components/Sensors/LiDARSensor/AddNewLiDAR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
+      <a href="../../../Components/Sensors/LiDARSensor/ReadMaterialInformation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
+      <a href="../../../Components/Sensors/LiDARSensor/RGLUnityPlugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/CameraSensor/" class="md-nav__link">
+      <a href="../../../Components/Sensors/CameraSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/IMUSensor/" class="md-nav__link">
+      <a href="../../../Components/Sensors/IMUSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/GNSSSensor/" class="md-nav__link">
+      <a href="../../../Components/Sensors/GNSSSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Sensors/VehicleStatusSensor/" class="md-nav__link">
+      <a href="../../../Components/Sensors/VehicleStatusSensor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AWSIMEnvironment/" class="md-nav__link">
+      <a href="../../../Components/Environment/AWSIMEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
+      <a href="../../../Components/Environment/AddNewEnvironment/AddEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1515,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
+      <a href="../../../Components/Environment/AddNewEnvironment/AddRandomTraffic/LoadItemsFromLanelet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1536,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
+      <a href="../../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddRandomTraffic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
+      <a href="../../../Components/Environment/AddNewEnvironment/AddRandomTraffic/AddTrafficIntersection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1586,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
+      <a href="../../../Components/Environment/AddNewEnvironment/AddTrafficLights/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/CreatePCD/" class="md-nav__link">
+      <a href="../../../Components/Environment/CreatePCD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/LaneletBoundsVisualizer/" class="md-nav__link">
+      <a href="../../../Components/Environment/LaneletBoundsVisualizer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1657,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/SmokeSimulator/" class="md-nav__link">
+      <a href="../../../Components/Environment/SmokeSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1678,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Environment/V2I/" class="md-nav__link">
+      <a href="../../../Components/Environment/V2I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1746,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/TrafficComponents/" class="md-nav__link">
+      <a href="../../../Components/Traffic/TrafficComponents/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
+      <a href="../../../Components/Traffic/RandomTraffic/RandomTrafficSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1827,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
+      <a href="../../../Components/Traffic/RandomTraffic/YieldingRules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1848,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
+      <a href="../../../Components/Traffic/RandomTraffic/AddRandomTrafficEnvironment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/NPCs/RvizNPCSpawner/" class="md-nav__link">
+      <a href="../../../Components/Traffic/NPCs/RvizNPCSpawner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/NPCs/Pedestrian/" class="md-nav__link">
+      <a href="../../../Components/Traffic/NPCs/Pedestrian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1958,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/Traffic/NPCs/Vehicle/" class="md-nav__link">
+      <a href="../../../Components/Traffic/NPCs/Vehicle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2034,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/ROS2/ROS2TopicList/" class="md-nav__link">
+      <a href="../../../Components/ROS2/ROS2TopicList/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2055,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/ROS2/AddACustomROS2Message/" class="md-nav__link">
+      <a href="../../../Components/ROS2/AddACustomROS2Message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2076,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/ROS2/ROS2ForUnity/" class="md-nav__link">
+      <a href="../../../Components/ROS2/ROS2ForUnity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2144,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
+      <a href="../../../Components/ScenarioSimulation/SetupUnityProjectForScenarioSimulation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2165,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Components/ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
+      <a href="../../../Components/ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2240,6 +2240,90 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToContribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VSCode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JetBrainsRider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rider Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graphy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphy Asset Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2256,7 +2340,7 @@
           
   
   <span class="md-ellipsis">
-    How to Contribute
+    Vehicle Physics Pro CE Setup
   </span>
   
 
@@ -2267,7 +2351,7 @@
         
   
   <span class="md-ellipsis">
-    How to Contribute
+    Vehicle Physics Pro CE Setup
   </span>
   
 
@@ -2289,69 +2373,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-can-i-get-help" class="md-nav__link">
+  <a href="#add-vpp-ce-from-asset-store" class="md-nav__link">
     <span class="md-ellipsis">
-      How can I get help?
+      Add VPP-CE from Asset Store
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#issue" class="md-nav__link">
+  <a href="#add-vpp-ce-to-the-unity-editor" class="md-nav__link">
     <span class="md-ellipsis">
-      Issue
+      Add VPP-CE to the Unity Editor
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bug-report" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bug report
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature request
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#question" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Pull requests
+      Useful links:
     </span>
   </a>
   
@@ -2373,91 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EditorSetup/VSCode/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VSCode Configuration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EditorSetup/JetBrainsRider/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rider Configuration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EditorSetup/Graphy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Graphy Asset Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EditorSetup/VPPCommunityEdition/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vehicle Physics Pro CE Setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TroubleShooting/" class="md-nav__link">
+      <a href="../../TroubleShooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2478,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Documentation/" class="md-nav__link">
+      <a href="../../Documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2499,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../License/" class="md-nav__link">
+      <a href="../../License/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2520,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contact/" class="md-nav__link">
+      <a href="../../Contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2568,69 +2526,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-can-i-get-help" class="md-nav__link">
+  <a href="#add-vpp-ce-from-asset-store" class="md-nav__link">
     <span class="md-ellipsis">
-      How can I get help?
+      Add VPP-CE from Asset Store
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#issue" class="md-nav__link">
+  <a href="#add-vpp-ce-to-the-unity-editor" class="md-nav__link">
     <span class="md-ellipsis">
-      Issue
+      Add VPP-CE to the Unity Editor
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bug-report" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bug report
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature request
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#question" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
+  <a href="#useful-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Pull requests
+      Useful links:
     </span>
   </a>
   
@@ -2654,37 +2570,31 @@
   
 
 
-<div><h1 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">#</a></h1>
-<p>Everyone is welcome!</p>
-<h2 id="how-can-i-get-help">How can I get help?<a class="headerlink" href="#how-can-i-get-help" title="Permanent link">#</a></h2>
-<p>Do not open issues for general support questions as we want to keep GitHub issues for confirmed bug reports.
-Instead, open a discussion in the <a href="https://github.com/autowarefoundation/autoware/discussions/new?category=q-a">Q&amp;A category</a>.
-The trouble shooting page at <a href="../TroubleShooting/">AWSIM</a> and at <a href="https://autowarefoundation.github.io/autoware-documentation/main/support/troubleshooting/">Autoware</a> will be also helpful.</p>
-<h2 id="issue">Issue<a class="headerlink" href="#issue" title="Permanent link">#</a></h2>
-<p>Before you post an issue, please search <a href="https://github.com/autowarefoundation/AWSIM-Labs/issues?q=is%3Aissue">Issues</a> and <a href="https://github.com/orgs/autowarefoundation/discussions/categories/q-a">Discussions Q&amp;A catecory</a> to check if it is not a known issue.</p>
-<p><a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository">This page</a> is helpful how to create an issue from a repository.</p>
-<h3 id="bug-report">Bug report<a class="headerlink" href="#bug-report" title="Permanent link">#</a></h3>
-<p>If you find a new bug, please create an issue <a href="https://github.com/autowarefoundation/AWSIM-Labs/issues/new?assignees=&amp;labels=&amp;template=bug.yaml">here</a></p>
-<h3 id="feature-request">Feature request<a class="headerlink" href="#feature-request" title="Permanent link">#</a></h3>
-<p>If you propose a new feature or have an idea, please create an issue <a href="https://github.com/autowarefoundation/AWSIM-Labs/issues/new?assignees=&amp;labels=&amp;template=feature_request.yaml">here</a></p>
-<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">#</a></h3>
-<p>If you have plan to contribute AWSIM Labs, please create an issue <a href="https://github.com/autowarefoundation/AWSIM-Labs/issues/new?assignees=&amp;labels=&amp;template=task.yaml">here</a>.</p>
-<h3 id="question">Question<a class="headerlink" href="#question" title="Permanent link">#</a></h3>
+<div><h1 id="vehicle-physics-pro-community-edition">Vehicle Physics Pro Community Edition<a class="headerlink" href="#vehicle-physics-pro-community-edition" title="Permanent link">#</a></h1>
+<h2 id="add-vpp-ce-from-asset-store">Add VPP-CE from Asset Store<a class="headerlink" href="#add-vpp-ce-from-asset-store" title="Permanent link">#</a></h2>
 <ul>
-<li>If you need a general support, please open a discussion in the <a href="https://github.com/autowarefoundation/autoware/discussions/new?category=q-a">Q&amp;A category</a>.</li>
-<li>You can contribute by <a href="https://github.com/autowarefoundation/autoware/discussions/categories/q-a?discussions_q=category%3AQ%26A+is%3Aunanswered">Answering questions and supporting other contributors</a></li>
+<li>Go to Unity Asset Store and add VPP-CE to personal assets.</li>
 </ul>
-<h2 id="pull-requests">Pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">#</a></h2>
-<p>If you have an idea to improve the simulation, you can submit a pull request.
-The following process should be followed:</p>
+<p><a href="https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556">Vehicle Physics Pro Asset Store link</a></p>
+<h2 id="add-vpp-ce-to-the-unity-editor">Add VPP-CE to the Unity Editor<a class="headerlink" href="#add-vpp-ce-to-the-unity-editor" title="Permanent link">#</a></h2>
 <ol>
-<li>Create a derived branch (<code>feature/***</code>) from the <code>main</code> branch.</li>
-<li>Create a pull request to the <code>main</code> branch.</li>
+<li>Open up the Unity Editor.</li>
+<li>Go to the <code>Window</code> menu and select <code>Package Manager</code>.</li>
+<li>Make sure the <code>My Assets</code> tab is selected from the top left of the Package Manager window.</li>
+<li>Find &amp; select the VPP-CE from the list and click <code>Download</code> or <code>Import</code> from the bottom left of the Package Manager
+   window.</li>
+<li>There will be a popup window showing contents of the package.
+   - Select <code>Sdk</code> folder to import. Rest of the content is optional.
+   - Click <code>Import</code> to add VPP-CE to the project.</li>
 </ol>
-<p>Please keep the following in mind, while developing new features:</p>
+<h2 id="useful-links">Useful links:<a class="headerlink" href="#useful-links" title="Permanent link">#</a></h2>
+<p>Unity Package manager:</p>
 <ul>
-<li><a href="https://autowarefoundation.github.io/AWSIM-Labs/main/ProjectGuide/GitBranch/">Git branching guidelines</a></li>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions?redirectedfrom=MSDN">C# coding convention</a>.</li>
+<li><a href="https://docs.unity3d.com/Manual/upm-ui.html">Manual</a></li>
+</ul>
+<p>VPP Website:</p>
+<ul>
+<li><a href="https://vehiclephysics.com/">Vehicle Physics</a></li>
 </ul></div>
 
 
@@ -2723,7 +2633,7 @@ The following process should be followed:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Components/ScenarioSimulation/PreparingTheConnectionBetweenAWSIMAndScenarioSimulator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preparing the connection between AWSIM and scenario_simulator_v2">
+          <a href="../Graphy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graphy Asset Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2733,20 +2643,20 @@ The following process should be followed:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Preparing the connection between AWSIM and scenario_simulator_v2
+                Graphy Asset Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../EditorSetup/VSCode/" class="md-footer__link md-footer__link--next" aria-label="Next: VSCode Configuration">
+          <a href="../../TroubleShooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Trouble shooting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                VSCode Configuration
+                Trouble shooting
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2780,12 +2690,12 @@ The following process should be followed:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.path", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="../../assets/js/mathjax.js"></script>
+        <script src="../../../assets/js/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
