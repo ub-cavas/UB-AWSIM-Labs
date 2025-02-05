@@ -25,8 +25,8 @@ public class NPCMovement : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             forwardMovement = transform.forward * velocity;
-            currentVelocity = rb.velocity;
-            rb.velocity = new Vector3(forwardMovement.x, rb.velocity.y, forwardMovement.z);
+            currentVelocity = rb.linearVelocity;
+            rb.linearVelocity = new Vector3(forwardMovement.x, rb.linearVelocity.y, forwardMovement.z);
         }
     }
 }

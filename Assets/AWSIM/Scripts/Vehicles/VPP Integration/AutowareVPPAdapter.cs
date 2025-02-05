@@ -328,7 +328,7 @@ namespace AWSIM.Scripts.Vehicles.VPP_Integration
             VpSteeringReport = _frontWheels[0].steerAngle;
             VpGearReport = _vehicleController.data.bus[Channel.Vehicle][VehicleData.GearboxMode];
             VpVelocityReport =
-                transform.InverseTransformDirection(_rigidbody.velocity);
+                transform.InverseTransformDirection(_rigidbody.linearVelocity);
             VpAngularVelocityReport = transform.InverseTransformDirection(AngularVelocity);
             VpThrottleStatusReport =
                 _vehicleController.data.bus[Channel.Input][InputData.Throttle] * VppToAutowareMultiplier;
