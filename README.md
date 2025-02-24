@@ -4,44 +4,37 @@
 
 <img src="docs/assets/images/autoware-foundation.png" height="90"> <img src="docs/assets/images/awsim-labs-logo.png" height="90">
 
-[AWSIM Labs](https://github.com/autowarefoundation/AWSIM-Labs) is currently being developed under the [Autoware Labs](https://github.com/orgs/autowarefoundation/discussions/4550) initiative. Main purpose of this fork is to provide faster implementation of features needed by the users of the AWSIM while also ensuring a high-performance simulation environment for the [Autoware](https://github.com/autowarefoundation/autoware).
+[UB AWSIM Labs](https://github.com/autowarefoundation/AWSIM-Labs) is currently being developed under the [Autoware Labs](https://github.com/orgs/autowarefoundation/discussions/4550) initiative. Main purpose of this fork is to develop the existing AWSIM-Labs environment to integrate new research on Gaussian Splatting, traffic simulation and collaborative sensing while also ensuring a high-performance simulation environment for the [Autoware](https://github.com/autowarefoundation/autoware).
 
-This is a fork of [TIER IV's AWSIM](https://github.com/tier4/AWSIM).
+This is a fork of [AWSIM Labs](https://github.com/autowarefoundation/AWSIM-Labs).
 
 ## Features
 
 - Simulator components included (Vehicle, Sensor, Environment, ROS2, etc.)
-- Support for Ubuntu 22.04 and windows10/11
+- Support for Ubuntu 22.04 and windows 10/11
 - ROS2 native communication
 - Open source software
 - Made with Unity Game Engine
 - Multiple scene and vehicle setup
 - Interactable simulation and UI
 
-### Feature differences from the TIER IV/AWSIM
-
-See [Feature differences from the TIER IV/AWSIM in the Autoware Documentation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/digital-twin-simulation/awsim-tutorial/#feature-differences-from-the-awsim-and-awsim-labs).
-
 ## Tutorial
 
-First, try the tutorial!  
+First, try the packaged version!  
 [AWSIM Labs Documentation - Quick Start Demo](https://autowarefoundation.github.io/AWSIM-Labs/main/GettingStarted/QuickStartDemo/)
+
+Next, try running the project from source!
+[Steps]
+1.) Clone this repo
+2.) Follow the config instructions in the Quick Start Demo
+3.) Unzip and import the Service Center Loop assets into Assets/AWSIM/Externals/ [Link to assets](https://buffalo.app.box.com/file/1786212759904)
+4.) Open the Service Center Scene
 
 ## Documentation
 
 https://autowarefoundation.github.io/AWSIM-Labs/main/
 
-## How to Contribute
 
-Everyone is welcome!
-1. Create a issue [here](https://github.com/autowarefoundation/AWSIM-Labs/issues) to discuss the contribution you want to make.
-2. Create a derived branch `feature/***` from the `main` branch.
-3. Create a pull request for the `main` branch.
-
-see also [AWSIM Labs Documentation - Git branch](https://autowarefoundation.github.io/AWSIM-Labs/main/ProjectGuide/GitBranch/)
-
-We recommend [microsoft's C# coding convention](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions?redirectedfrom=MSDN).  
-However, if the logic of the code is good, it does not matter if coding conventions are not followed.
 
 ## License
 
