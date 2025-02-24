@@ -24,11 +24,17 @@ First, try the packaged version!
 [AWSIM Labs Documentation - Quick Start Demo](https://autowarefoundation.github.io/AWSIM-Labs/main/GettingStarted/QuickStartDemo/)
 
 Next, try running the project from source!
-
 1. Clone this repo
 2. Follow the config instructions in the Quick Start Demo
+3. Install the [Unity HUB](https://unity.com/download) 
+4. Install the following editor version [Unity 6000.0.36f1](https://unity.com/releases/editor/archive)
+5. Open the project (it will ask to open in safe mode) **NOTE:** The Unity HUB must be launched via terminal (not GUI) to run the project without errors
+6. Import the [Vehicle Physics Pro](https://autowarefoundation.github.io/AWSIM-Labs/main/DeveloperGuide/EditorSetup/VPPCommunityEdition/) and [Graphy](https://autowarefoundation.github.io/AWSIM-Labs/main/DeveloperGuide/EditorSetup/Graphy/) assets using the package manager
 3. Unzip and import the Service Center Loop assets into Assets/AWSIM/Externals/ [Link to assets](https://buffalo.app.box.com/file/1786212759904)
-4. Open the Service Center Scene
+4. Open the Service Center Loop Scene (Assets/AWSIM/Scenes/ServiceCenterLoop.unity)
+5. Press Play to run the scene
+    - NOTE: The Unity HUB must be launched via terminal (not GUI) to run the project without errors
+6. Start autoware with the correct map: !!! TO DO - Add link to autoware map !!!
 
 ## Documentation
 
