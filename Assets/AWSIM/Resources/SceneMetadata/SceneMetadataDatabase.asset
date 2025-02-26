@@ -27,7 +27,3 @@ MonoBehaviour:
     isSs2Scene: 1
   - sceneName: Parking Area
     isSs2Scene: 0
-  - sceneName: Untitled
-    isSs2Scene: 0
-  - sceneName: GS_Test
-    isSs2Scene: 0
