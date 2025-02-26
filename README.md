@@ -51,3 +51,7 @@ Applies to `tier4/AWSIM` repositories and all content contained in the [Releases
 - assets : CC BY-NC
 
 See also [LICENSE](./LICENSE)
+
+## Contributions
+Gaussian Splatting in AWSIM achieved with work done by [aras-p](https://github.com/aras-p)
+- [Unity Gaussian Splatting](https://github.com/aras-p/UnityGaussianSplatting)
