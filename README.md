@@ -30,11 +30,13 @@ Next, try running the project from source!
 4. Install the following editor version [Unity 6000.0.36f1](https://unity.com/releases/editor/archive)
 5. Open the project (it will ask to open in safe mode) **NOTE:** The Unity HUB must be launched via terminal (not GUI) to run the project without errors
 6. Import the [Vehicle Physics Pro](https://autowarefoundation.github.io/AWSIM-Labs/main/DeveloperGuide/EditorSetup/VPPCommunityEdition/) and [Graphy](https://autowarefoundation.github.io/AWSIM-Labs/main/DeveloperGuide/EditorSetup/Graphy/) assets using the package manager
-3. Unzip and import the Service Center Loop assets into Assets/AWSIM/Externals/ [Link to assets](https://buffalo.app.box.com/file/1786212759904)
-4. Open the Service Center Loop Scene (Assets/AWSIM/Scenes/ServiceCenterLoop.unity)
-5. Press Play to run the scene
+7. Unzip and import the Service Center Loop assets into Assets/AWSIM/Externals/ [Link to assets](https://buffalo.app.box.com/file/1786212759904)
+8. Autoware reads from ServiceCenterLoop/map. You can put this map folder anywhere (Unity does not use it)
+9. Open the Service Center Loop Scene (Assets/AWSIM/Scenes/ServiceCenterLoop.unity)
+10. Press Play to run the scene
     - NOTE: The Unity HUB must be launched via terminal (not GUI) to run the project without errors
-6. Start autoware with the correct map: !!! TO DO - Add link to autoware map !!!
+11. Start autoware and point the map to the map folder in Step 8
+12. If the car does not localize at first, try giving a 2D Pose Estimation in autoware
 
 ## Documentation
 
