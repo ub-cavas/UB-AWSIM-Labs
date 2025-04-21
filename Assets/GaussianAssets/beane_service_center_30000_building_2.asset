@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b71fae31e6c7d438e8566dc713e666, type: 3}
+  m_Name: beane_service_center_30000_building_2
+  m_EditorClassIdentifier: 
+  m_FormatVersion: 20231020
+  m_SplatCount: 124652
+  m_BoundsMin: {x: -3.1634786, y: -3.4528427, z: -1.5456038}
+  m_BoundsMax: {x: 3.4108255, y: 0.3205492, z: 4.2942085}
+  m_DataHash:
+    serializedVersion: 2
+    Hash: e2b2f88d832de8bf815e20aa2dccb039
+  m_PosFormat: 0
+  m_ScaleFormat: 0
+  m_SHFormat: 0
+  m_ColorFormat: 0
+  m_PosData: {fileID: 4900000, guid: 1bcad62435aac41c49eecd7995f86aef, type: 3}
+  m_ColorData: {fileID: 4900000, guid: 10e7a795af1b0a903accd273fa711201, type: 3}
+  m_OtherData: {fileID: 4900000, guid: cd9e12a9304b20694ba331fc690d797d, type: 3}
+  m_SHData: {fileID: 4900000, guid: 81cb181d94a8b3574b465e5065ff3ffc, type: 3}
+  m_ChunkData: {fileID: 0}
+  m_Cameras: []
