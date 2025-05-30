@@ -1,0 +1,1315 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &58515850025783863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033130637906783914}
+  m_Layer: 0
+  m_Name: TrafficLanes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033130637906783914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58515850025783863}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8134904107138227303}
+  - {fileID: 7265341571947526325}
+  - {fileID: 771486779254686289}
+  - {fileID: 5124427597595202968}
+  - {fileID: 3851541193296452168}
+  - {fileID: 4402834740626313651}
+  - {fileID: 2920202846320451278}
+  - {fileID: 1375034167309485203}
+  - {fileID: 1720362649140192258}
+  - {fileID: 4538023633781184237}
+  - {fileID: 1195995619904285759}
+  - {fileID: 1000978941091773564}
+  - {fileID: 2624412848580164062}
+  - {fileID: 8427929057784278227}
+  - {fileID: 8556932660453196346}
+  - {fileID: 1951147941853360884}
+  - {fileID: 8565214960019324446}
+  - {fileID: 6481470727229358115}
+  - {fileID: 2993851319451935427}
+  - {fileID: 6335251414905407688}
+  - {fileID: 4770178354255432259}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &410272460072284374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4770178354255432259}
+  - component: {fileID: 1853961750633510594}
+  m_Layer: 0
+  m_Name: TrafficLane21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4770178354255432259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410272460072284374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 65.15335, y: -4.13, z: 14.014404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853961750633510594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410272460072284374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 65.15335, y: -4.13, z: 14.014404}
+  - {x: 64.72386, y: -6.1, z: 44.810913}
+  - {x: 64.36078, y: -7.32, z: 63.683105}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 598046877422997879}
+  prevLanes:
+  - {fileID: 5162534061088388189}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &1862378245102177171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3851541193296452168}
+  - component: {fileID: 4774782338044531573}
+  m_Layer: 0
+  m_Name: TrafficLane5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3851541193296452168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862378245102177171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.04669, y: -5.12, z: 28.12796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4774782338044531573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862378245102177171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 60.04669, y: -5.12, z: 28.12796}
+  - {x: 59.962196, y: -2.9, z: -2.6252766}
+  - {x: 58.61799, y: -0.64, z: -33.36055}
+  - {x: 57.90439, y: 1.1, z: -64.12416}
+  - {x: 56.550884, y: 3.0143204, z: -94.86081}
+  - {x: 55.025658, y: 5.094798, z: -125.59036}
+  - {x: 53.795624, y: 7.3, z: -150.3722}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 134513273231670112}
+  prevLanes:
+  - {fileID: 2861916533635842582}
+  - {fileID: 5311647401594329461}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &2128253671099908246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8427929057784278227}
+  - component: {fileID: 7217910235024099198}
+  m_Layer: 0
+  m_Name: TrafficLane14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8427929057784278227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128253671099908246}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.2312, y: 9.25, z: -163.69714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7217910235024099198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128253671099908246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 35.2312, y: 9.25, z: -163.69714}
+  - {x: 4.424799, y: 9.4, z: -162.43167}
+  - {x: -26.3816, y: 9.69, z: -161.16621}
+  - {x: -57.188004, y: 9.81, z: -159.90079}
+  - {x: -87.99439, y: 9.85, z: -158.63535}
+  - {x: -96.93817, y: 10.2, z: -158.26794}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 6827023445873321224}
+  prevLanes:
+  - {fileID: 134513273231670112}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &2292561294417395012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8556932660453196346}
+  - component: {fileID: 1156027984337154763}
+  m_Layer: 0
+  m_Name: TrafficLane15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8556932660453196346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292561294417395012}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -118.03516, y: 7.67, z: -127.71976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156027984337154763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292561294417395012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -118.03516, y: 7.67, z: -127.71976}
+  - {x: -116.873886, y: 5.74, z: -96.95415}
+  - {x: -115.71262, y: 3.85, z: -66.188515}
+  - {x: -114.55135, y: 1.67, z: -35.422882}
+  - {x: -113.68506, y: -0.53, z: -4.6553144}
+  - {x: -113.316055, y: -2.74, z: 26.11546}
+  - {x: -113.19702, y: -3.74, z: 36.041534}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 6238392911382727990}
+  prevLanes:
+  - {fileID: 6827023445873321224}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3120920713671976005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4538023633781184237}
+  - component: {fileID: 5162534061088388189}
+  m_Layer: 0
+  m_Name: TrafficLane10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4538023633781184237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120920713671976005}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 58.74164, y: 7.47, z: -150.4328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5162534061088388189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120920713671976005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 58.74164, y: 7.47, z: -150.4328}
+  - {x: 60.241356, y: 4.626871, z: -119.73452}
+  - {x: 61.808407, y: 2.5515103, z: -89.03659}
+  - {x: 63.01902, y: 0.8, z: -58.323154}
+  - {x: 63.88507, y: -1.31, z: -27.596567}
+  - {x: 65.02546, y: -3.27, z: 3.1113825}
+  - {x: 65.15335, y: -4.13, z: 14.014404}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 1853961750633510594}
+  prevLanes:
+  - {fileID: 5250916533489470035}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3207265748121523316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6481470727229358115}
+  - component: {fileID: 134513273231670112}
+  m_Layer: 0
+  m_Name: TrafficLane18
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6481470727229358115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207265748121523316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 53.795624, y: 7.3, z: -150.3722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134513273231670112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207265748121523316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 53.795624, y: 7.3, z: -150.3722}
+  - {x: 52.14252, y: 8.84, z: -160.6195}
+  - {x: 49.884758, y: 9, z: -163.18585}
+  - {x: 49.071842, y: 9.02, z: -163.4601}
+  - {x: 45.716385, y: 9.27, z: -164.10907}
+  - {x: 35.2312, y: 9.25, z: -163.69714}
+  turnDirection: 2
+  nextLanes:
+  - {fileID: 7217910235024099198}
+  prevLanes:
+  - {fileID: 4774782338044531573}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3391465641621843369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7265341571947526325}
+  - component: {fileID: 2861916533635842582}
+  m_Layer: 0
+  m_Name: TrafficLane2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7265341571947526325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391465641621843369}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 58.818542, y: -9.56, z: 95.595215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2861916533635842582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3391465641621843369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 58.818542, y: -9.56, z: 95.595215}
+  - {x: 59.303806, y: -7.63, z: 64.82771}
+  - {x: 59.92546, y: -5.42, z: 34.079163}
+  - {x: 60.04669, y: -5.12, z: 28.12796}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 4774782338044531573}
+  prevLanes:
+  - {fileID: 8654516533336372907}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3415235581282507964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2920202846320451278}
+  - component: {fileID: 5383610861868917720}
+  m_Layer: 0
+  m_Name: TrafficLane7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2920202846320451278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415235581282507964}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -99.26514, y: -5.46, z: 69.99365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5383610861868917720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415235581282507964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -99.26514, y: -5.46, z: 69.99365}
+  - {x: -105.44008, y: -6.05, z: 68.144875}
+  - {x: -108.44859, y: -6.2826467, z: 66.040634}
+  - {x: -110.940796, y: -5.9944286, z: 62.18125}
+  - {x: -116.83165, y: -3.96, z: 44.65325}
+  - {x: -117.85779, y: -3.8, z: 36.374054}
+  turnDirection: 1
+  nextLanes:
+  - {fileID: 1682325265037318566}
+  prevLanes:
+  - {fileID: 7767509445399330006}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3732194637883354429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2993851319451935427}
+  - component: {fileID: 6827023445873321224}
+  m_Layer: 0
+  m_Name: TrafficLane19
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2993851319451935427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732194637883354429}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -96.93817, y: 10.2, z: -158.26794}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6827023445873321224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732194637883354429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -96.93817, y: 10.2, z: -158.26794}
+  - {x: -111.36591, y: 10.17, z: -155.72778}
+  - {x: -116.81195, y: 9.63, z: -152.47026}
+  - {x: -118.82182, y: 9.2, z: -149.5748}
+  - {x: -119.09379, y: 8.97, z: -147.86671}
+  - {x: -118.03516, y: 7.67, z: -127.71976}
+  turnDirection: 2
+  nextLanes:
+  - {fileID: 1156027984337154763}
+  prevLanes:
+  - {fileID: 7217910235024099198}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &3797831350224038208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000978941091773564}
+  - component: {fileID: 3680817618891010836}
+  m_Layer: 0
+  m_Name: TrafficLane12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000978941091773564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797831350224038208}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -89.644226, y: -4.88, z: 50.942444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3680817618891010836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797831350224038208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -89.644226, y: -4.88, z: 50.942444}
+  - {x: -58.976414, y: -4.6, z: 49.208}
+  - {x: -28.308617, y: -5.01, z: 47.473553}
+  - {x: 2.3591828, y: -5.44, z: 45.739113}
+  - {x: 21.155579, y: -5.56, z: 44.676056}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 5311647401594329461}
+  - {fileID: 7452124537674788543}
+  prevLanes:
+  - {fileID: 6238392911382727990}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &4067440385576187687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195995619904285759}
+  - component: {fileID: 6238392911382727990}
+  m_Layer: 0
+  m_Name: TrafficLane11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195995619904285759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067440385576187687}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -113.19702, y: -3.74, z: 36.041534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6238392911382727990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067440385576187687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -113.19702, y: -3.74, z: 36.041534}
+  - {x: -111.054276, y: -4.44, z: 45.48519}
+  - {x: -109.89636, y: -4.27, z: 46.796593}
+  - {x: -104.69192, y: -4.49, z: 50.14577}
+  - {x: -98.5855, y: -4.95, z: 51.221638}
+  - {x: -89.644226, y: -4.88, z: 50.942444}
+  turnDirection: 2
+  nextLanes:
+  - {fileID: 3680817618891010836}
+  prevLanes:
+  - {fileID: 1156027984337154763}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &4292647935985238175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375034167309485203}
+  - component: {fileID: 1682325265037318566}
+  m_Layer: 0
+  m_Name: TrafficLane8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1375034167309485203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292647935985238175}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -117.85779, y: -3.8, z: 36.374054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682325265037318566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292647935985238175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -117.85779, y: -3.8, z: 36.374054}
+  - {x: -118.51288, y: -1.39, z: 5.5601826}
+  - {x: -119.31977, y: 0.8, z: -25.25205}
+  - {x: -120.482864, y: 2.85, z: -56.060448}
+  - {x: -121.64598, y: 5.05, z: -86.86886}
+  - {x: -122.80908, y: 7.15, z: -117.67727}
+  - {x: -123.184265, y: 7.61, z: -127.61545}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 6511480023595829154}
+  prevLanes:
+  - {fileID: 5383610861868917720}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &4344588738483565547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4402834740626313651}
+  - component: {fileID: 7767509445399330006}
+  m_Layer: 0
+  m_Name: TrafficLane6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4402834740626313651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344588738483565547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.38501, y: -7.71, z: 67.439514}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7767509445399330006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344588738483565547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 20.38501, y: -7.71, z: 67.439514}
+  - {x: -10.515404, y: -7.25, z: 68.34068}
+  - {x: -41.42823, y: -6.6, z: 68.916435}
+  - {x: -72.341064, y: -6.39, z: 69.49219}
+  - {x: -99.26514, y: -5.46, z: 69.99365}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 5383610861868917720}
+  prevLanes:
+  - {fileID: 8058908349683099868}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &5494244664771606414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2624412848580164062}
+  - component: {fileID: 598046877422997879}
+  m_Layer: 0
+  m_Name: TrafficLane13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2624412848580164062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494244664771606414}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.36078, y: -7.32, z: 63.683105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598046877422997879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494244664771606414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 64.36078, y: -7.32, z: 63.683105}
+  - {x: 64.04813, y: -9.62, z: 94.51546}
+  - {x: 63.44967, y: -11.8, z: 125.34038}
+  - {x: 62.842434, y: -13.8, z: 156.16515}
+  - {x: 62.23519, y: -16, z: 186.98984}
+  - {x: 62.215607, y: -15.9, z: 187.98416}
+  turnDirection: 0
+  nextLanes: []
+  prevLanes:
+  - {fileID: 7452124537674788543}
+  - {fileID: 1853961750633510594}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &5497100279130991622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5124427597595202968}
+  - component: {fileID: 7452124537674788543}
+  m_Layer: 0
+  m_Name: TrafficLane4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5124427597595202968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497100279130991622}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.155579, y: -6.18905, z: 44.676056}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7452124537674788543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497100279130991622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 21.155579, y: -5.54, z: 44.676056}
+  - {x: 51.909843, y: -6, z: 43.56347}
+  - {x: 58.34178, y: -6.07, z: 43.597954}
+  - {x: 60.667084, y: -6.27, z: 44.88496}
+  - {x: 64.271835, y: -6.48, z: 48.81215}
+  - {x: 64.36078, y: -7.46, z: 63.683105}
+  turnDirection: 1
+  nextLanes:
+  - {fileID: 598046877422997879}
+  prevLanes:
+  - {fileID: 3680817618891010836}
+  rightOfWayLanes:
+  - {fileID: 2861916533635842582}
+  - {fileID: 1853961750633510594}
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &6359307757297468438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951147941853360884}
+  - component: {fileID: 8366613279063518803}
+  m_Layer: 0
+  m_Name: TrafficLane16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951147941853360884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359307757297468438}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -97.05786, y: 10.29, z: -163.19775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8366613279063518803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359307757297468438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -97.05786, y: 10.29, z: -163.19775}
+  - {x: -66.17247, y: 9.74, z: -164.5392}
+  - {x: -35.287086, y: 9.67, z: -165.88063}
+  - {x: -4.4017053, y: 9.39, z: -167.22214}
+  - {x: 26.48368, y: 9.3, z: -168.5636}
+  - {x: 35.45041, y: 9.29, z: -168.95303}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 5250916533489470035}
+  prevLanes:
+  - {fileID: 6511480023595829154}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &7307603612083356684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771486779254686289}
+  - component: {fileID: 5311647401594329461}
+  m_Layer: 0
+  m_Name: TrafficLane3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771486779254686289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307603612083356684}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.155579, y: -5.56, z: 44.676056}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5311647401594329461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307603612083356684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 21.155579, y: -5.56, z: 44.676056}
+  - {x: 51.677345, y: -5.98, z: 43.385067}
+  - {x: 56.135513, y: -6, z: 42.660446}
+  - {x: 59.013947, y: -5.8, z: 40.82184}
+  - {x: 59.653595, y: -5.89, z: 39.157547}
+  - {x: 59.882133, y: -5.61, z: 36.402435}
+  - {x: 60.04669, y: -5.12, z: 28.12796}
+  turnDirection: 2
+  nextLanes:
+  - {fileID: 4774782338044531573}
+  prevLanes:
+  - {fileID: 3680817618891010836}
+  rightOfWayLanes:
+  - {fileID: 2861916533635842582}
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &8003513861990061096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6335251414905407688}
+  - component: {fileID: 6511480023595829154}
+  m_Layer: 0
+  m_Name: TrafficLane20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6335251414905407688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003513861990061096}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -123.184265, y: 7.61, z: -127.61545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6511480023595829154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003513861990061096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: -123.184265, y: 7.61, z: -127.61545}
+  - {x: -123.78791, y: 9.32, z: -151.57928}
+  - {x: -122.87277, y: 9.17, z: -153.12636}
+  - {x: -116.80184, y: 10.06, z: -158.77713}
+  - {x: -111.722786, y: 10.21, z: -160.99155}
+  - {x: -97.05786, y: 10.29, z: -163.19775}
+  turnDirection: 1
+  nextLanes:
+  - {fileID: 8366613279063518803}
+  prevLanes:
+  - {fileID: 1682325265037318566}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &8091382763075779078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720362649140192258}
+  - component: {fileID: 5250916533489470035}
+  m_Layer: 0
+  m_Name: TrafficLane9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720362649140192258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091382763075779078}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.45041, y: 9.29, z: -168.95303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5250916533489470035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091382763075779078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 35.45041, y: 9.29, z: -168.95303}
+  - {x: 51.223515, y: 8.86, z: -168.08466}
+  - {x: 54.140137, y: 8.74, z: -166.2113}
+  - {x: 57.048916, y: 8.64, z: -161.76807}
+  - {x: 57.52809, y: 8.47, z: -160.07245}
+  - {x: 58.74164, y: 7.47, z: -150.4328}
+  turnDirection: 1
+  nextLanes:
+  - {fileID: 5162534061088388189}
+  prevLanes:
+  - {fileID: 8366613279063518803}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &8163695194948674674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8134904107138227303}
+  - component: {fileID: 8654516533336372907}
+  m_Layer: 0
+  m_Name: TrafficLane1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8134904107138227303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163695194948674674}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 57.18268, y: -15.95, z: 188.0716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8654516533336372907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163695194948674674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 57.18268, y: -15.95, z: 188.0716}
+  - {x: 57.727966, y: -13.9, z: 157.24611}
+  - {x: 58.273254, y: -11.8, z: 126.4207}
+  - {x: 58.818542, y: -9.56, z: 95.595215}
+  turnDirection: 0
+  nextLanes:
+  - {fileID: 2861916533635842582}
+  - {fileID: 8058908349683099868}
+  prevLanes: []
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
+--- !u!1 &8270351050740276232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8565214960019324446}
+  - component: {fileID: 8058908349683099868}
+  m_Layer: 0
+  m_Name: TrafficLane17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8565214960019324446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270351050740276232}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 58.818542, y: -9.56, z: 95.595215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033130637906783914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8058908349683099868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270351050740276232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ab73cebda3db4580ebd3ece935931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {x: 58.818542, y: -9.56, z: 95.595215}
+  - {x: 58.557816, y: -8.16, z: 75.0759}
+  - {x: 55.54174, y: -8.266409, z: 70.40421}
+  - {x: 53.90612, y: -8.196674, z: 69.552}
+  - {x: 43.9132, y: -7.78, z: 67.234314}
+  - {x: 20.38501, y: -7.71, z: 67.439514}
+  turnDirection: 2
+  nextLanes:
+  - {fileID: 7767509445399330006}
+  prevLanes:
+  - {fileID: 8654516533336372907}
+  rightOfWayLanes: []
+  stopLine: {fileID: 0}
+  speedLimit: 5
+  intersectionLane: 0
