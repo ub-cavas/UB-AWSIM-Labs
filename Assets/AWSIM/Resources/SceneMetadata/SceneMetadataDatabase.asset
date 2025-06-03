@@ -13,17 +13,5 @@ MonoBehaviour:
   m_Name: SceneMetadataDatabase
   m_EditorClassIdentifier: 
   sceneInfos:
-  - sceneName: LoaderScene
-    isSs2Scene: 0
-  - sceneName: AWSIMSimulation
-    isSs2Scene: 0
-  - sceneName: Shinjuku
-    isSs2Scene: 0
-  - sceneName: ShinjukuNight
-    isSs2Scene: 0
-  - sceneName: AutowareSimulationScenarioSimulator
-    isSs2Scene: 1
-  - sceneName: Parking Area ss2
-    isSs2Scene: 1
-  - sceneName: Parking Area
+  - sceneName: ServiceCenterLoop
     isSs2Scene: 0
